@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #3e6d73;
+    --color-primary-hover: #32585c;
+    --color-primary-light: #d9e7e8;
+    --color-secondary: #6b8869;
+    --color-secondary-hover: #566d54;
+    --color-accent: #98a55f;
+    --color-accent-hover: #7a844c;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    max-width: 65ch;
+    line-height: 1.7;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  img {
+    content-visibility: auto;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: #3e6d7330;
+    color: #0d1717;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-500 text-white font-semibold rounded-xl shadow-md transition-all duration-200;
+    @apply hover:bg-teal-600 hover:shadow-lg;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
+    @apply active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-600 font-semibold rounded-xl border-2 border-teal-500 transition-all duration-200;
+    @apply hover:bg-teal-50 hover:border-teal-600;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
+    @apply active:scale-[0.98];
+  }
+
+  .btn-tertiary {
+    @apply inline-flex items-center gap-2 text-teal-600 font-medium transition-colors duration-200;
+    @apply hover:text-teal-700 hover:underline;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 transition-all duration-300;
+    @apply hover:shadow-lg hover:ring-teal-500/20;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest;
+    @apply bg-teal-50 text-teal-700 border border-teal-200;
+  }
+
+  .section-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-teal-800 leading-tight tracking-tight;
+  }
+
+  .section-description {
+    @apply text-lg text-gray-600 leading-relaxed max-w-2xl;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900;
+    @apply placeholder:text-gray-400;
+    @apply focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none;
+    @apply transition-all duration-200;
+  }
+
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .contain-layout {
+    contain: layout style paint;
+  }
+
+  .backdrop-blur-optimized {
+    backdrop-filter: blur(12px);
+    will-change: backdrop-filter;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .display-heading {
+    @apply max-w-display text-balance;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .section-heading {
+    @apply max-w-heading text-balance;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .subheading {
+    @apply max-w-subheading text-balance;
+    line-height: 1.25;
+  }
+
+  .body-text {
+    @apply max-w-body;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+
+  .caption-text {
+    line-height: 1.4;
+    letter-spacing: normal;
+  }
+
+  .animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Progressive Typography Enhancement System */
+  .typography-enhanced {
+    /* Apply system-wide typography improvements */
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    font-variant-ligatures: common-ligatures;
+  }
+
+  /* Auto-enhance all headings */
+  h1, h2, h3, h4, h5, h6,
+  .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    @apply text-balance;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Auto-enhance display text */
+  .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    @apply max-w-display;
+    line-height: 1.15;
+  }
+
+  /* Auto-enhance section headings */
+  .text-2xl, .text-3xl {
+    @apply max-w-heading text-balance;
+    line-height: 1.25;
+  }
+
+  /* Auto-enhance body text */
+  p, .text-base, .text-lg {
+    @apply max-w-body;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  /* Auto-enhance small text */
+  .text-sm, .text-xs {
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+
+  /* Prevent orphaned words in buttons and labels */
+  button, label, .btn {
+    text-wrap: nowrap;
+  }
+
+  /* Multi-line button text should balance */
+  button.multiline, .btn.multiline {
+    text-wrap: balance;
+  }
+
+  /* Progressive enhancement for containers */
+  .container, .max-w-7xl, .max-w-6xl, .max-w-5xl {
+    container-type: inline-size;
+  }
+
+  /* Responsive typography scaling */
+  @container (min-width: 768px) {
+    .text-4xl { font-size: 2.5rem; }
+    .text-5xl { font-size: 3.25rem; }
+    .text-6xl { font-size: 4rem; }
+    .text-7xl { font-size: 5rem; }
+  }
+
+  @container (min-width: 1024px) {
+    .text-4xl { font-size: 2.75rem; }
+    .text-5xl { font-size: 3.5rem; }
+    .text-6xl { font-size: 4.5rem; }
+    .text-7xl { font-size: 5.5rem; }
+  }
+
+  /* Prevent layout shift during font loading */
+  .font-loading {
+    font-display: swap;
+    visibility: hidden;
+  }
+
+  .font-loaded {
+    visibility: visible;
+  }
+
+  /* Enhanced readability for long-form content */
+  .prose {
+    @apply typography-enhanced;
+  }
+
+  .prose h1, .prose h2, .prose h3 {
+    @apply text-balance max-w-heading;
+  }
+
+  .prose p {
+    @apply max-w-body;
+    text-wrap: pretty;
+  }
+
+  /* System-wide link enhancement */
+  a {
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.125em;
+  }
+
+  /* Enhanced focus states */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+
+  /* Prevent text selection on UI elements */
+  button, .btn, nav, .navigation {
+    user-select: none;
+  }
+
+  /* Allow text selection on content */
+  p, h1, h2, h3, h4, h5, h6, .content {
+    user-select: text;
+  }
+}
