@@ -86,7 +86,7 @@ export function GetInvolved() {
 
               <div className="mt-auto">
                 <button className="group/btn flex items-center gap-2 text-sm font-geist font-bold uppercase tracking-widest text-white transition-colors hover:text-olive-300">
-                  <span className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
+                  <Link to="/soul-caravan" className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
                   {way.action}
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </button>
