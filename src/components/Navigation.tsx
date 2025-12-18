@@ -89,14 +89,14 @@ export function Navigation() {
   }, [isMobileMenuOpen]);
 
   const navBackgroundClass = isScrolled
-    ? 'bg-brand-primary shadow-lg border-white/5 py-3 lg:py-4'
-    : 'bg-brand-primary border-white/10 py-4 lg:py-6';
+    ? 'shadow-lg py-3 lg:py-4'
+    : 'py-4 lg:py-6';
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 w-full z-[100] border-b transition-all duration-500 ease-in-out ${navBackgroundClass}`}
-        style={{ backdropFilter: 'blur(12px)' }}
+        className={`fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-500 ease-in-out ${navBackgroundClass}`}
+        style={{ backgroundColor: '#3e6d73' }}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10">
           <div className="flex items-center justify-between">

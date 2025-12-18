@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, Droplets, Utensils, HeartHandshake, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Droplets, Utensils, HeartHandshake, ArrowRight, Building, Beef, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const appeals = [
@@ -29,6 +29,33 @@ const appeals = [
     isZakatEligible: true,
     href: '/food-relief',
     icon: Utensils
+  },
+  {
+    title: 'Build a Masjid',
+    description: 'Construct a place of worship and community gathering that will serve generations. A masjid becomes the heart of spiritual and social life for the entire community.',
+    image: 'https://images.unsplash.com/photo-1564769625392-651b2c0e7b8b?q=80&w=800&auto=format&fit=crop',
+    category: 'Sadaqah Jariyah',
+    isZakatEligible: false,
+    href: '#masjid',
+    icon: Building
+  },
+  {
+    title: 'Qurbani',
+    description: 'Fulfill your Qurbani obligation and share fresh meat with families in need. Your sacrifice provides protein-rich meals during Eid al-Adha celebrations.',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop',
+    category: 'Seasonal Appeal',
+    isZakatEligible: false,
+    href: '#qurbani',
+    icon: Beef
+  },
+  {
+    title: 'Zakat',
+    description: 'Calculate and pay your Zakat obligation to purify your wealth. Your Zakat directly supports the most vulnerable members of our community.',
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop',
+    category: 'Religious Obligation',
+    isZakatEligible: true,
+    href: '#zakat',
+    icon: DollarSign
   }
 ];
 
@@ -73,8 +100,8 @@ export function AppealsIndex() {
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <appeal.icon className="w-5 h-5 text-teal-600" />
-                    <span className="text-sm font-medium text-teal-600">{appeal.category}</span>
+                    <appeal.icon className="w-5 h-5" style={{ color: '#3e6d73' }} />
+                    <span className="text-sm font-medium" style={{ color: '#3e6d73' }}>{appeal.category}</span>
                     {appeal.isZakatEligible && (
                       <span className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full font-medium">
                         Zakat Eligible
@@ -82,7 +109,7 @@ export function AppealsIndex() {
                     )}
                   </div>
 
-                  <h3 className="text-xl font-serif font-semibold text-teal-800 mb-3">
+                  <h3 className="text-xl font-serif font-semibold mb-3" style={{ color: '#3e6d73' }}>
                     {appeal.title}
                   </h3>
 
@@ -92,9 +119,13 @@ export function AppealsIndex() {
 
                   <Link
                     to={appeal.href}
-                    className="inline-flex items-center gap-2 text-teal-600 font-medium hover:text-teal-700 transition-colors"
+                    className="inline-flex items-center gap-2 font-medium transition-colors"
+                    style={{ color: '#3e6d73' }}
                   >
-                    Learn More <ArrowRight size={16} />
+                    {appeal.title === 'Build a Masjid' ? 'Donate Now' : 
+                     appeal.title === 'Qurbani' ? 'Select Qurbani' : 
+                     appeal.title === 'Zakat' ? 'Pay Zakat' : 'Learn More'} 
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </motion.article>
