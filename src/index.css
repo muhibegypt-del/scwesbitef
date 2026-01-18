@@ -77,15 +77,41 @@
 }
 
 @layer components {
+  /* === DESIGN TOKENS === */
+  :root {
+    --radius-sm: 0.5rem;    /* 8px - buttons, inputs */
+    --radius-md: 0.75rem;   /* 12px - cards, modals */
+    --radius-lg: 1rem;      /* 16px - large cards */
+    --radius-xl: 1.5rem;    /* 24px - hero elements */
+    --radius-full: 9999px;  /* pills, badges */
+  }
+
+  /* === TYPOGRAPHY UTILITIES === */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow-teal {
+    @apply eyebrow text-teal-600;
+  }
+
+  .eyebrow-muted {
+    @apply eyebrow text-gray-500;
+  }
+
+  /* === BUTTON COMPONENTS === */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-500 text-white font-semibold rounded-xl shadow-md transition-all duration-200;
-    @apply hover:bg-teal-600 hover:shadow-lg;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-500 text-white font-semibold shadow-soft transition-all duration-200;
+    border-radius: var(--radius-md);
+    @apply hover:bg-teal-600 hover:shadow-elevated;
     @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
     @apply active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-600 font-semibold rounded-xl border-2 border-teal-500 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-600 font-semibold border-2 border-teal-500 transition-all duration-200;
+    border-radius: var(--radius-md);
     @apply hover:bg-teal-50 hover:border-teal-600;
     @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
     @apply active:scale-[0.98];
@@ -96,31 +122,44 @@
     @apply hover:text-teal-700 hover:underline;
   }
 
+  /* === CARD COMPONENTS === */
   .card {
-    @apply bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 transition-all duration-300;
-    @apply hover:shadow-lg hover:ring-teal-500/20;
+    @apply bg-white shadow-card ring-1 ring-gray-900/5 transition-all duration-300;
+    border-radius: var(--radius-lg);
+    @apply hover:shadow-card-hover hover:ring-teal-500/20;
   }
 
+  .card-elevated {
+    @apply bg-white shadow-elevated ring-1 ring-gray-900/5 transition-all duration-300;
+    border-radius: var(--radius-lg);
+    @apply hover:shadow-lg;
+  }
+
+  /* === SECTION COMPONENTS === */
   .section-badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest;
+    @apply inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold uppercase tracking-widest;
     @apply bg-teal-50 text-teal-700 border border-teal-200;
+    border-radius: var(--radius-full);
   }
 
   .section-title {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-teal-800 leading-tight tracking-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 leading-tight tracking-tight;
   }
 
   .section-description {
     @apply text-lg text-gray-600 leading-relaxed max-w-2xl;
   }
 
+  /* === FORM COMPONENTS === */
   .input-field {
-    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900;
+    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900;
+    border-radius: var(--radius-md);
     @apply placeholder:text-gray-400;
     @apply focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none;
     @apply transition-all duration-200;
   }
 
+  /* === PERFORMANCE UTILITIES === */
   .gpu-accelerated {
     transform: translateZ(0);
     will-change: transform;

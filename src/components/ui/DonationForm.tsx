@@ -7,7 +7,7 @@ import type { DonationAmount } from '../../types';
 interface DonationFormProps {
   title: string;
   subtitle: string;
-  amounts: DonationAmount[];
+  amounts: readonly DonationAmount[] | DonationAmount[];
   defaultAmount?: number;
   defaultType?: 'one-time' | 'monthly';
   onSubmit?: (data: { amount: number; type: 'one-time' | 'monthly' }) => void;
@@ -60,9 +60,8 @@ export function DonationForm({
                 onChange={() => setDonationType(type)}
                 className="sr-only"
               />
-              <span className={`block py-3 text-center text-sm font-semibold capitalize transition-colors ${
-                donationType === type ? 'text-brand-primary-dark' : 'text-gray-500 hover:text-brand-primary'
-              }`}>
+              <span className={`block py-3 text-center text-sm font-semibold capitalize transition-colors ${donationType === type ? 'text-brand-primary-dark' : 'text-gray-500 hover:text-brand-primary'
+                }`}>
                 {donationType === type && (
                   <motion.div
                     layoutId="activeTab"
@@ -83,11 +82,10 @@ export function DonationForm({
             return (
               <label
                 key={item.amount}
-                className={`relative cursor-pointer rounded-xl border-2 p-4 transition-all duration-200 ${
-                  isSelected
-                    ? 'border-brand-primary bg-brand-primary-lightest text-brand-primary-dark ring-1 ring-brand-primary'
-                    : 'border-gray-200 bg-gray-50 text-gray-600 hover:border-brand-primary-light hover:bg-white'
-                }`}
+                className={`relative cursor-pointer rounded-xl border-2 p-4 transition-all duration-200 ${isSelected
+                  ? 'border-brand-primary bg-brand-primary-lightest text-brand-primary-dark ring-1 ring-brand-primary'
+                  : 'border-gray-200 bg-gray-50 text-gray-600 hover:border-brand-primary-light hover:bg-white'
+                  }`}
               >
                 <input
                   type="radio"
@@ -109,20 +107,7 @@ export function DonationForm({
         </fieldset>
 
         <div className="mb-6 flex min-h-10 items-center justify-center" aria-live="polite">
-          <AnimatePresence mode="wait">
-            {selectedAmount && !customAmount && (
-              <motion.div
-                key={selectedAmount}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={ANIMATION.SPRING_CONFIG}
-                className="rounded-full bg-olive-100 px-4 py-2 text-center text-xs font-semibold text-olive-800"
-              >
-                {amounts.find(d => d.amount === selectedAmount)?.description}
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {/* Impact description removed as per request */}
         </div>
 
         <div className="relative mb-6">

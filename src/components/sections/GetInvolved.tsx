@@ -5,31 +5,36 @@ import { Link } from 'react-router-dom';
 import { HandHeart, Share2, Mail, ArrowRight, Plane } from 'lucide-react';
 import { SectionHeading, BodyText, SubHeading } from '../ui/Typography';
 
-const EASE = [0.22, 1, 0.36, 1];
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 const ways = [
   {
     icon: HandHeart,
     title: 'Volunteer with Us',
-    description: 'Join our "Khidmat" (Service) team on the ground. Use your skills - medical, media, or logistical - to serve directly.',
+    description: 'Turn your compassion into action by volunteering in projects that truly matter.',
     action: 'Apply to Volunteer',
-    color: 'teal'
+    color: 'teal',
+    href: '/volunteer'
   },
   {
     icon: Share2,
     title: 'Become an Ambassador',
-    description: 'You don\'t need money to make an impact. Use your voice to fundraise within your network and multiply your reward.',
+    description: 'Start a campaign, make an impact, and help transform lives.',
     action: 'Start Fundraising',
-    color: 'sage'
+    color: 'sage',
+    href: '/fundraise'
   },
   {
     icon: Plane,
     title: 'Soul Caravan 2026 Kenya Adventure',
     description: 'Find service through exploration. Join us for a life-changing journey where we combine adventure with meaningful volunteer work.',
     action: 'Apply for 2026',
-    color: 'olive'
+    color: 'olive',
+    href: '/soul-caravan'
   }
 ];
+
+
 
 export function GetInvolved() {
   return (
@@ -49,7 +54,7 @@ export function GetInvolved() {
           </div>
 
           <SectionHeading className="text-4xl sm:text-5xl font-geist font-semibold text-brand-primary-dark mb-6">
-            More ways to leave <br/> a <span className="text-sage-600">lasting legacy.</span>
+            More ways to leave <br /> a <span className="text-sage-600">lasting legacy.</span>
           </SectionHeading>
 
           <BodyText className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -72,7 +77,7 @@ export function GetInvolved() {
                 w-14 h-14 mb-8 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110
                 ${way.color === 'teal' ? 'bg-brand-primary/50 text-white group-hover:bg-brand-primary group-hover:text-white' :
                   way.color === 'sage' ? 'bg-brand-primary/50 text-white group-hover:bg-sage-500 group-hover:text-white' :
-                  'bg-brand-primary/50 text-white group-hover:bg-olive-500 group-hover:text-white'}
+                    'bg-brand-primary/50 text-white group-hover:bg-olive-500 group-hover:text-white'}
               `}>
                 <way.icon className="w-7 h-7" strokeWidth={1.5} />
               </div>
@@ -87,7 +92,7 @@ export function GetInvolved() {
 
               <div className="mt-auto">
                 <button className="group/btn flex items-center gap-2 text-sm font-geist font-bold uppercase tracking-widest text-white transition-colors hover:text-olive-300">
-                  <Link to="/soul-caravan" className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
+                  <Link to={way.href} className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
                   {way.action}
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </button>

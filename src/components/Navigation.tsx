@@ -135,14 +135,32 @@ export function Navigation() {
                 Portal
               </a>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-brand-primary-dark px-7 py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl hover:bg-brand-primary-lightest transition-all flex items-center gap-2"
+              {/* Donate Dropdown CTA */}
+              <div
+                className="relative group z-50"
               >
-                <span>Donate Now</span>
-                <Heart className="h-4 w-4 fill-brand-primary-dark text-brand-primary-dark" />
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-brand-primary-dark px-7 py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl hover:bg-brand-primary-lightest transition-all flex items-center gap-2"
+                >
+                  <span>Donate</span>
+                  <Heart className="h-4 w-4 fill-brand-primary-dark text-brand-primary-dark" />
+                </motion.button>
+
+                {/* Dropdown Menu */}
+                <div className="absolute top-full right-0 mt-2 min-w-[220px] bg-white rounded-xl shadow-xl border border-teal-900/10 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right">
+                  {NAV_CONFIG.find(l => l.label === 'Our Appeals')?.dropdownItems?.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="block px-4 py-3 text-teal-900 hover:bg-teal-50 transition-colors text-sm font-medium border-b border-gray-50 last:border-0 text-left"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* 4. Mobile Actions & Toggle */}

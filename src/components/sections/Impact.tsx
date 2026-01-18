@@ -1,73 +1,14 @@
 'use client';
 
-import { motion, useScroll, useSpring, useTransform, useInView, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Quote, CheckCircle2, CircleDashed, ArrowRight, Sparkles, X } from 'lucide-react';
-import { SectionHeading, BodyText, SubHeading } from '../ui/Typography';
+import { Quote, Sparkles } from 'lucide-react';
+import { SectionHeading, BodyText } from '../ui/Typography';
+import { timelineData } from '../../data/timelineData';
+import { TimelineItem } from '../ui/TimelineItem';
+import { TimelineModal } from '../ui/TimelineModal';
 
 const EASE = [0.22, 1, 0.36, 1];
-
-const timelineData = [
-  {
-    year: "2020",
-    status: "completed",
-    title: "The Seed Was Planted",
-    description: "Our founder visited Kenya’s Mombasa coast for work and witnessed firsthand the challenges faced by local communities. Inspired to make a difference, he envisioned creating opportunities for people to experience the beauty of Kenya while contributing through volunteer work.",
-    photos: [
-      'https://images.unsplash.com/photo-1541919329513-35f7af297129?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop'
-    ],
-    detailedCopy: "Our founder visited Kenya’s Mombasa coast for work and witnessed firsthand the challenges faced by local communities. Inspired to make a difference, he envisioned creating opportunities for people to experience the beauty of Kenya while contributing through volunteer work."
-  },
-  {
-    year: "2022",
-    status: "completed",
-    title: "The Journey Begins",
-    description: "Soul Caravan, a company dedicated to traveling with purpose, was born. The first group traveled to Kenya to experience its beauty while giving back, supporting three orphanages and establishing a school library in a local primary school.",
-    photos: [
-      'https://images.unsplash.com/photo-1541919329513-35f7af297129?q=80&w=800&auto=format&fit=crop'
-    ],
-    detailedCopy: "Soul Caravan, a company dedicated to traveling with purpose, was born. The first group traveled to Kenya to experience its beauty while giving back, supporting three orphanages and establishing a school library in a local primary school."
-  },
-  {
-    year: "2023",
-    status: "completed",
-    title: "The Commitment Deepens",
-    description: "Through the funds raised from our second group trip, we strengthened our support for orphanages and the school library, continuing to stock books and resources. We refurbished an entire orphanage, providing mattresses, fans, school supplies, and many other essentials.",
-    photos: [
-      'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=800&auto=format&fit=crop'
-    ],
-    detailedCopy: "Through the funds raised from our second group trip, we strengthened our support for orphanages and the school library, continuing to stock books and resources. We refurbished an entire orphanage, providing mattresses, fans, school supplies, and many other essentials, ensuring the children had a safe and comfortable environment to live and learn."
-  },
-  {
-    year: "2024",
-    status: "completed",
-    title: "The Impact Expands",
-    description: "We continued our support for orphanages and took a major step in education by building a fully outfitted science lab in a soon-to-be-built secondary school within an under-resourced community, providing students with the tools to explore, learn, and grow.",
-    photos: [
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop'
-    ],
-    detailedCopy: "We continued our support for orphanages and took a major step in education by building a fully outfitted science lab in a soon-to-be-built secondary school within an under-resourced community, providing students with the tools to explore, learn, and grow."
-  },
-  {
-    year: "2025",
-    status: "current",
-    title: "The Vision Becomes Clearer",
-    description: "Our latest group raised enough funds to renovate a Maasai village school and pledged to build secondary school classrooms. The overwhelming support and incredible enthusiasm inspired us to establish an official charity.",
-    photos: [
-      'https://images.unsplash.com/photo-1594708767771-a7502209ff51?q=80&w=800&auto=format&fit=crop'
-    ],
-    detailedCopy: "Our latest group raised enough funds to renovate a Maasai village school and pledged to build secondary school classrooms. The overwhelming support and incredible enthusiasm from those who experienced our work firsthand inspired us to take the next step: establishing an official charity to expand our impact."
-  },
-  {
-    year: "2026 and beyond",
-    status: "future",
-    title: "The Mission Becomes a Movement",
-    description: "We formalized and officially launched the Soul Caravan Foundation. From building schools and water wells to providing food and supporting vulnerable communities, our mission is to create positive change and transform lives wherever we go.",
-    photos: [],
-    detailedCopy: "We formalized and officially launched the Soul Caravan Foundation, setting forth a clear vision to make a lasting impact wherever it’s needed. From building schools and water wells to providing food and supporting vulnerable communities, our mission is to create positive change and transform lives wherever we go."
-  }
-];
 
 export function Impact() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,10 +26,10 @@ export function Impact() {
 
   return (
     <section ref={containerRef} id="history" className="relative py-24 lg:py-32 bg-gray-50 overflow-hidden">
-      
+
       {/* 1. TEXTURE: Consistent Dot Pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.4]" 
+      <div
+        className="absolute inset-0 opacity-[0.4]"
         style={{
           backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
           backgroundSize: '32px 32px'
@@ -97,7 +38,7 @@ export function Impact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
-          
+
           {/* --- LEFT COLUMN: Story & Founder (Sticky) --- */}
           <div className="lg:col-span-5 relative">
             <div className="lg:sticky lg:top-32 space-y-10">
@@ -113,10 +54,10 @@ export function Impact() {
                 </div>
 
                 <SectionHeading className="text-4xl sm:text-5xl font-geist font-bold text-brand-primary-darker mb-6 tracking-tight">
-                  Built on trust, <br/>
+                  Built on trust, <br />
                   <span className="text-olive-600 font-serif italic">grown by community.</span>
                 </SectionHeading>
-                
+
                 <BodyText className="text-lg text-brand-primary-dark/80 leading-relaxed">
                   What started as a single trip to Kenya has grown into a movement. We don't just build wells; we build relationships that last generations.
                 </BodyText>
@@ -133,12 +74,12 @@ export function Impact() {
                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-brand-primary-light/50 rounded-full blur-3xl group-hover:bg-brand-primary-light/80 transition-colors" />
 
                 <Quote className="absolute top-8 right-8 h-12 w-12 text-brand-primary-light rotate-180" />
-                
+
                 <div className="relative z-10 space-y-6">
                   <p className="font-serif text-xl italic text-brand-primary-dark leading-relaxed">
                     "True charity isn't about pity; it's about partnership. We ask the communities what they need, and we deliver exactly that."
                   </p>
-                  
+
                   <div className="flex items-center gap-4 pt-4 border-t border-brand-primary-light/50">
                     <div className="h-12 w-12 rounded-full overflow-hidden ring-2 ring-white shadow-md">
                       <img
@@ -159,7 +100,7 @@ export function Impact() {
 
           {/* --- RIGHT COLUMN: The "Living" Timeline --- */}
           <div className="lg:col-span-7 relative pt-8 lg:pt-4 pb-20">
-            
+
             {/* 3. THE THREAD: Gray background line */}
             <div className="absolute left-[8px] lg:left-[8px] top-0 bottom-0 w-px bg-gray-100" />
 
@@ -185,149 +126,5 @@ export function Impact() {
         )}
       </AnimatePresence>
     </section>
-  );
-}
-
-function TimelineItem({ item, index, onClick }: { item: typeof timelineData[0], index: number, onClick: () => void }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-50% 0px -50% 0px", once: false });
-  const isFuture = item.status === 'future';
-  const isCurrent = item.status === 'current';
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-20% 0px -20% 0px", once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      onClick={onClick}
-      className={`relative pl-12 sm:pl-16 group cursor-pointer ${isFuture ? 'opacity-60 grayscale' : 'opacity-100'}`}
-    >
-      
-      {/* 5. THE NODE: Custom markers based on status */}
-      <div className="absolute left-0 top-1.5 -translate-x-1/2 z-20 flex flex-col items-center">
-        <motion.div 
-          animate={{ 
-            scale: isInView ? 1.2 : 1,
-            backgroundColor: isCurrent ? '#fff' : isInView ? '#fff' : '#fff'
-          }}
-          className={`
-            relative w-4 h-4 rounded-full border-2 flex items-center justify-center bg-white transition-colors duration-500
-            ${isCurrent ? 'border-olive-500 shadow-[0_0_0_4px_rgba(132,204,22,0.2)]' :
-              isInView ? 'border-brand-primary shadow-sm' : 'border-gray-200'}
-          `}
-        >
-          {item.status === 'completed' && isInView && (
-            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-1.5 h-1.5 bg-brand-primary rounded-full" />
-          )}
-          {isCurrent && (
-             <span className="absolute inline-flex h-full w-full rounded-full bg-olive-500 opacity-20 animate-ping" />
-          )}
-        </motion.div>
-      </div>
-
-      {/* Content Block */}
-      <div className={`transition-all duration-500 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-80'}`}>
-        
-        {/* Header Row */}
-        <div className="flex flex-wrap items-baseline gap-3 mb-2">
-          <span className={`font-geist font-bold text-xl tracking-tight transition-colors ${isInView ? 'text-brand-primary-darker group-hover:text-olive-600' : 'text-gray-400 group-hover:text-brand-primary'}`}>
-            {item.year}
-          </span>
-          
-          {isCurrent && (
-            <span className="inline-flex items-center gap-1 rounded-md bg-olive-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-olive-700 border border-olive-100">
-              Current Phase
-            </span>
-          )}
-        </div>
-
-        <h3 className={`text-lg sm:text-xl font-bold mb-3 transition-colors duration-300 ${isInView ? 'text-brand-primary-dark' : 'text-gray-600'}`}>
-          {item.title}
-        </h3>
-
-        <BodyText className={`text-sm sm:text-base transition-colors duration-300 ${isInView ? 'text-brand-primary-dark/80' : 'text-gray-500'}`}>
-          {item.description}
-        </BodyText>
-
-        {isCurrent && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            className="mt-4"
-          >
-             <button className="inline-flex items-center gap-2 text-sm font-bold text-olive-600 hover:text-olive-700 hover:underline decoration-2 underline-offset-4 transition-all">
-                Read 2024 Report <ArrowRight size={14} />
-             </button>
-          </motion.div>
-        )}
-      </div>
-    </motion.div>
-  );
-}
-
-function TimelineModal({ year, onClose }: { year: typeof timelineData[0], onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={onClose}
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[200] flex items-center justify-center p-4"
-    >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-      >
-        <div className="sticky top-0 bg-white border-b border-brand-primary-darker/10 px-8 py-6 flex items-center justify-between z-10">
-          <div>
-            <h2 className="text-3xl font-geist font-bold text-brand-primary-darker">{year.year}</h2>
-            <p className="text-brand-primary font-medium">{year.title}</p>
-          </div>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full hover:bg-brand-primary-lightest transition-colors"
-            aria-label="Close modal"
-          >
-            <X className="w-6 h-6 text-brand-primary-dark" />
-          </button>
-        </div>
-
-        <div className="p-8">
-          {year.photos.length > 0 && (
-            <div className={`grid ${year.photos.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-4 mb-8`}>
-              {year.photos.map((photo, index) => (
-                <div key={index} className="aspect-[4/3] rounded-2xl overflow-hidden">
-                  <img
-                    src={photo}
-                    alt={`${year.title} - Photo ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-brand-primary-dark/80 leading-relaxed">
-              {year.detailedCopy}
-            </p>
-          </div>
-
-          {year.status === 'current' && (
-            <div className="mt-8 bg-olive-50 rounded-2xl p-6 border border-olive-200">
-              <h3 className="font-geist font-bold text-brand-primary-darker mb-3">Current Status</h3>
-              <p className="text-brand-primary-dark/80">
-                This is our current active phase. Follow our progress and get updates on this initiative through our newsletter.
-              </p>
-            </div>
-          )}
-        </div>
-      </motion.div>
-    </motion.div>
   );
 }

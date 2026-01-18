@@ -1,173 +1,152 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
-import { ArrowRight, Droplets, Utensils, HeartHandshake, CheckCircle2 } from 'lucide-react';
-import { SectionHeading, SubHeading, BodyText } from '../ui/Typography';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const EASE = [0.22, 1, 0.36, 1];
+// Square payment links
+const SQUARE_LINKS = {
+  WATER_WELL: 'https://square.link/u/d5fSYpG9',
+  EDUCATION: 'https://square.link/u/VFOiNlbN',
+  ORPHANS: 'https://square.link/u/1muC8Kjs',
+  FOOD_RELIEF: 'https://square.link/u/dpkEeY0Q',
+  MASJID: 'https://square.link/u/PaNdJVqa',
+  QURBANI: 'https://square.link/u/wTjNjHHp',
+};
 
-// Updated with reliable Unsplash IDs for consistent "Humanitarian" vibe
-const programs = [
+interface Program {
+  title: string;
+  description: string;
+  image: string;
+  href: string | null;
+  donateLink: string;
+}
+
+const programs: Program[] = [
   {
     title: 'Build a Water Well',
     description: 'Construct a deep-water tube well to provide clean, safe drinking water for an entire village (up to 200 people) for 10+ years.',
-    image: 'https://images.unsplash.com/photo-1541919329513-35f7af297129?q=80&w=800&auto=format&fit=crop', // Water well/pump
-    category: 'Sadaqah Jariyah',
-    isZakatEligible: true,
-    href: '/water-well'
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/8-DSC00857.jpg',
+    href: '/water-well',
+    donateLink: SQUARE_LINKS.WATER_WELL,
   },
   {
     title: 'Orphan & Widow Care',
     description: 'Provide comprehensive support including school fees, uniforms, food, and psychosocial support for families who have lost their primary provider.',
-    image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=800&auto=format&fit=crop', // Child writing/Education
-    category: 'Monthly Support',
-    isZakatEligible: true,
-    href: '/orphan-care'
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/28-DSC00262.jpg',
+    href: '/orphan-care',
+    donateLink: SQUARE_LINKS.ORPHANS,
   },
   {
-    title: 'Hot Meals & Food Packs',
+    title: 'Food Relief',
     description: 'Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict.',
-    image: 'https://images.unsplash.com/photo-1594708767771-a7502209ff51?q=80&w=800&auto=format&fit=crop', // Food/Community
-    category: 'Emergency Relief',
-    isZakatEligible: true,
-    href: '/food-relief'
-  }
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg',
+    href: '/food-relief',
+    donateLink: SQUARE_LINKS.FOOD_RELIEF,
+  },
+  {
+    title: 'Support Education',
+    description: 'Provide learning opportunities to children who need it most, opening doors to a brighter future through schools and supplies.',
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg',
+    href: '/education',
+    donateLink: SQUARE_LINKS.EDUCATION,
+  },
+  {
+    title: 'Build a Masjid',
+    description: 'Construct a place of worship and community gathering that will serve generations as the heart of spiritual and social life.',
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/17-DSC00819.jpg',
+    href: null,
+    donateLink: SQUARE_LINKS.MASJID,
+  },
+  {
+    title: 'Qurbani',
+    description: 'Fulfill your Qurbani obligation and share fresh meat with families in need during Eid al-Adha celebrations.',
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/24-DSC00601.jpg',
+    href: null,
+    donateLink: SQUARE_LINKS.QURBANI,
+  },
 ];
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.8, ease: EASE }
-  }
-};
 
 export function Programs() {
   return (
-    <section id="appeals" className="relative py-24 lg:py-32 bg-white overflow-hidden">
-      
-      {/* 1. TEXTURE: Maintain the system consistency with the Values page */}
-      <div 
-        className="absolute inset-0 opacity-[0.3]" 
-        style={{
-          backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)',
-          backgroundSize: '32px 32px'
-        }}
-      />
+    <section id="programs" className="bg-gray-50 py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        
         {/* Section Header */}
         <motion.div
-          className="max-w-3xl mb-16 lg:mb-24"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: EASE }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary-light/80 text-brand-primary-dark text-[11px] font-geist font-bold tracking-widest uppercase mb-6 border border-brand-primary-light/50">
-            Active Appeals
-          </div>
-          <SectionHeading className="text-4xl sm:text-5xl lg:text-6xl font-geist font-bold text-brand-primary-darker tracking-tighter mb-6">
-            Direct aid where it is{' '}
-            <span className="text-olive-600 font-serif italic">needed most.</span>
-          </SectionHeading>
+          <p className="eyebrow-teal mb-4">
+            Our Current Appeals
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-gray-900 mb-6">
+            Supporting the Communities That Need Us the Most
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Check out our current appeals to see where help is needed most and how your support helps us respond on the ground.
+          </p>
         </motion.div>
 
         {/* Cards Grid */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {programs.map((program) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {programs.map((program, index) => (
             <motion.article
               key={program.title}
-              variants={cardVariants}
-              className="group relative flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-brand-primary-darker/10 transition-all duration-500 ease-out hover:-translate-y-2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
-              
-              {/* Image Container - Flush Full Width */}
-              <div className="aspect-[4/3] overflow-hidden relative bg-gray-100">
-                <div className="absolute inset-0 bg-brand-primary-darker/0 group-hover:bg-brand-primary-darker/10 z-10 transition-colors duration-500" />
-                
+              {/* Image */}
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover"
                 />
-
-                {/* Floating Tags (Glassmorphism) */}
-                <div className="absolute top-4 left-4 right-4 z-20 flex justify-between items-start">
-                  
-                  {/* Category Pill */}
-                  <div className="backdrop-blur-md bg-white/90 border border-white/50 px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs font-geist font-bold tracking-wide shadow-lg text-brand-primary-dark">
-                    {program.title.includes('Water') ? <Droplets size={12} className="text-brand-primary" /> :
-                     program.title.includes('Food') ? <Utensils size={12} className="text-brand-accent" /> :
-                     <HeartHandshake size={12} className="text-brand-secondary" />}
-                    {program.category}
-                  </div>
-
-                  {/* Zakat Gold Badge (Premium Trust Signal) */}
-                  {program.isZakatEligible && (
-                    <div className="backdrop-blur-md bg-amber-50/95 border border-amber-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs font-geist font-bold tracking-wide shadow-lg text-amber-800">
-                      <CheckCircle2 size={12} className="text-amber-600 fill-amber-600/20" />
-                      Zakat
-                    </div>
-                  )}
-                </div>
               </div>
 
-              {/* Content Content */}
-              <div className="p-8 flex flex-col flex-grow">
-                
-                <div className="mb-4">
-                  <SubHeading className="text-2xl font-geist font-bold text-brand-primary-darker mb-3 leading-tight group-hover:text-brand-primary-dark transition-colors">
-                    {program.title}
-                  </SubHeading>
-                  
-                  {/* Line Clamp for uniform height */}
-                  <BodyText className="text-gray-600 text-base leading-relaxed line-clamp-3">
-                    {program.description}
-                  </BodyText>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+                  {program.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                  {program.description}
+                </p>
+
+                {/* Buttons */}
+                <div className="flex items-center gap-3">
+                  {program.href ? (
+                    <Link
+                      to={program.href}
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors"
+                    >
+                      Learn More
+                      <ArrowUpRight size={14} />
+                    </Link>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-gray-200 text-gray-400 text-sm font-semibold cursor-not-allowed">
+                      Coming Soon
+                    </span>
+                  )}
+                  <a
+                    href={program.donateLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors"
+                  >
+                    Donate now
+                  </a>
                 </div>
-
-                <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
-                  
-                  {/* Text Link */}
-                  <span className="text-sm font-geist font-bold text-brand-primary-dark tracking-wide">
-                    View Project
-                  </span>
-
-                  {/* Animated Arrow Button */}
-                  <div className="w-10 h-10 rounded-full bg-brand-primary-lightest flex items-center justify-center text-brand-primary-dark group-hover:bg-brand-primary-darker group-hover:text-white transition-all duration-300 group-hover:scale-110">
-                    <ArrowRight size={18} className="-ml-0.5" />
-                  </div>
-                </div>
-
-                {/* Full Card Link Overlay */}
-                <a href={program.href} className="absolute inset-0 z-30" aria-label={`View ${program.title}`}></a>
               </div>
             </motion.article>
           ))}
-        </motion.div>
-
-        {/* Bottom CTA (Optional - Adds closure to the section) */}
-        <div className="mt-16 text-center">
-          <a href="/appeals" className="inline-flex items-center gap-2 text-olive-600 font-bold hover:text-olive-700 transition-colors border-b-2 border-olive-200 hover:border-olive-600 pb-0.5">
-            View all active appeals <ArrowRight size={16} />
-          </a>
         </div>
 
       </div>

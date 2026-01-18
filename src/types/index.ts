@@ -20,6 +20,7 @@ export interface ButtonProps {
 export interface NavigationLink {
   label: string;
   href: string;
+  dropdownItems?: { label: string; href: string }[];
 }
 
 export interface TimelineItem {

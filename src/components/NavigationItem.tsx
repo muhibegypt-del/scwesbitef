@@ -11,7 +11,28 @@ interface NavigationItemProps {
 
 export function NavigationItem({ link, isActive }: NavigationItemProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const location = window.location; // Using window.location for simplicity as useLocation requires Router context inside the component which is fine, but simpler is better if we just need pathname. Actually useLocation is safer within Router.
+  // Converting to useLocation requires import.
+
   const hasDropdown = link.dropdownItems && link.dropdownItems.length > 0;
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    if (href.includes('#')) {
+      const [path, hash] = href.split('#');
+      const targetPath = path || '/';
+
+      // If we are on the same page
+      if (location.pathname === targetPath || (targetPath === '/' && location.pathname === '/')) {
+        e.preventDefault();
+        const element = document.getElementById(hash) || document.querySelector(`#${hash}`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      // If different page, allow default navigation which will go to page and anchor
+    }
+    setIsHovered(false);
+  };
 
   return (
     <div
@@ -20,17 +41,8 @@ export function NavigationItem({ link, isActive }: NavigationItemProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
-        to={link.href.startsWith('#') ? '/' : link.href}
-        onClick={(e) => {
-          if (link.href.startsWith('#')) {
-            e.preventDefault();
-            const element = document.querySelector(link.href);
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          }
-          setIsHovered(false);
-        }}
+        to={link.href}
+        onClick={(e) => handleScroll(e, link.href)}
         className="relative group py-2 flex items-center gap-1 focus:outline-none"
         aria-current={isActive ? 'page' : undefined}
       >
@@ -58,17 +70,8 @@ export function NavigationItem({ link, isActive }: NavigationItemProps) {
               {link.dropdownItems!.map((item) => (
                 <Link
                   key={item.label}
-                  to={item.href.startsWith('#') ? '/' : item.href}
-                  onClick={(e) => {
-                    if (item.href.startsWith('#')) {
-                      e.preventDefault();
-                      const element = document.querySelector(item.href);
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }
-                    setIsHovered(false);
-                  }}
+                  to={item.href}
+                  onClick={(e) => handleScroll(e, item.href)}
                   className="block px-4 py-3 text-teal-900 hover:bg-teal-50 transition-colors text-sm font-medium border-b border-gray-50 last:border-0"
                 >
                   {item.label}

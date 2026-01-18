@@ -1,14 +1,14 @@
 'use client';
 
-import { 
-  Mail, Phone, MapPin, Heart, Facebook, Twitter, Instagram, 
-  ArrowRight, Send, ArrowUp 
+import {
+  Mail, Phone, MapPin, Heart, Facebook, Twitter, Instagram,
+  ArrowRight, Send, ArrowUp
 } from 'lucide-react';
 import { useState } from 'react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   // smooth scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,52 +31,23 @@ export function Footer() {
 
   return (
     <footer className="relative bg-teal-900 text-white overflow-hidden border-t border-teal-800">
-      
+
       {/* 1. Subtle Background Texture (Noise/Grain feel via SVG) */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
-         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <filter id="noiseFilter">
-              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-            </filter>
-            <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
-         </svg>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+        </svg>
       </div>
 
-      {/* 2. Top Section: Newsletter & Call to Action */}
-      <div className="relative z-10 border-b border-teal-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-2 text-white">Join our caravan of hope</h3>
-              <p className="text-teal-200/80 text-base">
-                Subscribe to receive updates on our latest projects in Kenya and see the direct impact of your support.
-              </p>
-            </div>
-            
-            <form className="relative max-w-md lg:ml-auto w-full">
-              <div className="relative">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address"
-                  className="w-full h-14 pl-6 pr-16 bg-teal-800/50 border border-teal-700 rounded-full text-white placeholder-teal-400/50 focus:outline-none focus:ring-2 focus:ring-olive-400/50 focus:border-olive-400 transition-all"
-                />
-                <button 
-                  type="button"
-                  className="absolute right-2 top-2 h-10 w-10 bg-olive-500 hover:bg-olive-400 text-white rounded-full flex items-center justify-center transition-colors shadow-lg"
-                  aria-label="Subscribe"
-                >
-                  <Send className="h-4 w-4 -ml-0.5" />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      {/* 2. Top Section Removed */}
 
       {/* 3. Main Content Grid */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-          
+
           {/* Brand Column (Span 4) */}
           <div className="lg:col-span-4 space-y-8">
             <img
@@ -87,7 +58,7 @@ export function Footer() {
             <p className="text-teal-100/70 text-base leading-relaxed max-w-sm">
               We are a grassroots charity working directly with communities to build sustainable futures through education, water, and essential care.
             </p>
-            
+
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-3 bg-teal-800/40 border border-teal-700/50 rounded-xl">
               <div className="p-2 bg-olive-500/20 rounded-full">
@@ -166,7 +137,7 @@ export function Footer() {
             ))}
           </div>
 
-          <button 
+          <button
             onClick={scrollToTop}
             className="group flex items-center gap-2 text-xs text-teal-300/60 hover:text-white transition-colors uppercase tracking-wider font-medium"
           >

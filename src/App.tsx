@@ -22,6 +22,10 @@ import { FoodReliefAppeal } from './pages/FoodReliefAppeal';
 import { AppealsIndex } from './pages/AppealsIndex';
 import { SoulCaravanFeature } from './pages/SoulCaravanFeature';
 import { Navigation } from './components/Navigation';
+import { EducationAppeal } from './pages/EducationAppeal';
+import { Purpose } from './pages/Purpose';
+import { Leadership } from './pages/Leadership';
+import { Fundraise } from './pages/Fundraise';
 
 function NoiseOverlay() {
   return (
@@ -67,6 +71,10 @@ function App() {
                 <Route path="/orphan-care" element={<OrphanCareAppeal />} />
                 <Route path="/food-relief" element={<FoodReliefAppeal />} />
                 <Route path="/appeals" element={<AppealsIndex />} />
+                <Route path="/education" element={<EducationAppeal />} />
+                <Route path="/purpose" element={<Purpose />} />
+                <Route path="/leadership" element={<Leadership />} />
+                <Route path="/fundraise" element={<Fundraise />} />
                 <Route path="/soul-caravan" element={<SoulCaravanFeature />} />
               </Routes>
 

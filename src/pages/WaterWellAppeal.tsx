@@ -1,23 +1,22 @@
 import { motion } from 'framer-motion';
-import { Droplets, Heart, Shield, Users, ArrowLeft } from 'lucide-react';
-import { DonationForm } from '../components/ui/DonationForm';
-import { DONATION_AMOUNTS, ANIMATION } from '../constants';
+import { Droplets, Shield, Users, ArrowLeft, Heart } from 'lucide-react';
+import { NarrativeImage } from '../components/ui/NarrativeImage';
+import { WATER_WELL_IMAGES, IMAGES } from '../data/imageAssets';
+
+const SQUARE_LINK = 'https://square.link/u/d5fSYpG9';
 
 export function WaterWellAppeal() {
-  const handleDonationSubmit = (data: { amount: number; type: 'one-time' | 'monthly' }) => {
-    console.log('Water well donation:', data);
-  };
-
   return (
     <div className="min-h-screen bg-white pt-20 lg:pt-24">
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden bg-teal-50 py-16 lg:py-24">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/1739855/pexels-photo-1739855.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt=""
+            src={IMAGES.WATER.GIRL_COLLECTING}
+            alt="Child collecting water from well"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-50 via-gray-50/95 to-gray-50/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -25,7 +24,7 @@ export function WaterWellAppeal() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: ANIMATION.EASING_CURVE }}
+              transition={{ duration: 0.8 }}
               className="flex flex-col"
             >
               <a
@@ -36,7 +35,7 @@ export function WaterWellAppeal() {
                 Back to Home
               </a>
 
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal-700 w-fit">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal-700 w-fit">
                 <Droplets size={12} />
                 Water Crisis Appeal
               </div>
@@ -49,72 +48,126 @@ export function WaterWellAppeal() {
                 Provide clean, safe drinking water for an entire village. A single well can serve up to 200 people for over 10 years, transforming lives and preventing water-borne diseases.
               </p>
 
-              <div className="flex flex-col gap-3 border-l-2 border-teal-200 pl-6 text-sm font-medium text-gray-500">
+              <div className="flex flex-col gap-3 border-l-2 border-teal-200 pl-6 text-sm font-medium text-gray-500 mb-8">
                 <div className="flex items-center gap-3">
                   <Shield className="h-5 w-5 text-teal-600" />
-                  <span>Zakat eligible project</span>
+                  <span>Sadaqah Jariyah project</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users className="h-5 w-5 text-teal-600" />
                   <span>Serves 200+ people for 10+ years</span>
                 </div>
               </div>
+
+              <a
+                href={SQUARE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-teal-700 transition-all w-fit"
+              >
+                <Heart className="h-5 w-5 fill-white" />
+                Donate Now
+              </a>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8, ease: ANIMATION.EASING_CURVE }}
-              className="relative w-full max-w-md mx-auto"
-            >
-              <DonationForm
-                title="Fund This Well"
-                subtitle="Help bring clean water to a community"
-                amounts={DONATION_AMOUNTS.WATER_WELL}
-                defaultAmount={100}
-                onSubmit={handleDonationSubmit}
-              />
-            </motion.div>
+            <div className="hidden lg:block" />
           </div>
         </div>
       </section>
 
+      {/* NARRATIVE IMAGE SECTION 1 */}
       <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-teal-800 mb-4">
-              Why Water Wells Matter
-            </h2>
-            <p className="text-lg text-gray-600">
-              Access to clean water is fundamental to health, education, and economic development.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Droplets className="w-8 h-8 text-teal-600" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-teal-800 mb-2">Clean Water Access</h3>
-              <p className="text-gray-600">Eliminates waterborne diseases and provides safe drinking water for entire communities.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-sage-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-sage-600" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-teal-800 mb-2">Community Impact</h3>
-              <p className="text-gray-600">Serves up to 200 people, reducing time spent collecting water and enabling education.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-olive-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-olive-600" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-teal-800 mb-2">Long-term Solution</h3>
-              <p className="text-gray-600">Built to last 10+ years with proper maintenance, providing sustainable water access.</p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <NarrativeImage
+              src={WATER_WELL_IMAGES[1]}
+              alt="Child using water tap"
+              variant="feature"
+            />
+            <div>
+              <h2 className="text-3xl font-serif font-semibold text-teal-800 mb-4">
+                Clean Water Changes Everything
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                Access to clean water transforms communities. Children no longer walk miles to collect contaminated water. Instead, they attend school. Women can pursue opportunities. Entire villages thrive.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Your donation provides sustainable infrastructure that serves generations.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* NARRATIVE IMAGE SECTION 2 */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl font-serif font-semibold text-teal-800 mb-4">
+                Built to Last
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                Each water well is constructed with durable materials and includes a storage tank to ensure consistent water supply. We partner with local communities for maintenance.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                A plaque bearing your name or the name of your loved one marks your contribution to this life-saving project.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <NarrativeImage
+                src={WATER_WELL_IMAGES[2]}
+                alt="Water well structure"
+                variant="feature"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NARRATIVE IMAGE SECTION 3 */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <NarrativeImage
+              src={WATER_WELL_IMAGES[3]}
+              alt="Water well installation"
+              variant="feature"
+            />
+            <div>
+              <h2 className="text-3xl font-serif font-semibold text-teal-800 mb-4">
+                A Legacy of Giving
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                When you build a water well, you create a source of sadaqah jariyah — continuous charity that keeps giving rewards as long as the well provides water.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Perfect for honoring a loved one's memory or celebrating a milestone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="py-16 lg:py-24 bg-teal-800 text-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <Droplets className="w-12 h-12 mx-auto mb-6 opacity-80" />
+          <h2 className="text-3xl font-serif font-semibold mb-4">
+            Transform a Community Today
+          </h2>
+          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+            Your contribution helps us build water wells that serve over 200 people for more than a decade.
+          </p>
+          <a
+            href={SQUARE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-white text-teal-800 px-8 py-4 text-base font-bold shadow-lg transition-all hover:bg-teal-50"
+          >
+            <Heart className="h-5 w-5" />
+            Donate Now
+          </a>
         </div>
       </section>
     </div>

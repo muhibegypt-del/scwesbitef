@@ -1,0 +1,992 @@
+[
+  {
+    "type": "file",
+    "name": "default-image.jpg",
+    "createdAt": "2026-01-18T05:56:10.749Z",
+    "updatedAt": "2026-01-18T05:56:12.320Z",
+    "fileId": "696c75fa5c7cd75eb8c66bc2",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c75fa5c7cd75eb8c66bc2",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:56:12.319Z",
+      "DateTimeCreated": "2026-01-18T05:56:12.319Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/default-image.jpg?updatedAt=1768715772320",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/default-image.jpg?updatedAt=1768715772320&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/default-image.jpg",
+    "height": 667,
+    "width": 1000,
+    "size": 127766,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "1-DSC00120.jpg",
+    "createdAt": "2026-01-18T05:57:33.273Z",
+    "updatedAt": "2026-01-18T05:57:33.957Z",
+    "fileId": "696c764d5c7cd75eb8c81338",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764d5c7cd75eb8c81338",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:33.954Z",
+      "DateTimeCreated": "2026-01-18T05:57:33.954Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/1-DSC00120.jpg?updatedAt=1768715853957",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/1-DSC00120.jpg?updatedAt=1768715853957&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/1-DSC00120.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 328333,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "13-DSC00025.jpg",
+    "createdAt": "2026-01-18T05:57:33.626Z",
+    "updatedAt": "2026-01-18T05:57:34.318Z",
+    "fileId": "696c764d5c7cd75eb8c816a2",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764d5c7cd75eb8c816a2",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.313Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.314Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg?updatedAt=1768715854318",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg?updatedAt=1768715854318&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/13-DSC00025.jpg",
+    "height": 1152,
+    "width": 2048,
+    "size": 271546,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "10-DSC00188.jpg",
+    "createdAt": "2026-01-18T05:57:33.874Z",
+    "updatedAt": "2026-01-18T05:57:34.549Z",
+    "fileId": "696c764d5c7cd75eb8c8193c",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764d5c7cd75eb8c8193c",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.542Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.543Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/10-DSC00188.jpg?updatedAt=1768715854549",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/10-DSC00188.jpg?updatedAt=1768715854549&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/10-DSC00188.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 178100,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "32-DSC00187.jpg",
+    "createdAt": "2026-01-18T05:57:33.957Z",
+    "updatedAt": "2026-01-18T05:57:34.658Z",
+    "fileId": "696c764e5c7cd75eb8c81a36",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81a36",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.648Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.649Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/32-DSC00187.jpg?updatedAt=1768715854658",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/32-DSC00187.jpg?updatedAt=1768715854658&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/32-DSC00187.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 204890,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "5-DSC00169.jpg",
+    "createdAt": "2026-01-18T05:57:34.022Z",
+    "updatedAt": "2026-01-18T05:57:34.735Z",
+    "fileId": "696c764e5c7cd75eb8c81abe",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81abe",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.730Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.730Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/5-DSC00169.jpg?updatedAt=1768715854735",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/5-DSC00169.jpg?updatedAt=1768715854735&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/5-DSC00169.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 325782,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "28-DSC00262.jpg",
+    "createdAt": "2026-01-18T05:57:34.119Z",
+    "updatedAt": "2026-01-18T05:57:34.866Z",
+    "fileId": "696c764e5c7cd75eb8c81bed",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81bed",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.861Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.862Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/28-DSC00262.jpg?updatedAt=1768715854866",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/28-DSC00262.jpg?updatedAt=1768715854866&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/28-DSC00262.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 230466,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "14-DSC00018.jpg",
+    "createdAt": "2026-01-18T05:57:34.127Z",
+    "updatedAt": "2026-01-18T05:57:34.897Z",
+    "fileId": "696c764e5c7cd75eb8c81bfd",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81bfd",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.892Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.893Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/14-DSC00018.jpg?updatedAt=1768715854897",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/14-DSC00018.jpg?updatedAt=1768715854897&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/14-DSC00018.jpg",
+    "height": 1152,
+    "width": 2048,
+    "size": 334095,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "23-DSC00606.jpg",
+    "createdAt": "2026-01-18T05:57:34.169Z",
+    "updatedAt": "2026-01-18T05:57:34.859Z",
+    "fileId": "696c764e5c7cd75eb8c81c45",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81c45",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.856Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.856Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/23-DSC00606.jpg?updatedAt=1768715854859",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/23-DSC00606.jpg?updatedAt=1768715854859&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/23-DSC00606.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 286767,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "31-DSC00213.jpg",
+    "createdAt": "2026-01-18T05:57:34.193Z",
+    "updatedAt": "2026-01-18T05:57:34.881Z",
+    "fileId": "696c764e5c7cd75eb8c81c87",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81c87",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.877Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.878Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/31-DSC00213.jpg?updatedAt=1768715854881",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/31-DSC00213.jpg?updatedAt=1768715854881&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/31-DSC00213.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 233177,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "4-DSC00119.jpg",
+    "createdAt": "2026-01-18T05:57:34.250Z",
+    "updatedAt": "2026-01-18T05:57:35.005Z",
+    "fileId": "696c764e5c7cd75eb8c81d43",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81d43",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.001Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.001Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/4-DSC00119.jpg?updatedAt=1768715855005",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/4-DSC00119.jpg?updatedAt=1768715855005&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/4-DSC00119.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 289148,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "29-DSC00256.jpg",
+    "createdAt": "2026-01-18T05:57:34.259Z",
+    "updatedAt": "2026-01-18T05:57:34.976Z",
+    "fileId": "696c764e5c7cd75eb8c81d79",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81d79",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.972Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.973Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg?updatedAt=1768715854976",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg?updatedAt=1768715854976&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/29-DSC00256.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 288775,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "27-DSC00246.jpg",
+    "createdAt": "2026-01-18T05:57:34.263Z",
+    "updatedAt": "2026-01-18T05:57:34.927Z",
+    "fileId": "696c764e5c7cd75eb8c81d84",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81d84",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.924Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.924Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/27-DSC00246.jpg?updatedAt=1768715854927",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/27-DSC00246.jpg?updatedAt=1768715854927&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/27-DSC00246.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 228660,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "3-DSC00170.jpg",
+    "createdAt": "2026-01-18T05:57:34.304Z",
+    "updatedAt": "2026-01-18T05:57:35.001Z",
+    "fileId": "696c764e5c7cd75eb8c81e25",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81e25",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:34.998Z",
+      "DateTimeCreated": "2026-01-18T05:57:34.998Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/3-DSC00170.jpg?updatedAt=1768715855001",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/3-DSC00170.jpg?updatedAt=1768715855001&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/3-DSC00170.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 281204,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "12-DSC00080.jpg",
+    "createdAt": "2026-01-18T05:57:34.375Z",
+    "updatedAt": "2026-01-18T05:57:35.115Z",
+    "fileId": "696c764e5c7cd75eb8c81efb",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81efb",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.112Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.112Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/12-DSC00080.jpg?updatedAt=1768715855115",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/12-DSC00080.jpg?updatedAt=1768715855115&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/12-DSC00080.jpg",
+    "height": 1152,
+    "width": 2048,
+    "size": 315715,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "2-DSC00121.jpg",
+    "createdAt": "2026-01-18T05:57:34.384Z",
+    "updatedAt": "2026-01-18T05:57:35.101Z",
+    "fileId": "696c764e5c7cd75eb8c81f31",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81f31",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.097Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.098Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/2-DSC00121.jpg?updatedAt=1768715855101",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/2-DSC00121.jpg?updatedAt=1768715855101&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/2-DSC00121.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 327913,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "22-DSC00625.jpg",
+    "createdAt": "2026-01-18T05:57:34.419Z",
+    "updatedAt": "2026-01-18T05:57:35.097Z",
+    "fileId": "696c764e5c7cd75eb8c81fba",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c81fba",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.094Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.094Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/22-DSC00625.jpg?updatedAt=1768715855097",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/22-DSC00625.jpg?updatedAt=1768715855097&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/22-DSC00625.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 344436,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "11-DSC00048.jpg",
+    "createdAt": "2026-01-18T05:57:34.474Z",
+    "updatedAt": "2026-01-18T05:57:35.170Z",
+    "fileId": "696c764e5c7cd75eb8c8209f",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c8209f",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.166Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.167Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/11-DSC00048.jpg?updatedAt=1768715855170",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/11-DSC00048.jpg?updatedAt=1768715855170&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/11-DSC00048.jpg",
+    "height": 1152,
+    "width": 2048,
+    "size": 370444,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "16-DSC00788.jpg",
+    "createdAt": "2026-01-18T05:57:34.476Z",
+    "updatedAt": "2026-01-18T05:57:35.182Z",
+    "fileId": "696c764e5c7cd75eb8c820a6",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c820a6",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.180Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.180Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/16-DSC00788.jpg?updatedAt=1768715855182",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/16-DSC00788.jpg?updatedAt=1768715855182&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/16-DSC00788.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 477722,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "18-DSC00784.jpg",
+    "createdAt": "2026-01-18T05:57:34.500Z",
+    "updatedAt": "2026-01-18T05:57:35.201Z",
+    "fileId": "696c764e5c7cd75eb8c8210d",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c8210d",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.199Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.199Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/18-DSC00784.jpg?updatedAt=1768715855201",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/18-DSC00784.jpg?updatedAt=1768715855201&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/18-DSC00784.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 435339,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "19-DSC00785.jpg",
+    "createdAt": "2026-01-18T05:57:34.502Z",
+    "updatedAt": "2026-01-18T05:57:35.194Z",
+    "fileId": "696c764e5c7cd75eb8c82110",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82110",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.190Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.191Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/19-DSC00785.jpg?updatedAt=1768715855194",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/19-DSC00785.jpg?updatedAt=1768715855194&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/19-DSC00785.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 442228,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "6-DSC00850.jpg",
+    "createdAt": "2026-01-18T05:57:34.514Z",
+    "updatedAt": "2026-01-18T05:57:35.204Z",
+    "fileId": "696c764e5c7cd75eb8c8213a",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c8213a",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.200Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.201Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/6-DSC00850.jpg?updatedAt=1768715855204",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/6-DSC00850.jpg?updatedAt=1768715855204&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/6-DSC00850.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 468637,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "17-DSC00819.jpg",
+    "createdAt": "2026-01-18T05:57:34.513Z",
+    "updatedAt": "2026-01-18T05:57:35.209Z",
+    "fileId": "696c764e5c7cd75eb8c8213f",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c8213f",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.206Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.207Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/17-DSC00819.jpg?updatedAt=1768715855209",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/17-DSC00819.jpg?updatedAt=1768715855209&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/17-DSC00819.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 442289,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "30-DSC00557.jpg",
+    "createdAt": "2026-01-18T05:57:34.589Z",
+    "updatedAt": "2026-01-18T05:57:35.303Z",
+    "fileId": "696c764e5c7cd75eb8c82260",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82260",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.292Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.293Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/30-DSC00557.jpg?updatedAt=1768715855303",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/30-DSC00557.jpg?updatedAt=1768715855303&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/30-DSC00557.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 477687,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "21-DSC00776.jpg",
+    "createdAt": "2026-01-18T05:57:34.594Z",
+    "updatedAt": "2026-01-18T05:57:35.334Z",
+    "fileId": "696c764e5c7cd75eb8c82266",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82266",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.329Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.330Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/21-DSC00776.jpg?updatedAt=1768715855334",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/21-DSC00776.jpg?updatedAt=1768715855334&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/21-DSC00776.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 502053,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "9-DSC00914.jpg",
+    "createdAt": "2026-01-18T05:57:34.608Z",
+    "updatedAt": "2026-01-18T05:57:35.371Z",
+    "fileId": "696c764e5c7cd75eb8c82288",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82288",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.368Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.368Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg?updatedAt=1768715855371",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg?updatedAt=1768715855371&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/9-DSC00914.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 483670,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "20-DSC00749.jpg",
+    "createdAt": "2026-01-18T05:57:34.637Z",
+    "updatedAt": "2026-01-18T05:57:35.363Z",
+    "fileId": "696c764e5c7cd75eb8c822d3",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c822d3",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.358Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.359Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/20-DSC00749.jpg?updatedAt=1768715855363",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/20-DSC00749.jpg?updatedAt=1768715855363&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/20-DSC00749.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 497873,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "24-DSC00601.jpg",
+    "createdAt": "2026-01-18T05:57:34.648Z",
+    "updatedAt": "2026-01-18T05:57:35.378Z",
+    "fileId": "696c764e5c7cd75eb8c82319",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82319",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.374Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.374Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/24-DSC00601.jpg?updatedAt=1768715855378",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/24-DSC00601.jpg?updatedAt=1768715855378&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/24-DSC00601.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 627749,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "8-DSC00857.jpg",
+    "createdAt": "2026-01-18T05:57:34.660Z",
+    "updatedAt": "2026-01-18T05:57:35.391Z",
+    "fileId": "696c764e5c7cd75eb8c82336",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c82336",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.388Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.388Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/8-DSC00857.jpg?updatedAt=1768715855391",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/8-DSC00857.jpg?updatedAt=1768715855391&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/8-DSC00857.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 591286,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "15-DSC00003.jpg",
+    "createdAt": "2026-01-18T05:57:34.673Z",
+    "updatedAt": "2026-01-18T05:57:35.449Z",
+    "fileId": "696c764e5c7cd75eb8c8235f",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c8235f",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.445Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.445Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/15-DSC00003.jpg?updatedAt=1768715855449",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/15-DSC00003.jpg?updatedAt=1768715855449&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/15-DSC00003.jpg",
+    "height": 1152,
+    "width": 2048,
+    "size": 693581,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "7-DSC00848.jpg",
+    "createdAt": "2026-01-18T05:57:34.696Z",
+    "updatedAt": "2026-01-18T05:57:35.430Z",
+    "fileId": "696c764e5c7cd75eb8c823a6",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c823a6",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.426Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.427Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/7-DSC00848.jpg?updatedAt=1768715855430",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/7-DSC00848.jpg?updatedAt=1768715855430&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/7-DSC00848.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 624801,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "26-DSC00564.jpg",
+    "createdAt": "2026-01-18T05:57:34.718Z",
+    "updatedAt": "2026-01-18T05:57:35.459Z",
+    "fileId": "696c764e5c7cd75eb8c823e7",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c823e7",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.456Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.456Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/26-DSC00564.jpg?updatedAt=1768715855459",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/26-DSC00564.jpg?updatedAt=1768715855459&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/26-DSC00564.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 772457,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  },
+  {
+    "type": "file",
+    "name": "25-DSC00589.jpg",
+    "createdAt": "2026-01-18T05:57:34.784Z",
+    "updatedAt": "2026-01-18T05:57:35.528Z",
+    "fileId": "696c764e5c7cd75eb8c824af",
+    "tags": null,
+    "AITags": null,
+    "versionInfo": {
+      "id": "696c764e5c7cd75eb8c824af",
+      "name": "Version 1"
+    },
+    "embeddedMetadata": {
+      "DateCreated": "2026-01-18T05:57:35.525Z",
+      "DateTimeCreated": "2026-01-18T05:57:35.525Z"
+    },
+    "isPublished": true,
+    "customCoordinates": null,
+    "customMetadata": {},
+    "isPrivateFile": false,
+    "url": "https://ik.imagekit.io/dzmabcda0/finals/25-DSC00589.jpg?updatedAt=1768715855528",
+    "thumbnail": "https://ik.imagekit.io/dzmabcda0/finals/25-DSC00589.jpg?updatedAt=1768715855528&tr=n-ik_ml_thumbnail",
+    "fileType": "image",
+    "filePath": "/finals/25-DSC00589.jpg",
+    "height": 1365,
+    "width": 2048,
+    "size": 1020040,
+    "hasAlpha": false,
+    "mime": "image/jpeg"
+  }
+]
