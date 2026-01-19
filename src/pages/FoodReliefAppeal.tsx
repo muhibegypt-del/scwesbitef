@@ -29,7 +29,7 @@ export function FoodReliefAppeal() {
             >
               <a
                 href="/"
-                className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-orange-700 mb-6 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-orange-700 mb-6 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700 rounded-sm"
               >
                 <ArrowLeft size={16} />
                 Back to Home
@@ -63,7 +63,7 @@ export function FoodReliefAppeal() {
                 href={SQUARE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-orange-700 transition-all w-fit"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-orange-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
               >
                 <Heart className="h-5 w-5 fill-white" />
                 Donate Now
@@ -163,7 +163,7 @@ export function FoodReliefAppeal() {
             href={SQUARE_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-white text-orange-800 px-8 py-4 text-base font-bold shadow-lg transition-all hover:bg-orange-50"
+            className="inline-flex items-center gap-2 rounded-xl bg-white text-orange-800 px-8 py-4 text-base font-bold shadow-lg transition-colors hover:bg-orange-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             <Heart className="h-5 w-5" />
             Donate Now

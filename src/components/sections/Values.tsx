@@ -93,7 +93,7 @@ export function Values() {
             <motion.article
               key={value.title}
               variants={cardVariants}
-              className="group relative flex flex-col h-full rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="group relative flex flex-col h-full rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500"
             >
               <div className="absolute inset-0">
                 <img
@@ -125,7 +125,7 @@ export function Values() {
         </motion.div>
 
         <div className="mt-16 text-center">
-          <Link to="/purpose" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-olive-600 text-white font-bold hover:bg-olive-700 transition-colors">
+          <Link to="/purpose" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-olive-600 text-white font-bold hover:bg-olive-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive-600">
             Read Our Full Purpose <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>

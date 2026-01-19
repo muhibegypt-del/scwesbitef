@@ -78,7 +78,7 @@ export function Footer() {
             <ul className="space-y-4">
               {quickLinks.slice(0, 3).map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-teal-200/60 hover:text-white transition-colors text-sm">
+                  <a href={link.href} className="text-teal-200/60 hover:text-white transition-colors text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                     {link.label}
                   </a>
                 </li>
@@ -92,7 +92,7 @@ export function Footer() {
             <ul className="space-y-4">
               {quickLinks.slice(3).map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-teal-200/60 hover:text-white transition-colors text-sm">
+                  <a href={link.href} className="text-teal-200/60 hover:text-white transition-colors text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                     {link.label}
                   </a>
                 </li>
@@ -104,11 +104,11 @@ export function Footer() {
           <div className="lg:col-span-3">
             <h4 className="text-white font-medium mb-6">Contact Us</h4>
             <div className="space-y-4">
-              <a href="mailto:info@soulcaravan.org" className="flex items-start gap-4 text-teal-200/60 hover:text-white transition-colors group">
+              <a href="mailto:info@soulcaravan.org" className="flex items-start gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                 <Mail className="h-5 w-5 mt-0.5 text-olive-400/80 group-hover:text-olive-400 transition-colors" />
                 <span className="text-sm">info@soulcaravan.org</span>
               </a>
-              <a href="tel:+254700000000" className="flex items-start gap-4 text-teal-200/60 hover:text-white transition-colors group">
+              <a href="tel:+254700000000" className="flex items-start gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                 <Phone className="h-5 w-5 mt-0.5 text-olive-400/80 group-hover:text-olive-400 transition-colors" />
                 <span className="text-sm">+254 700 000 000</span>
               </a>
@@ -124,7 +124,7 @@ export function Footer() {
                 { Icon: Twitter, label: 'Twitter' },
                 { Icon: Instagram, label: 'Instagram' }
               ].map(({ Icon, label }) => (
-                <a key={label} href="#" aria-label={`Follow us on ${label}`} className="p-2 bg-teal-800/40 rounded-lg hover:bg-teal-700 text-teal-300 hover:text-white transition-all">
+                <a key={label} href="#" aria-label={`Follow us on ${label}`} className="p-2 bg-teal-800/40 rounded-lg hover:bg-teal-700 text-teal-300 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
@@ -138,13 +138,13 @@ export function Footer() {
             <span>&copy; {currentYear} Soul Caravan Foundation</span>
             <span>Charity No: 12345678</span>
             {legalLinks.map(link => (
-              <a key={link.label} href={link.href} className="hover:text-teal-200 transition-colors">{link.label}</a>
+              <a key={link.label} href={link.href} className="hover:text-teal-200 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">{link.label}</a>
             ))}
           </div>
 
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2 text-xs text-teal-300/60 hover:text-white transition-colors uppercase tracking-wider font-medium"
+            className="group flex items-center gap-2 text-xs text-teal-300/60 hover:text-white transition-colors uppercase tracking-wider font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm"
           >
             Back to Top
             <span className="p-1.5 rounded-full bg-teal-800 group-hover:bg-olive-500 transition-colors">

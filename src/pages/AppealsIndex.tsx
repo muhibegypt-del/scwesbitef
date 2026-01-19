@@ -99,7 +99,7 @@ export function AppealsIndex() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-1 flex flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -128,7 +128,7 @@ export function AppealsIndex() {
                     {appeal.href && (
                       <Link
                         to={appeal.href}
-                        className="inline-flex items-center gap-1 text-sm font-medium text-teal-700 hover:text-teal-800 transition-colors"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-teal-700 hover:text-teal-800 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm"
                       >
                         Read More
                         <ArrowRight size={14} />
@@ -138,7 +138,7 @@ export function AppealsIndex() {
                       href={appeal.donateLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors"
+                      className="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
                     >
                       <Heart size={14} className="fill-white" />
                       Donate

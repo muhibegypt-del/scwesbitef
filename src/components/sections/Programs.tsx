@@ -128,7 +128,7 @@ export function Programs() {
                   {program.href ? (
                     <Link
                       to={program.href}
-                      className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
                     >
                       Learn More
                       <ArrowUpRight size={14} />
@@ -142,7 +142,7 @@ export function Programs() {
                     href={program.donateLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
                   >
                     Donate now
                   </a>
@@ -153,6 +153,6 @@ export function Programs() {
         </div>
 
       </div>
-    </section>
+    </section >
   );
 }

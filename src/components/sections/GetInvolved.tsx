@@ -92,7 +92,7 @@ export function GetInvolved() {
 
               <div className="mt-auto flex justify-center">
                 <button className="group/btn flex items-center gap-2 text-sm font-geist font-bold uppercase tracking-widest text-white transition-colors hover:text-olive-300">
-                  <Link to={way.href} className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
+                  <Link to={way.href} className="absolute inset-0 z-10 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500" aria-hidden="true" />
                   {way.action}
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
                 </button>
