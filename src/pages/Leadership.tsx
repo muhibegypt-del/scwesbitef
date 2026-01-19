@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Leadership() {
     return (
         <div className="min-h-screen bg-white pt-20 lg:pt-24">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-                <a href="/" className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-teal-700 mb-8 transition-colors">
-                    <ArrowLeft size={16} />
+                <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-teal-700 mb-8 transition-colors">
+                    <ArrowLeft size={16} aria-hidden="true" />
                     Back to Home
-                </a>
+                </Link>
                 <h1 className="text-4xl lg:text-5xl font-bold font-geist text-brand-primary-darker mb-4">Leadership</h1>
                 <p className="text-xl text-gray-600 mb-16 max-w-2xl">
                     Meet the team dedicated to driving our mission forward.

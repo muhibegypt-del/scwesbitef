@@ -74,27 +74,27 @@ export function GetInvolved() {
               className="group relative bg-brand-primary rounded-2xl p-8 hover:bg-brand-primary-hover transition-colors duration-300"
             >
               <div className={`
-                w-14 h-14 mb-8 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110
+                w-14 h-14 mx-auto mb-8 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110
                 ${way.color === 'teal' ? 'bg-brand-primary/50 text-white group-hover:bg-brand-primary group-hover:text-white' :
                   way.color === 'sage' ? 'bg-brand-primary/50 text-white group-hover:bg-sage-500 group-hover:text-white' :
                     'bg-brand-primary/50 text-white group-hover:bg-olive-500 group-hover:text-white'}
               `}>
-                <way.icon className="w-7 h-7" strokeWidth={1.5} />
+                <way.icon className="w-7 h-7" strokeWidth={1.5} aria-hidden="true" />
               </div>
 
-              <SubHeading className="text-xl font-geist font-semibold text-white mb-4 group-hover:text-olive-300 transition-colors">
+              <SubHeading className="text-xl font-geist font-semibold text-white mb-4 text-center group-hover:text-olive-300 transition-colors">
                 {way.title}
               </SubHeading>
 
-              <BodyText className="text-brand-primary-light/80 mb-8 flex-grow">
+              <BodyText className="text-brand-primary-light/80 mb-8 flex-grow text-center">
                 {way.description}
               </BodyText>
 
-              <div className="mt-auto">
+              <div className="mt-auto flex justify-center">
                 <button className="group/btn flex items-center gap-2 text-sm font-geist font-bold uppercase tracking-widest text-white transition-colors hover:text-olive-300">
                   <Link to={way.href} className="absolute inset-0 z-10 rounded-2xl" aria-hidden="true" />
                   {way.action}
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
                 </button>
               </div>
             </motion.div>
@@ -111,16 +111,16 @@ export function GetInvolved() {
           <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-brand-secondary/20 blur-3xl" />
           <div className="absolute bottom-0 left-0 -ml-16 -mb-16 h-64 w-64 rounded-full bg-brand-accent/20 blur-3xl" />
 
-          <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
-            <div className="text-left">
-              <div className="flex items-center gap-3 mb-4 text-olive-400">
-                <Mail className="w-6 h-6" />
+          <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-center text-center lg:text-left">
+            <div className="flex-1">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-4 text-olive-400">
+                <Mail className="w-6 h-6" aria-hidden="true" />
                 <span className="text-sm font-geist font-bold uppercase tracking-widest">Stay Connected</span>
               </div>
               <SubHeading className="text-3xl font-geist font-semibold text-white mb-4">
                 Join our weekly newsletter
               </SubHeading>
-              <BodyText className="text-teal-100/80 text-lg max-w-md">
+              <BodyText className="text-teal-100/80 text-lg max-w-md mx-auto lg:mx-0">
                 Receive impactful stories from the field, transparency reports, and urgent appeals directly to your inbox. No spam, ever.
               </BodyText>
             </div>
@@ -130,11 +130,13 @@ export function GetInvolved() {
               <input
                 type="email"
                 id="email-address"
-                placeholder="Enter your email"
+                name="email"
+                autoComplete="email"
+                placeholder="Enter your email…"
                 className="w-full rounded-xl border-0 bg-white/10 px-5 py-4 text-white placeholder:text-brand-primary-light/60 ring-1 ring-inset ring-white/20 focus:ring-2 focus:ring-olive-400 focus:bg-white/15 transition-all backdrop-blur-sm"
               />
               <button
-                type="button"
+                type="submit"
                 className="whitespace-nowrap rounded-xl bg-white px-8 py-4 text-base font-geist font-bold text-brand-primary-dark shadow-lg hover:bg-olive-100 hover:text-brand-primary-darker transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Subscribe

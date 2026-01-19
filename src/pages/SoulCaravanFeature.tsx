@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { SectionHeading, SubHeading, BodyText } from '../components/ui/Typography';
-import { Plane, ArrowRight, MapPin, Calendar } from 'lucide-react';
+import { SectionHeading, BodyText } from '../components/ui/Typography';
+import { ArrowRight } from 'lucide-react';
 
 const TRIPS = [
     {

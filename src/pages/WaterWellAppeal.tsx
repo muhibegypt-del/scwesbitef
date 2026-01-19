@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Droplets, Shield, Users, ArrowLeft, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { NarrativeImage } from '../components/ui/NarrativeImage';
 import { WATER_WELL_IMAGES, IMAGES } from '../data/imageAssets';
 
@@ -14,6 +15,8 @@ export function WaterWellAppeal() {
           <img
             src={IMAGES.WATER.GIRL_COLLECTING}
             alt="Child collecting water from well"
+            width={1920}
+            height={1080}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/30" />
@@ -27,13 +30,13 @@ export function WaterWellAppeal() {
               transition={{ duration: 0.8 }}
               className="flex flex-col"
             >
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-teal-700 mb-6 transition-colors"
               >
-                <ArrowLeft size={16} />
+                <ArrowLeft size={16} aria-hidden="true" />
                 Back to Home
-              </a>
+              </Link>
 
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal-700 w-fit">
                 <Droplets size={12} />
@@ -65,7 +68,7 @@ export function WaterWellAppeal() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-teal-700 transition-all w-fit"
               >
-                <Heart className="h-5 w-5 fill-white" />
+                <Heart className="h-5 w-5 fill-white" aria-hidden="true" />
                 Donate Now
               </a>
             </motion.div>

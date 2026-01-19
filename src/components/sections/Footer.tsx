@@ -2,9 +2,8 @@
 
 import {
   Mail, Phone, MapPin, Heart, Facebook, Twitter, Instagram,
-  ArrowRight, Send, ArrowUp
+  ArrowUp
 } from 'lucide-react';
-import { useState } from 'react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,8 +32,8 @@ export function Footer() {
     <footer className="relative bg-teal-900 text-white overflow-hidden border-t border-teal-800">
 
       {/* 1. Subtle Background Texture (Noise/Grain feel via SVG) */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <filter id="noiseFilter">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
           </filter>
@@ -53,6 +52,8 @@ export function Footer() {
             <img
               src="/logo.svg"
               alt="Soul Caravan Foundation"
+              width={140}
+              height={56}
               className="h-14 w-auto brightness-0 invert opacity-90"
             />
             <p className="text-teal-100/70 text-base leading-relaxed max-w-sm">
@@ -62,7 +63,7 @@ export function Footer() {
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-3 bg-teal-800/40 border border-teal-700/50 rounded-xl">
               <div className="p-2 bg-olive-500/20 rounded-full">
-                <Heart className="h-5 w-5 text-olive-400 fill-olive-400" />
+                <Heart className="h-5 w-5 text-olive-400 fill-olive-400" aria-hidden="true" />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-white">100% Donation Policy</span>
@@ -118,9 +119,13 @@ export function Footer() {
             </div>
 
             <div className="flex gap-4 mt-8">
-              {[Facebook, Twitter, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="p-2 bg-teal-800/40 rounded-lg hover:bg-teal-700 text-teal-300 hover:text-white transition-all">
-                  <Icon className="h-5 w-5" />
+              {[
+                { Icon: Facebook, label: 'Facebook' },
+                { Icon: Twitter, label: 'Twitter' },
+                { Icon: Instagram, label: 'Instagram' }
+              ].map(({ Icon, label }) => (
+                <a key={label} href="#" aria-label={`Follow us on ${label}`} className="p-2 bg-teal-800/40 rounded-lg hover:bg-teal-700 text-teal-300 hover:text-white transition-all">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
             </div>

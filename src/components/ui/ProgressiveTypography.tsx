@@ -21,7 +21,7 @@ export function useProgressiveTypography() {
     const supportsTextWrap = CSS.supports('text-wrap', 'balance');
     if (!supportsTextWrap) {
       // Fallback for browsers without text-wrap support
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const headings = document.querySelectorAll<HTMLElement>('h1, h2, h3, h4, h5, h6');
       headings.forEach(heading => {
         heading.style.maxWidth = '22ch';
       });
@@ -55,7 +55,7 @@ export function useTypographyQualityChecker() {
       const issues: string[] = [];
 
       // Check for orphaned words in headings
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const headings = document.querySelectorAll<HTMLElement>('h1, h2, h3, h4, h5, h6');
       headings.forEach((heading, index) => {
         const text = heading.textContent?.trim();
         if (text) {
@@ -83,8 +83,8 @@ export function useTypographyQualityChecker() {
         const computedStyle = window.getComputedStyle(heading);
         if (heading.offsetHeight > parseFloat(computedStyle.lineHeight) * 1.5) {
           // Multi-line heading detected
-          if (!heading.classList.contains('text-balance') && 
-              computedStyle.textWrap !== 'balance') {
+          if (!heading.classList.contains('text-balance') &&
+            computedStyle.textWrap !== 'balance') {
             issues.push(`Multi-line heading ${index + 1}: Missing text-wrap: balance`);
           }
         }
@@ -102,7 +102,7 @@ export function useTypographyQualityChecker() {
 
     // Run check after fonts load and layout settles
     const timeoutId = setTimeout(checkTypographyQuality, 1000);
-    
+
     return () => clearTimeout(timeoutId);
   }, []);
 }
@@ -118,9 +118,9 @@ interface AutoTypographyProps {
   variant?: 'display' | 'heading' | 'subheading' | 'body' | 'caption';
 }
 
-export function AutoTypography({ 
-  children, 
-  as: Component = 'div', 
+export function AutoTypography({
+  children,
+  as: Component = 'div',
   className = '',
   variant = 'body'
 }: AutoTypographyProps) {

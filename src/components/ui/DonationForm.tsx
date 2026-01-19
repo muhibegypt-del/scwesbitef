@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Heart, Shield, CheckCircle2 } from 'lucide-react';
 import { useDonationForm } from '../../hooks/useDonationForm';
 import { ANIMATION } from '../../constants';

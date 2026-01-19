@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion';
 import { Heart, Globe, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SectionHeading, BodyText, SubHeading } from '../ui/Typography';
 
 // --- TYPES ---
@@ -12,7 +13,7 @@ interface ValueItem {
   image: string;
 }
 
-const SPRING_CONFIG = { type: "spring", stiffness: 100, damping: 20 };
+const SPRING_CONFIG = { type: "spring", stiffness: 100, damping: 20 } as const;
 
 const values: ValueItem[] = [
   {
@@ -88,7 +89,7 @@ export function Values() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {values.map((value, index) => (
+          {values.map((value) => (
             <motion.article
               key={value.title}
               variants={cardVariants}
@@ -98,14 +99,17 @@ export function Values() {
                 <img
                   src={value.image}
                   alt={value.title}
+                  width={400}
+                  height={500}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-8 flex flex-col justify-end" />
               </div>
 
-              <div className="relative z-10 p-8 pt-64 flex flex-col justify-end h-full text-white">
-                <div className="mb-4 inline-flex items-center justify-center p-3 rounded-2xl bg-white/20 backdrop-blur-md text-white w-fit">
-                  <value.icon className="h-6 w-6" strokeWidth={1.5} />
+              <div className="relative z-10 p-8 pt-64 flex flex-col justify-end h-full text-white text-center">
+                <div className="mb-4 mx-auto inline-flex items-center justify-center p-3 rounded-2xl bg-white/20 backdrop-blur-md text-white w-fit">
+                  <value.icon className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
 
                 <SubHeading className="mb-3 font-geist text-2xl font-bold text-white tracking-tight">
@@ -121,9 +125,9 @@ export function Values() {
         </motion.div>
 
         <div className="mt-16 text-center">
-          <a href="/purpose" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-olive-600 text-white font-bold hover:bg-olive-700 transition-colors">
-            Read Our Full Purpose <ArrowRight size={16} />
-          </a>
+          <Link to="/purpose" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-olive-600 text-white font-bold hover:bg-olive-700 transition-colors">
+            Read Our Full Purpose <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

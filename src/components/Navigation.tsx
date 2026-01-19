@@ -12,7 +12,7 @@ import { MobileMenu } from './MobileMenu';
 const ANIMATION_CONFIG = {
   SPRING: { type: "spring", stiffness: 300, damping: 30 },
   EASE: { duration: 0.5, ease: [0.32, 0.72, 0, 1] }
-};
+} as const;
 
 // --- SUB-COMPONENTS ---
 

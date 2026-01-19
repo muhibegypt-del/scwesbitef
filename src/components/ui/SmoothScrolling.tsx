@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import { ReactLenis } from '@studio-freight/react-lenis';
 import { ReactNode } from 'react';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
@@ -10,7 +10,7 @@ interface SmoothScrollingProps {
 
 export function SmoothScrolling({ children }: SmoothScrollingProps) {
   const prefersReducedMotion = useReducedMotion();
-  
+
   // Disable smooth scrolling for users who prefer reduced motion
   if (prefersReducedMotion) {
     return <>{children}</>;

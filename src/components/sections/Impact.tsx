@@ -8,7 +8,7 @@ import { timelineData } from '../../data/timelineData';
 import { TimelineItem } from '../ui/TimelineItem';
 import { TimelineModal } from '../ui/TimelineModal';
 
-const EASE = [0.22, 1, 0.36, 1];
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function Impact() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,6 +85,8 @@ export function Impact() {
                       <img
                         src="/WhatsApp Image 2025-11-28 at 5.30.38 PM.jpeg"
                         alt="Uthman Hanif"
+                        width={48}
+                        height={48}
                         className="h-full w-full object-cover"
                       />
                     </div>

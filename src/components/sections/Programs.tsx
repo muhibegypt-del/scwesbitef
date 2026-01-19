@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Heart } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Square payment links
@@ -107,12 +107,15 @@ export function Programs() {
                 <img
                   src={program.image}
                   alt={program.title}
+                  width={400}
+                  height={300}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
                   {program.title}
                 </h3>
@@ -121,17 +124,17 @@ export function Programs() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col gap-2">
                   {program.href ? (
                     <Link
                       to={program.href}
-                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors"
                     >
                       Learn More
                       <ArrowUpRight size={14} />
                     </Link>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-gray-200 text-gray-400 text-sm font-semibold cursor-not-allowed">
+                    <span className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-gray-200 text-gray-400 text-sm font-semibold cursor-not-allowed">
                       Coming Soon
                     </span>
                   )}
@@ -139,7 +142,7 @@ export function Programs() {
                     href={program.donateLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors"
                   >
                     Donate now
                   </a>
