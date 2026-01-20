@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Heading, Text, Button, Card, Stack, Section } from '../system';
 
 // Square payment links
 const SQUARE_LINKS = {
@@ -69,39 +69,37 @@ const programs: Program[] = [
 
 export function Programs() {
   return (
-    <section id="programs" className="bg-gray-50 py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <Section id="programs" background="gray" padding="md">
+      {/* Section Header */}
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="section-badge bg-teal-50 text-teal-700 border-teal-200 mb-4 inline-block">
+          Our Current Appeals
+        </span>
+        <Heading level={2} className="mb-6">
+          Supporting the Communities That Need Us the Most
+        </Heading>
+        <Text size="base" color="muted" className="max-w-2xl mx-auto">
+          Check out our current appeals to see where help is needed most and how your support helps us respond on the ground.
+        </Text>
+      </motion.div>
 
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="eyebrow-teal mb-4">
-            Our Current Appeals
-          </p>
-          <h2 className="text-4xl lg:text-5xl font-serif font-semibold text-gray-900 mb-6">
-            Supporting the Communities That Need Us the Most
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Check out our current appeals to see where help is needed most and how your support helps us respond on the ground.
-          </p>
-        </motion.div>
-
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programs.map((program, index) => (
-            <motion.article
-              key={program.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
-            >
+      {/* Cards Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {programs.map((program, index) => (
+          <motion.div
+            key={program.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card padding="none" stretch>
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -115,44 +113,54 @@ export function Programs() {
               </div>
 
               {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
-                  {program.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                  {program.description}
-                </p>
+              <div className="p-6 flex flex-col flex-grow text-center">
+                <Card.Header>
+                  <Heading level={3} className="text-gray-900 !text-xl !font-serif">
+                    {program.title}
+                  </Heading>
+                </Card.Header>
+
+                <Card.Body>
+                  <Text size="sm" color="muted" className="line-clamp-3">
+                    {program.description}
+                  </Text>
+                </Card.Body>
 
                 {/* Buttons */}
-                <div className="flex flex-col gap-2">
-                  {program.href ? (
-                    <Link
-                      to={program.href}
-                      className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-teal-600 text-teal-700 text-sm font-semibold hover:bg-teal-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+                <Card.Footer>
+                  <Stack gap={2}>
+                    {program.href ? (
+                      <Button
+                        variant="outline"
+                        size="md"
+                        href={program.href}
+                        className="w-full"
+                        icon={<ArrowUpRight size={14} />}
+                      >
+                        Learn More
+                      </Button>
+                    ) : (
+                      <span className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-3 min-h-[44px] rounded-full border-2 border-gray-200 text-gray-400 text-sm font-semibold cursor-not-allowed">
+                        Coming Soon
+                      </span>
+                    )}
+                    <Button
+                      variant="secondary"
+                      size="md"
+                      href={program.donateLink}
+                      external
+                      className="w-full"
                     >
-                      Learn More
-                      <ArrowUpRight size={14} />
-                    </Link>
-                  ) : (
-                    <span className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-gray-200 text-gray-400 text-sm font-semibold cursor-not-allowed">
-                      Coming Soon
-                    </span>
-                  )}
-                  <a
-                    href={program.donateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
-                  >
-                    Donate now
-                  </a>
-                </div>
+                      Donate now
+                    </Button>
+                  </Stack>
+                </Card.Footer>
               </div>
-            </motion.article>
-          ))}
-        </div>
-
+            </Card>
+          </motion.div>
+        ))}
       </div>
-    </section >
+    </Section>
   );
 }
+

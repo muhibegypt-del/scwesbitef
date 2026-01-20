@@ -36,10 +36,26 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.1;
     letter-spacing: -0.015em;
+  }
+
+  /* Typography Hierarchy: H1 = 48px (3rem), H2 = 30px (1.875rem) */
+  h1 {
+    font-size: 3rem !important;
+    /* 48px */
+  }
+
+  h2 {
+    font-size: 1.875rem !important;
+    /* 30px */
   }
 
   p {
@@ -74,16 +90,28 @@
     background-color: #3e6d7330;
     color: #0d1717;
   }
+
+  /* Hide dev tool overlays (defensive) */
+  #preact-border-shadow-host {
+    display: none !important;
+  }
 }
 
 @layer components {
+
   /* === DESIGN TOKENS === */
   :root {
-    --radius-sm: 0.5rem;    /* 8px - buttons, inputs */
-    --radius-md: 0.75rem;   /* 12px - cards, modals */
-    --radius-lg: 1rem;      /* 16px - large cards */
-    --radius-xl: 1.5rem;    /* 24px - hero elements */
-    --radius-full: 9999px;  /* pills, badges */
+    /* Soft Block Radius System */
+    --radius-sm: 0.5rem;
+    /* 8px - small elements */
+    --radius-md: 1.5rem;
+    /* 24px - inputs, cards (STANDARD) */
+    --radius-lg: 1.5rem;
+    /* 24px - large cards (match md) */
+    --radius-xl: 1.5rem;
+    /* 24px - hero elements */
+    --radius-full: 9999px;
+    /* pills, primary buttons */
   }
 
   /* === TYPOGRAPHY UTILITIES === */
@@ -143,7 +171,8 @@
   }
 
   .section-title {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 leading-tight tracking-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-gray-900 leading-tight tracking-tight text-center mx-auto;
+    max-width: 22ch;
   }
 
   .section-description {
@@ -181,19 +210,19 @@
   }
 
   .display-heading {
-    @apply max-w-display text-balance;
+    @apply max-w-display text-balance mx-auto;
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
 
   .section-heading {
-    @apply max-w-heading text-balance;
+    @apply max-w-heading text-balance mx-auto;
     line-height: 1.25;
     letter-spacing: -0.01em;
   }
 
   .subheading {
-    @apply max-w-subheading text-balance;
+    @apply max-w-subheading text-balance mx-auto;
     line-height: 1.25;
   }
 
@@ -217,6 +246,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -232,8 +262,16 @@
   }
 
   /* Auto-enhance all headings */
-  h1, h2, h3, h4, h5, h6,
-  .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl {
     @apply text-balance;
     text-rendering: optimizeLegibility;
     font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
@@ -241,59 +279,59 @@
   }
 
   /* Auto-enhance display text */
-  .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl {
     @apply max-w-display;
     line-height: 1.15;
   }
 
   /* Auto-enhance section headings */
-  .text-2xl, .text-3xl {
+  .text-2xl,
+  .text-3xl {
     @apply max-w-heading text-balance;
     line-height: 1.25;
   }
 
   /* Auto-enhance body text */
-  p, .text-base, .text-lg {
+  p,
+  .text-base,
+  .text-lg {
     @apply max-w-body;
     line-height: 1.6;
     text-wrap: pretty;
   }
 
   /* Auto-enhance small text */
-  .text-sm, .text-xs {
+  .text-sm,
+  .text-xs {
     line-height: 1.4;
     text-wrap: pretty;
   }
 
   /* Prevent orphaned words in buttons and labels */
-  button, label, .btn {
+  button,
+  label,
+  .btn {
     text-wrap: nowrap;
   }
 
   /* Multi-line button text should balance */
-  button.multiline, .btn.multiline {
+  button.multiline,
+  .btn.multiline {
     text-wrap: balance;
   }
 
   /* Progressive enhancement for containers */
-  .container, .max-w-7xl, .max-w-6xl, .max-w-5xl {
+  .container,
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl {
     container-type: inline-size;
   }
 
-  /* Responsive typography scaling */
-  @container (min-width: 768px) {
-    .text-4xl { font-size: 2.5rem; }
-    .text-5xl { font-size: 3.25rem; }
-    .text-6xl { font-size: 4rem; }
-    .text-7xl { font-size: 5rem; }
-  }
 
-  @container (min-width: 1024px) {
-    .text-4xl { font-size: 2.75rem; }
-    .text-5xl { font-size: 3.5rem; }
-    .text-6xl { font-size: 4.5rem; }
-    .text-7xl { font-size: 5.5rem; }
-  }
 
   /* Prevent layout shift during font loading */
   .font-loading {
@@ -310,7 +348,9 @@
     @apply typography-enhanced;
   }
 
-  .prose h1, .prose h2, .prose h3 {
+  .prose h1,
+  .prose h2,
+  .prose h3 {
     @apply text-balance max-w-heading;
   }
 
@@ -333,12 +373,22 @@
   }
 
   /* Prevent text selection on UI elements */
-  button, .btn, nav, .navigation {
+  button,
+  .btn,
+  nav,
+  .navigation {
     user-select: none;
   }
 
   /* Allow text selection on content */
-  p, h1, h2, h3, h4, h5, h6, .content {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .content {
     user-select: text;
   }
 }

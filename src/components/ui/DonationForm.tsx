@@ -42,7 +42,7 @@ export function DonationForm({
     <div className="relative w-full max-w-md mx-auto">
       <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/10 to-sage-500/10 blur-3xl rounded-full" />
 
-      <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-xl ring-1 ring-gray-900/5 lg:p-8">
+      <div className="relative overflow-hidden rounded-xl bg-white p-6 shadow-xl ring-1 ring-gray-900/5 lg:p-8">
         <div className="mb-6 text-center">
           <h3 className="text-xl font-serif font-semibold text-brand-primary-dark">{title}</h3>
           <p className="text-sm text-gray-500 mt-1">{subtitle}</p>

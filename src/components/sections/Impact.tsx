@@ -3,7 +3,6 @@
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Quote, Sparkles } from 'lucide-react';
-import { SectionHeading, BodyText } from '../ui/Typography';
 import { timelineData } from '../../data/timelineData';
 import { TimelineItem } from '../ui/TimelineItem';
 import { TimelineModal } from '../ui/TimelineModal';
@@ -25,7 +24,7 @@ export function Impact() {
   });
 
   return (
-    <section ref={containerRef} id="history" className="relative py-24 lg:py-32 bg-gray-50 overflow-hidden">
+    <section ref={containerRef} id="history" className="relative py-24 lg:py-32 bg-gray-50 overflow-hidden typography-enhanced">
 
       {/* 1. TEXTURE: Consistent Dot Pattern */}
       <div
@@ -48,39 +47,39 @@ export function Impact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: EASE }}
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary-lightest border border-brand-primary-light text-brand-primary-dark text-[11px] font-geist font-bold tracking-widest uppercase mb-6">
-                  <Sparkles size={12} className="text-brand-primary" />
+                <div className="section-badge mb-6">
+                  <Sparkles size={12} className="text-teal-600" />
                   Our Journey
                 </div>
 
-                <SectionHeading className="text-4xl sm:text-5xl font-geist font-bold text-brand-primary-darker mb-6 tracking-tight">
+                <h2 className="section-title mb-6">
                   Built on trust, <br />
-                  <span className="text-olive-600 font-serif italic">grown by community.</span>
-                </SectionHeading>
+                  <span className="text-teal-600 italic">grown by community.</span>
+                </h2>
 
-                <BodyText className="text-lg text-brand-primary-dark/80 leading-relaxed">
+                <p className="section-description">
                   What started as a single trip to Kenya has grown into a movement. We don't just build wells; we build relationships that last generations.
-                </BodyText>
+                </p>
               </motion.div>
 
               {/* 2. FOUNDER CARD: Glassmorphism + Editorial Layout */}
               <motion.div
-                className="relative rounded-3xl bg-white/80 backdrop-blur-xl border border-white shadow-xl shadow-brand-primary-darker/5 p-8 overflow-hidden group"
+                className="card-elevated p-8 relative overflow-hidden group backdrop-blur-optimized"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
               >
                 {/* Decorative background blob */}
-                <div className="absolute -right-10 -top-10 w-32 h-32 bg-brand-primary-light/50 rounded-full blur-3xl group-hover:bg-brand-primary-light/80 transition-colors" />
+                <div className="absolute -right-10 -top-10 w-32 h-32 bg-teal-50 rounded-full blur-3xl group-hover:bg-teal-100 transition-colors" />
 
-                <Quote className="absolute top-8 right-8 h-12 w-12 text-brand-primary-light rotate-180" />
+                <Quote className="absolute top-8 right-8 h-12 w-12 text-teal-100 rotate-180" />
 
                 <div className="relative z-10 space-y-6">
-                  <p className="font-serif text-xl italic text-brand-primary-dark leading-relaxed">
+                  <p className="font-serif text-xl italic text-gray-900 leading-relaxed">
                     "True charity isn't about pity; it's about partnership. We ask the communities what they need, and we deliver exactly that."
                   </p>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-brand-primary-light/50">
+                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
                     <div className="h-12 w-12 rounded-full overflow-hidden ring-2 ring-white shadow-md">
                       <img
                         src="/WhatsApp Image 2025-11-28 at 5.30.38 PM.jpeg"
@@ -91,8 +90,8 @@ export function Impact() {
                       />
                     </div>
                     <div>
-                      <div className="font-geist font-bold text-brand-primary-darker">Uthman Hanif</div>
-                      <div className="text-xs font-bold uppercase tracking-widest text-brand-primary/80">Founder</div>
+                      <div className="font-bold text-gray-900">Uthman Hanif</div>
+                      <div className="text-xs font-bold uppercase tracking-widest text-teal-600">Founder</div>
                     </div>
                   </div>
                 </div>
@@ -109,7 +108,7 @@ export function Impact() {
             {/* 4. THE BEAM: Gradient progress line */}
             <motion.div
               style={{ scaleY, transformOrigin: "top" }}
-              className="absolute left-[8px] lg:left-[8px] top-0 bottom-0 w-px bg-gradient-to-b from-teal-500 via-olive-500 to-teal-500 z-10"
+              className="absolute left-[8px] lg:left-[8px] top-0 bottom-0 w-px bg-gradient-to-b from-teal-500 via-teal-300 to-teal-500 z-10"
             />
 
             <div className="space-y-12">

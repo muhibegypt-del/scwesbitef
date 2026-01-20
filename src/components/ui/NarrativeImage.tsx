@@ -62,7 +62,7 @@ export function NarrativeImage({
         return (
             <div
                 ref={ref}
-                className={`relative w-full aspect-[21/9] overflow-hidden rounded-2xl shadow-xl ${className}`}
+                className={`relative w-full aspect-[21/9] overflow-hidden rounded-xl shadow-xl ${className}`}
             >
                 <img src={src} alt={alt} className={baseImageStyles} loading="lazy" />
                 {caption && (

@@ -75,19 +75,19 @@ export function AppealsIndex() {
     <div className="min-h-screen bg-white pt-20 lg:pt-24">
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-16 text-center">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-teal-700 mb-6 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-teal-700 mb-8 transition-colors"
             >
               <ArrowLeft size={16} />
               Back to Home
             </Link>
 
-            <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-teal-800 mb-6">
+            <h1 className="section-title mb-6">
               Our Active Appeals
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="body-text text-gray-600 mx-auto">
               Choose from our current humanitarian projects and make a direct impact on communities in Kenya.
             </p>
           </div>
@@ -99,7 +99,7 @@ export function AppealsIndex() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-1 flex flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-[transform,box-shadow] duration-300 hover:-translate-y-1 flex flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img

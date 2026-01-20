@@ -38,7 +38,7 @@ export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMe
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="fixed inset-0 top-0 z-40 bg-brand-primary flex flex-col pt-24 px-6 pb-10 overflow-y-auto lg:hidden"
+                    className="fixed inset-0 top-0 z-40 bg-[#264144] flex flex-col pt-24 px-6 pb-10 overflow-y-auto lg:hidden"
                 >
                     {/* Decorative background element */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-teal-600/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />

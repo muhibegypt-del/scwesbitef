@@ -85,7 +85,7 @@ export function FoodReliefAppeal() {
               variant="feature"
             />
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4 text-center">
                 Hot Meals That Nourish
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
@@ -104,7 +104,7 @@ export function FoodReliefAppeal() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4 text-center">
                 Food Parcels for Families
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
@@ -135,7 +135,7 @@ export function FoodReliefAppeal() {
               variant="feature"
             />
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-orange-800 mb-4 text-center">
                 Community Distribution
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">

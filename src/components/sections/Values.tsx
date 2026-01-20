@@ -2,8 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion';
 import { Heart, Globe, Users, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { SectionHeading, BodyText, SubHeading } from '../ui/Typography';
+import { Heading, Text, Button } from '../system';
 
 // --- TYPES ---
 interface ValueItem {
@@ -55,7 +54,7 @@ const cardVariants: Variants = {
 
 export function Values() {
   return (
-    <section id="values" className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section id="values" className="relative overflow-hidden bg-white py-24 lg:py-32 typography-enhanced">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Header */}
@@ -67,18 +66,18 @@ export function Values() {
           transition={SPRING_CONFIG}
         >
           <div className="flex justify-center mb-6">
-            <span className="px-3 py-1 rounded-full border border-gray-200 text-[10px] uppercase tracking-widest font-bold text-gray-600 bg-gray-50">
+            <span className="section-badge bg-gray-50 text-gray-600 border-gray-200">
               Our Ethos
             </span>
           </div>
 
-          <SectionHeading className="mb-6 font-geist text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-900 tracking-tight">
-            Driven by <span className="italic font-serif text-olive-600">purpose.</span>
-          </SectionHeading>
+          <Heading level={2} className="mb-6">
+            Driven by <span className="italic font-serif text-teal-600">purpose.</span>
+          </Heading>
 
-          <BodyText className="text-lg text-gray-600 max-w-xl mx-auto">
+          <Text size="base" color="muted" className="mx-auto">
             These principles guide everything we do, from program design to community partnerships.
-          </BodyText>
+          </Text>
         </motion.div>
 
         {/* Visual Storytelling Grid */}
@@ -93,7 +92,7 @@ export function Values() {
             <motion.article
               key={value.title}
               variants={cardVariants}
-              className="group relative flex flex-col h-full rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500"
+              className="group relative flex flex-col h-full rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500"
             >
               <div className="absolute inset-0">
                 <img
@@ -104,17 +103,17 @@ export function Values() {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-8 flex flex-col justify-end" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent p-8 flex flex-col justify-end" />
               </div>
 
               <div className="relative z-10 p-8 pt-64 flex flex-col justify-end h-full text-white text-center">
-                <div className="mb-4 mx-auto inline-flex items-center justify-center p-3 rounded-2xl bg-white/20 backdrop-blur-md text-white w-fit">
+                <div className="mb-4 mx-auto inline-flex items-center justify-center p-3 rounded-xl bg-white/20 backdrop-blur-md text-white w-fit">
                   <value.icon className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
 
-                <SubHeading className="mb-3 font-geist text-2xl font-bold text-white tracking-tight">
+                <h3 className="subheading text-white mb-3">
                   {value.title}
-                </SubHeading>
+                </h3>
 
                 <p className="text-white/90 leading-relaxed font-medium">
                   {value.description}
@@ -125,9 +124,9 @@ export function Values() {
         </motion.div>
 
         <div className="mt-16 text-center">
-          <Link to="/purpose" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-olive-600 text-white font-bold hover:bg-olive-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive-600">
-            Read Our Full Purpose <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+          <Button variant="secondary" size="lg" href="/purpose" icon={<ArrowRight size={16} />}>
+            Read Our Full Purpose
+          </Button>
         </div>
       </div>
     </section>

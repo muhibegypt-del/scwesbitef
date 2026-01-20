@@ -16,7 +16,7 @@ export function Purpose() {
                 </p>
 
                 {/* Placeholder for more content */}
-                <div className="h-64 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-400">
+                <div className="h-64 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400">
                     Content Placeholder
                 </div>
             </div>

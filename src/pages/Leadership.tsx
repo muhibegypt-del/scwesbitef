@@ -9,15 +9,15 @@ export function Leadership() {
                     <ArrowLeft size={16} aria-hidden="true" />
                     Back to Home
                 </Link>
-                <h1 className="text-4xl lg:text-5xl font-bold font-geist text-brand-primary-darker mb-4">Leadership</h1>
-                <p className="text-xl text-gray-600 mb-16 max-w-2xl">
+                <h1 className="text-4xl lg:text-5xl font-bold font-geist text-brand-primary-darker mb-4 text-center">Leadership</h1>
+                <p className="text-xl text-gray-600 mb-16 max-w-2xl mx-auto text-center">
                     Meet the team dedicated to driving our mission forward.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {[1, 2, 3, 4, 5, 6].map((i) => (
                         <div key={i} className="group">
-                            <div className="aspect-[3/4] bg-gray-200 rounded-2xl mb-4 overflow-hidden relative">
+                            <div className="aspect-[3/4] bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
                                 {/* Placeholder Image */}
                                 <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
                                     Photo {i}

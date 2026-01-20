@@ -85,7 +85,7 @@ export function OrphanCareAppeal() {
               variant="feature"
             />
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4 text-center">
                 Nourishment for Growing Minds
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
@@ -104,7 +104,7 @@ export function OrphanCareAppeal() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4 text-center">
                 Education Opens Doors
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
@@ -135,7 +135,7 @@ export function OrphanCareAppeal() {
               variant="feature"
             />
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4">
+              <h2 className="text-3xl font-serif font-semibold text-rose-800 mb-4 text-center">
                 A Community of Care
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
