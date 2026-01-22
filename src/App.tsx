@@ -64,7 +64,7 @@ function App() {
         <Router>
           <NavigationLifecycle />
           <SmoothScrolling>
-            <div className="min-h-screen bg-gray-50 font-sans">
+            <div className="min-h-screen bg-gray-50 font-sans overflow-x-hidden">
               <NoiseOverlay />
               <Navigation />
 

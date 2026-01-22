@@ -6,7 +6,7 @@ const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen flex flex-col font-sans overflow-hidden bg-gray-900">
+    <section className="relative w-full h-dvh flex flex-col font-sans overflow-hidden bg-gray-900">
 
       {/* BACKGROUND VIDEO (Full Screen) - No overlays */}
       <div className="absolute inset-0 w-full h-full">

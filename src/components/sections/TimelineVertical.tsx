@@ -21,7 +21,7 @@ export function TimelineVertical() {
         <div ref={containerRef} className="relative space-y-20 lg:space-y-0">
 
             {/* CENTRAL LINE (Desktop) / LEFT LINE (Mobile) */}
-            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-teal-100/50 -translate-x-1/2" />
+            <div className="absolute left-6 sm:left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-teal-100/50 -translate-x-1/2" />
 
             {/* PROGRESS BEAM */}
             <motion.div
@@ -37,7 +37,7 @@ export function TimelineVertical() {
                     <div key={item.year} className={`relative flex flex-col lg:flex-row gap-8 lg:gap-0 items-start lg:items-center ${isAlternate ? 'lg:flex-row-reverse' : ''}`}>
 
                         {/* 1. TIMELINE NODE */}
-                        <div className="absolute left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
+                        <div className="absolute left-6 sm:left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
                             <div className={`relative flex items-center justify-center w-8 h-8 rounded-full border-4 shadow-sm transition-colors duration-500 bg-white ${isCurrent ? 'border-teal-500 scale-125' : 'border-teal-200'}`}>
                                 {isCurrent && (
                                     <div className="absolute inset-0 rounded-full bg-teal-500 animate-ping opacity-20" />
@@ -47,7 +47,7 @@ export function TimelineVertical() {
                         </div>
 
                         {/* 2. CONTENT CARD (Left or Right) */}
-                        <div className={`w-full lg:w-1/2 pl-20 lg:pl-0 ${isAlternate ? 'lg:pr-24 lg:text-right' : 'lg:pl-24 lg:text-left'}`}>
+                        <div className={`w-full lg:w-1/2 pl-14 sm:pl-20 lg:pl-0 ${isAlternate ? 'lg:pr-24 lg:text-right' : 'lg:pl-24 lg:text-left'}`}>
                             <FadeIn delay={index * 0.1} direction={isAlternate ? 'left' : 'right'}>
                                 <div className={`group relative p-6 sm:p-8 bg-white rounded-2xl shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300`}>
 

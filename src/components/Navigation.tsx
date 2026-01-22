@@ -76,7 +76,7 @@ export function Navigation() {
             <div className="flex items-center gap-3 lg:hidden">
               <Link
                 to="/#programs"
-                className="bg-brand-accent text-brand-primary-darker font-bold text-sm px-4 py-2 rounded-full"
+                className="bg-brand-accent text-brand-primary-darker font-bold text-sm px-4 flex items-center min-h-[44px] rounded-full active:scale-95 transition-transform"
               >
                 Donate
               </Link>

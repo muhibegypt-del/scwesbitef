@@ -84,7 +84,10 @@ export function ImpactStatsBlock({ stats, theme = 'default', className }: Impact
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className={cn(
                     'grid gap-8',
-                    stats.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 lg:grid-cols-4'
+                    'grid-cols-1', // Default: Mobile (0-639px)
+                    stats.length === 3
+                        ? 'sm:grid-cols-3' // Tablet+
+                        : 'sm:grid-cols-2 lg:grid-cols-4' // Tablet+ and Desktop
                 )}>
                     {stats.map((stat, index) => (
                         <motion.div

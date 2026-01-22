@@ -18,9 +18,9 @@ interface ButtonProps {
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
-    sm: 'px-4 py-2 text-sm min-h-[36px]',
-    md: 'px-5 py-3 text-sm min-h-[44px]',
-    lg: 'px-8 py-4 text-base min-h-[60px]',
+    sm: 'px-4 py-2 text-sm min-h-[44px]', // Mobile-first: ALWAYS 44px minimum for touch
+    md: 'px-6 py-3 text-base min-h-[44px] md:min-h-[48px]', // Scale up slightly on desktop
+    lg: 'px-8 py-5 text-lg min-h-[56px] md:min-h-[64px]',
 };
 
 const variantClasses: Record<ButtonVariant, string> = {

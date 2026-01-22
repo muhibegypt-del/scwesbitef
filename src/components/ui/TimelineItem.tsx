@@ -84,7 +84,7 @@ export function TimelineItem({ item, index, onClick }: TimelineItemProps) {
                             animate={{ opacity: 1, height: 'auto' }}
                             className="mt-4"
                         >
-                            <button className="inline-flex items-center gap-2 text-sm font-bold text-olive-600 hover:text-olive-700 hover:underline decoration-2 underline-offset-4 transition-all">
+                            <button className="inline-flex items-center gap-2 text-sm font-bold text-olive-600 hover:text-olive-700 hover:underline decoration-2 underline-offset-4 transition-all py-2">
                                 View Report <ArrowRight size={14} />
                             </button>
                         </motion.div>
