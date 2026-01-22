@@ -10,8 +10,8 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 185 30% 35%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -30,22 +30,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    /* Legacy Brand Colors */
-    --color-primary: #3e6d73;
-    --color-primary-hover: #32585c;
-    --color-primary-light: #d9e7e8;
-    --color-secondary: #6b8869;
-    --color-secondary-hover: #566d54;
-    --color-accent: #98a55f;
-    --color-accent-hover: #7a844c;
-    --color-success: #10b981;
-    --color-warning: #f59e0b;
-    --color-error: #ef4444;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --text-muted: #6b7280;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
+
   }
 
   .dark {
@@ -101,16 +86,7 @@
     letter-spacing: -0.015em;
   }
 
-  /* Typography Hierarchy: H1 = 48px (3rem), H2 = 30px (1.875rem) */
-  h1 {
-    font-size: 3rem !important;
-    /* 48px */
-  }
 
-  h2 {
-    font-size: 1.875rem !important;
-    /* 30px */
-  }
 
   p {
     max-width: 65ch;
@@ -136,13 +112,12 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
+    @apply ring-2 ring-primary ring-offset-2;
   }
 
   ::selection {
-    background-color: #3e6d7330;
-    color: #0d1717;
+    background-color: hsl(var(--primary) / 0.3);
+    color: hsl(var(--primary-foreground));
   }
 
   /* Hide dev tool overlays (defensive) */
@@ -155,17 +130,7 @@
 
   /* === DESIGN TOKENS === */
   :root {
-    /* Soft Block Radius System */
-    --radius-sm: 0.5rem;
-    /* 8px - small elements */
-    --radius-md: 1.5rem;
-    /* 24px - inputs, cards (STANDARD) */
-    --radius-lg: 1.5rem;
-    /* 24px - large cards (match md) */
-    --radius-xl: 1.5rem;
-    /* 24px - hero elements */
-    --radius-full: 9999px;
-    /* pills, primary buttons */
+    /* Radius variables are handled by Tailwind config (rounded-xl = 1.5rem) */
   }
 
   /* === TYPOGRAPHY UTILITIES === */
@@ -184,18 +149,18 @@
 
   /* === BUTTON COMPONENTS === */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-500 text-white font-semibold shadow-soft transition-all duration-200;
-    border-radius: var(--radius-md);
-    @apply hover:bg-teal-600 hover:shadow-elevated;
-    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold shadow-soft transition-all duration-200 rounded-xl;
+
+    @apply hover:bg-primary/90 hover:shadow-elevated;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
     @apply active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-600 font-semibold border-2 border-teal-500 transition-all duration-200;
-    border-radius: var(--radius-md);
-    @apply hover:bg-teal-50 hover:border-teal-600;
-    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-background text-primary font-semibold border-2 border-primary transition-all duration-200 rounded-xl;
+
+    @apply hover:bg-accent hover:border-primary/80;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
     @apply active:scale-[0.98];
   }
 
@@ -206,22 +171,21 @@
 
   /* === CARD COMPONENTS === */
   .card {
-    @apply bg-white shadow-card ring-1 ring-gray-900/5 transition-all duration-300;
-    border-radius: var(--radius-lg);
-    @apply hover:shadow-card-hover hover:ring-teal-500/20;
+    @apply bg-white shadow-card ring-1 ring-gray-900/5 transition-all duration-300 rounded-xl;
+
+    @apply hover:shadow-card-hover hover:ring-primary/20;
   }
 
   .card-elevated {
-    @apply bg-white shadow-elevated ring-1 ring-gray-900/5 transition-all duration-300;
-    border-radius: var(--radius-lg);
+    @apply bg-white shadow-elevated ring-1 ring-gray-900/5 transition-all duration-300 rounded-xl;
+
     @apply hover:shadow-lg;
   }
 
   /* === SECTION COMPONENTS === */
   .section-badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold uppercase tracking-widest;
-    @apply bg-teal-50 text-teal-700 border border-teal-200;
-    border-radius: var(--radius-full);
+    @apply inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full;
+    @apply bg-accent text-accent-foreground border border-border;
   }
 
   .section-title {
@@ -235,10 +199,10 @@
 
   /* === FORM COMPONENTS === */
   .input-field {
-    @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900;
-    border-radius: var(--radius-md);
-    @apply placeholder:text-gray-400;
-    @apply focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none;
+    @apply w-full px-4 py-3 bg-muted/50 border border-input text-foreground rounded-xl;
+
+    @apply placeholder:text-muted-foreground;
+    @apply focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
     @apply transition-all duration-200;
   }
 
@@ -420,9 +384,7 @@
 
   /* Enhanced focus states */
   :focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    border-radius: 0.25rem;
+    @apply ring-2 ring-primary ring-offset-2 rounded;
   }
 
   /* Prevent text selection on UI elements */

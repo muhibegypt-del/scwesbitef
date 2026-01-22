@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { NavigationLink } from '../../config/navigationConfig';
 import { Z_INDEX } from '../../lib/design-tokens';
@@ -44,12 +43,7 @@ export function MegaMenuDropdown({ link }: { link: NavigationLink }) {
                 <div className="p-8 relative z-10">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="text-lg font-bold text-gray-900">{content.title}</h3>
-                        <Link
-                            to={link.href}
-                            className="text-sm font-semibold text-gray-500 hover:text-teal-600 flex items-center gap-1 transition-colors"
-                        >
-                            View All <ArrowUpRight className="w-3 h-3" />
-                        </Link>
+                        {/* VIEW ALL LINK REMOVED AS REQUESTED */}
                     </div>
 
                     <p className="text-sm text-gray-500 mb-6 font-medium">
@@ -69,11 +63,7 @@ export function MegaMenuDropdown({ link }: { link: NavigationLink }) {
                         ))}
                     </ul>
 
-                    <div className="mt-6 pt-4 border-t border-gray-100">
-                        <Link to={link.href} className="text-gray-800 font-bold hover:text-teal-600 text-sm inline-flex items-center gap-1">
-                            {content.viewAllText} <ArrowUpRight className="w-3 h-3" />
-                        </Link>
-                    </div>
+                    {/* FOOTER ACTION REMOVED AS REQUESTED */}
                 </div>
             </div>
         </div>

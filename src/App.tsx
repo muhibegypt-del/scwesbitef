@@ -52,6 +52,8 @@ function HomePage() {
   );
 }
 
+import { NavigationLifecycle } from './components/system/NavigationLifecycle';
+
 function App() {
   // Enable typography quality checking in development
   useTypographyQualityChecker();
@@ -60,6 +62,7 @@ function App() {
     <ErrorBoundary>
       <ProgressiveTypographyProvider>
         <Router>
+          <NavigationLifecycle />
           <SmoothScrolling>
             <div className="min-h-screen bg-gray-50 font-sans">
               <NoiseOverlay />

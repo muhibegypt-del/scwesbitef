@@ -90,7 +90,7 @@ export function Footer() {
             className="group flex items-center gap-2 text-xs text-teal-300/60 hover:text-white hover:bg-transparent transition-colors uppercase tracking-wider font-medium p-0"
           >
             Back to Top
-            <span className="p-1.5 rounded-full bg-teal-800 group-hover:bg-olive-500 transition-colors ml-2">
+            <span className="p-1 rounded-full bg-teal-800 group-hover:bg-olive-500 transition-colors ml-2">
               <ArrowUp className="h-3 w-3" />
             </span>
           </Button>

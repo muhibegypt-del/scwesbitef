@@ -24,17 +24,17 @@ const sizeClasses: Record<ButtonSize, string> = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'bg-brand-primary hover:bg-brand-primary-hover text-white shadow-soft hover:shadow-elevated',
-    secondary: 'bg-white text-brand-primary border-2 border-brand-primary hover:bg-brand-primary-lightest',
-    outline: 'border-2 border-brand-primary text-brand-primary hover:bg-brand-primary-lightest',
-    ghost: 'text-gray-700 hover:bg-gray-100 hover:text-brand-primary',
+    primary: 'bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft hover:shadow-elevated',
+    secondary: 'bg-background text-primary border-2 border-primary hover:bg-accent hover:border-primary/80',
+    outline: 'border-2 border-primary text-primary hover:bg-accent',
+    ghost: 'text-muted-foreground hover:bg-accent hover:text-foreground',
 };
 
 const baseClasses = `
   inline-flex items-center justify-center gap-2 
-  font-semibold rounded-full 
+  font-semibold rounded-xl
   transition-all duration-200
-  focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-500
+  focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary
   disabled:opacity-50 disabled:cursor-not-allowed
 `;
 

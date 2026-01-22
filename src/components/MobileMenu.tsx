@@ -1,4 +1,5 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { Lock, Phone } from 'lucide-react';
 import type { NavigationLink } from '../types';
@@ -31,7 +32,7 @@ const itemVariants: Variants = {
 };
 
 export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMenuProps) {
-    return (
+    return createPortal(
         <AnimatePresence>
             {isOpen && (
                 <motion.div
@@ -39,10 +40,22 @@ export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMe
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="fixed inset-0 top-0 z-40 bg-brand-primary-dark flex flex-col pt-24 px-6 pb-10 overflow-y-auto lg:hidden"
+                    className="fixed inset-0 top-0 z-modal bg-brand-primary-dark flex flex-col pt-24 px-6 pb-10 overflow-y-auto lg:hidden"
                 >
                     {/* Decorative background element */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-teal-600/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+                    {/* CLOSE BUTTON */}
+                    <button
+                        onClick={onClose}
+                        className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors z-50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                        aria-label="Close Menu"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
 
                     <nav className="flex flex-col space-y-2 relative z-10">
                         {navConfig.map((link) => {
@@ -109,6 +122,7 @@ export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMe
                     </motion.div>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 }

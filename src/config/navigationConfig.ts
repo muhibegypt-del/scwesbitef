@@ -9,14 +9,14 @@ export const NAV_CONFIG: NavigationLink[] = [
         label: 'Who We Are',
         href: '/#history',
         dropdownItems: [
-            { label: 'Our Story', href: '/#history' },
+            { label: 'Our Story', href: '/#year-2020' },
             { label: 'Our Values', href: '/#values' },
-            { label: 'Leadership', href: '/leadership' }, // Placeholder for new page
-            { label: 'Soul Caravan', href: '/soul-caravan' }, // Added Route
+            { label: 'Leadership', href: '/leadership' },
+            { label: 'Soul Caravan', href: '/soul-caravan' },
         ]
     },
     {
-        label: 'Our Appeals', // Renamed from Our Work
+        label: 'Our Appeals',
         href: '/#appeals',
         dropdownItems: [
             { label: 'Build a Masjid', href: '/masjid' },
@@ -24,15 +24,14 @@ export const NAV_CONFIG: NavigationLink[] = [
             { label: 'Orphan Care', href: '/orphan-care' },
             { label: 'Food Relief', href: '/food-relief' },
             { label: 'Qurbani', href: '/qurbani' },
-            { label: 'Zakat', href: '/#programs' },
-            { label: 'View All Appeals', href: '/#programs' } // Explicit View All
+            // Zakat & View All Removed as requested
         ]
     },
     {
         label: 'Get Involved',
         href: '/#involved',
         dropdownItems: [
-            { label: 'Volunteer with Us', href: '/#involved' },
+            { label: 'Volunteer with Us', href: '/volunteer' }, // Updated to /volunteer
             { label: 'Start a Fundraiser', href: '/fundraise' },
             { label: 'Soul Caravan Trips', href: '/soul-caravan' }
         ]

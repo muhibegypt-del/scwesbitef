@@ -36,12 +36,15 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
 
-            {/* LOGO */}
-            <Link to="/" className="flex items-center gap-2 z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md">
+            {/* LOGO - flex-shrink-0 prevents compression, min-w ensures space */}
+            <Link
+              to="/"
+              className="flex-shrink-0 min-w-[80px] lg:min-w-0 flex items-center z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md overflow-visible"
+            >
               <img
                 src="https://ik.imagekit.io/dzmabcda0/Design_6.svg"
                 alt="Soul Caravan Foundation"
-                className="h-10 lg:h-14 w-auto scale-[2.8] origin-center"
+                className="h-12 lg:h-14 w-auto scale-[1.8] lg:scale-[2.8] origin-left lg:origin-center"
               />
             </Link>
 

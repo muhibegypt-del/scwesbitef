@@ -35,7 +35,7 @@ export function MasjidAppeal() {
                 title="Build a Masjid"
                 subtitle="Build and restore masjids in communities where access to places of worship and learning is limited, creating safe spaces for prayer and community support. Your contribution helps ensure that these sacred spaces remain accessible, welcoming, and equipped to serve future generations."
                 badge="Sadaqah Jariyah"
-                image={IMAGES.QURBANI.HANDING_BAG}
+                image={IMAGES.MASJID.MAIN}
                 ctaLink={SQUARE_LINK}
             />
 

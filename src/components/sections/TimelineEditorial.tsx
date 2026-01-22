@@ -43,7 +43,11 @@ export function TimelineEditorial() {
                 const isCurrent = item.status === 'current';
 
                 return (
-                    <div key={item.year} className={`relative flex flex-col lg:flex-row gap-8 lg:gap-0 items-start lg:items-center ${isAlternate ? 'lg:flex-row-reverse' : ''}`}>
+                    <div
+                        key={item.year}
+                        id={`year-${item.year}`}
+                        className={`relative flex flex-col lg:flex-row gap-8 lg:gap-0 items-start lg:items-center ${isAlternate ? 'lg:flex-row-reverse' : ''} scroll-mt-32`}
+                    >
 
                         {/* 1. TIMELINE NODE (Editorial: Clean Circle) */}
                         <div className="absolute left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">

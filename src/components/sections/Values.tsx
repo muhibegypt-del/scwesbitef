@@ -64,6 +64,8 @@ export function Values() {
                 <img
                   src={value.image}
                   alt={value.title}
+                  width={800}
+                  height={600}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

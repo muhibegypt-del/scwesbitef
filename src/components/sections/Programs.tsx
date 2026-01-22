@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { IMAGES } from '@/data/imageAssets';
 
 // Square payment links
 const SQUARE_LINKS = {
@@ -54,7 +55,7 @@ const programs: Program[] = [
   {
     title: 'Build a Masjid',
     description: 'Construct a place of worship and community gathering that will serve generations as the heart of spiritual and social life.',
-    image: 'https://ik.imagekit.io/dzmabcda0/finals/17-DSC00819.jpg',
+    image: IMAGES.MASJID.MAIN,
     href: '/masjid',
     donateLink: SQUARE_LINKS.MASJID,
   },

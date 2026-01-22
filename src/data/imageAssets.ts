@@ -27,6 +27,13 @@ export const IMAGES = {
     },
 
     // ===========================
+    // MASJID
+    // ===========================
+    MASJID: {
+        MAIN: 'https://ik.imagekit.io/dzmabcda0/WhatsApp%20Image%202026-01-22%20at%206.18.03%20PM.jpeg',
+    },
+
+    // ===========================
     // EDUCATION (7 images)
     // ===========================
     EDUCATION: {
