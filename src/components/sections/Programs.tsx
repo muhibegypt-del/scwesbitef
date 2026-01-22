@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { IMAGES } from '@/data/imageAssets';
 
@@ -99,7 +100,6 @@ export function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group flex flex-col bg-white border border-gray-100 rounded-xl overflow-hidden shadow-soft hover:shadow-elevated transition-shadow duration-300"
             >
               {/* Image - Strict 4:3, Sharp */}
@@ -126,9 +126,9 @@ export function Programs() {
                 <div className="space-y-3 mt-auto w-full">
                   {program.href ? (
                     <Button asChild variant="outline" className="w-full rounded-xl border-gray-200 hover:border-teal-600 hover:text-teal-700 h-11 uppercase tracking-widest text-xs font-bold">
-                      <a href={program.href}>
+                      <Link to={program.href}>
                         Learn More <ArrowUpRight className="ml-2 h-3 w-3" />
-                      </a>
+                      </Link>
                     </Button>
                   ) : (
                     <div className="w-full h-11 flex items-center justify-center border border-gray-100 text-gray-400 text-xs font-bold uppercase tracking-widest bg-gray-50 cursor-not-allowed rounded-xl">
