@@ -34,7 +34,6 @@ export function TimelineItem({ item, index, onClick }: TimelineItemProps) {
                 <motion.div
                     animate={{
                         scale: isInView ? 1.2 : 1,
-                        backgroundColor: isCurrent ? '#fff' : isInView ? '#fff' : '#fff'
                     }}
                     className={`
             relative w-4 h-4 rounded-full border-2 flex items-center justify-center bg-white transition-colors duration-500
@@ -52,20 +51,23 @@ export function TimelineItem({ item, index, onClick }: TimelineItemProps) {
             </div>
 
             {/* Content Block */}
-            <div className={`transition-all duration-500 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-80'}`}>
+            <div className={`transition-all duration-500 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-80'}`
+            }>
 
                 {/* Header Row */}
-                <div className="flex flex-wrap items-baseline gap-3 mb-2">
+                < div className="flex flex-wrap items-baseline gap-3 mb-2" >
                     <span className={`font-geist font-bold text-xl tracking-tight transition-colors ${isInView ? 'text-brand-primary-darker group-hover:text-olive-600' : 'text-gray-400 group-hover:text-brand-primary'}`}>
                         {item.year}
                     </span>
 
-                    {isCurrent && (
-                        <span className="inline-flex items-center gap-1 rounded-md bg-olive-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-olive-700 border border-olive-100">
-                            Current Phase
-                        </span>
-                    )}
-                </div>
+                    {
+                        isCurrent && (
+                            <span className="inline-flex items-center gap-1 rounded-md bg-olive-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-olive-700 border border-olive-100">
+                                Current Phase
+                            </span>
+                        )
+                    }
+                </div >
 
                 <h3 className={`text-lg sm:text-xl font-bold mb-3 transition-colors duration-300 ${isInView ? 'text-brand-primary-dark' : 'text-gray-600'}`}>
                     {item.title}
@@ -75,18 +77,20 @@ export function TimelineItem({ item, index, onClick }: TimelineItemProps) {
                     {item.description}
                 </BodyText>
 
-                {isCurrent && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        className="mt-4"
-                    >
-                        <button className="inline-flex items-center gap-2 text-sm font-bold text-olive-600 hover:text-olive-700 hover:underline decoration-2 underline-offset-4 transition-all">
-                            View Report <ArrowRight size={14} />
-                        </button>
-                    </motion.div>
-                )}
-            </div>
-        </motion.div>
+                {
+                    isCurrent && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            className="mt-4"
+                        >
+                            <button className="inline-flex items-center gap-2 text-sm font-bold text-olive-600 hover:text-olive-700 hover:underline decoration-2 underline-offset-4 transition-all">
+                                View Report <ArrowRight size={14} />
+                            </button>
+                        </motion.div>
+                    )
+                }
+            </div >
+        </motion.div >
     );
 }

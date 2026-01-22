@@ -31,23 +31,18 @@ export function Navigation() {
     <>
       {/* MAIN HEADER - DARK TEAL AS REQUESTED */}
       <header
-        className={`fixed left-0 right-0 w-full z-header transition-all duration-300 ${isScrolled ? 'top-0 shadow-soft' : 'top-0'}`}
-        style={{ backgroundColor: '#264144' }}
+        className={`fixed left-0 right-0 w-full z-header transition-all duration-300 bg-brand-primary-dark ${isScrolled ? 'top-0 shadow-soft' : 'top-0'}`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
 
             {/* LOGO */}
-            <Link to="/" className="flex items-center gap-2 z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md p-1 -ml-1">
+            <Link to="/" className="flex items-center gap-2 z-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md">
               <img
-                src="/design_8.svg"
+                src="https://ik.imagekit.io/dzmabcda0/Design_6.svg"
                 alt="Soul Caravan Foundation"
-                className="h-10 lg:h-12 w-auto brightness-0 invert"
+                className="h-10 lg:h-14 w-auto scale-[2.8] origin-center"
               />
-              <div>
-                <p className="text-white text-lg font-bold leading-none">Soul Caravan</p>
-                <p className="text-teal-200 text-[10px] uppercase tracking-widest">Foundation</p>
-              </div>
             </Link>
 
             {/* DESKTOP NAV */}
@@ -61,7 +56,7 @@ export function Navigation() {
             <div className="hidden lg:flex items-center gap-4">
               {/* Donate CTA */}
               <Link
-                to="/appeals"
+                to="/#programs"
                 className="flex items-center gap-2 bg-brand-accent hover:bg-brand-accent/90 text-brand-primary-darker font-bold text-sm px-5 py-3 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-accent focus-visible:ring-offset-brand-primary-darker"
               >
                 Donate
@@ -77,7 +72,7 @@ export function Navigation() {
             {/* MOBILE ACTIONS */}
             <div className="flex items-center gap-3 lg:hidden">
               <Link
-                to="/appeals"
+                to="/#programs"
                 className="bg-brand-accent text-brand-primary-darker font-bold text-sm px-4 py-2 rounded-full"
               >
                 Donate

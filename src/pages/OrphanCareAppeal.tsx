@@ -33,7 +33,7 @@ export function OrphanCareAppeal() {
       {/* Hero */}
       <AppealHero
         title="Support Orphans & Widows"
-        subtitle="Provide comprehensive support including school fees, uniforms, food, and psychosocial support for families who have lost their primary provider. Your monthly support creates stability and hope."
+        subtitle="Provide comprehensive support for orphans and widows, including school fees, uniforms, and food for families who have lost their primary provider. Your support helps restore stability, providing children with the opportunity to continue their education and widows with the resources they need to care for their families."
         badge="Orphan & Widow Care"
         image={IMAGES.EDUCATION.BOY_SMILING}
         ctaLink={SQUARE_LINK}
@@ -96,7 +96,7 @@ export function OrphanCareAppeal() {
         imageAlt="Happy child"
         quote={
           <>
-            <span className="text-emerald-600">"We don't just feed children;</span> we nourish their dreams. Seeing them graduate and succeed is the greatest reward."
+            <span className="text-brand-primary">"We don't just feed children;</span> we nourish their dreams. Seeing them graduate and succeed is the greatest reward."
           </>
         }
         author="Program Coordinator"

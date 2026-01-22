@@ -32,8 +32,8 @@ export function EducationAppeal() {
 
             {/* Hero */}
             <AppealHero
-                title="Support Education"
-                subtitle="Education is the key to breaking the cycle of poverty. Your support provides books, uniforms, and safe learning environments for children who dream of a better future."
+                title="Education"
+                subtitle="Support children's education and help create opportunities for learning and growth. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed."
                 badge="Education Appeal"
                 image={IMAGES.EDUCATION.FRIENDS_BLACKBOARD}
                 ctaLink={SQUARE_LINK}
@@ -96,7 +96,7 @@ export function EducationAppeal() {
                 imageAlt="Students studying"
                 quote={
                     <>
-                        <span className="text-emerald-600">"Knowledge is power."</span> Seeing these children excel against all odds is the greatest testament to the power of your support.
+                        <span className="text-brand-primary">"Knowledge is power."</span> Seeing these children excel against all odds is the greatest testament to the power of your support.
                     </>
                 }
                 author="School Principal"

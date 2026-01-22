@@ -56,7 +56,7 @@ export function AppealProblem({
                                     {bullets.map((bullet, idx) => (
                                         <FadeIn key={idx} delay={0.4 + (idx * 0.1)} direction="right">
                                             <li className="flex items-start gap-3">
-                                                <span className={`w-2 h-2 rounded-full bg-emerald-500 mt-2.5 flex-shrink-0`} /> {/* Explicit emerald-500 from source */}
+                                                <span className={`w-2 h-2 rounded-full bg-teal-500 mt-2.5 flex-shrink-0`} /> {/* Explicit teal-500 from source */}
                                                 {bullet}
                                             </li>
                                         </FadeIn>

@@ -32,8 +32,8 @@ export function FoodReliefAppeal() {
 
       {/* Hero */}
       <AppealHero
-        title="Emergency Food Relief"
-        subtitle="Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict. When hunger strikes, immediate action saves lives."
+        title="Food Relief"
+        subtitle="Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict. Providing food relief ensures that families receive not only nourishment, but also hope."
         badge="Emergency Relief"
         image={IMAGES.HOT_MEALS.GIRL_PLATE}
         ctaLink={SQUARE_LINK}
@@ -96,7 +96,7 @@ export function FoodReliefAppeal() {
         imageAlt="Team distributing food"
         quote={
           <>
-            <span className="text-emerald-600">"Serving food is serving humanity."</span> Seeing a child finish a full plate of food with a smile is why we do this. It's basic dignity.
+            <span className="text-brand-primary">"Serving food is serving humanity."</span> Seeing a child finish a full plate of food with a smile is why we do this. It's basic dignity.
           </>
         }
         author="Food Program Lead"

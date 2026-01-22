@@ -50,5 +50,5 @@ export interface WayToHelp {
   title: string;
   description: string;
   action: string;
-  color: 'emerald' | 'teal' | 'slate';
+  color: 'teal' | 'slate';
 }

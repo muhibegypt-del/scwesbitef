@@ -35,7 +35,7 @@ export function TimelineEditorial() {
             {/* PROGRESS BEAM */}
             <motion.div
                 style={{ scaleY, transformOrigin: "top" }}
-                className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-emerald-500 -translate-x-1/2 z-10 origin-top"
+                className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-teal-500 -translate-x-1/2 z-10 origin-top"
             />
 
             {timelineData.map((item, index) => {
@@ -47,11 +47,11 @@ export function TimelineEditorial() {
 
                         {/* 1. TIMELINE NODE (Editorial: Clean Circle) */}
                         <div className="absolute left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
-                            <div className={`relative flex items-center justify-center w-6 h-6 rounded-full border-2 transition-all duration-500 bg-white ${isCurrent ? 'border-emerald-500 scale-125' : 'border-slate-300'}`}>
+                            <div className={`relative flex items-center justify-center w-6 h-6 rounded-full border-2 transition-all duration-500 bg-white ${isCurrent ? 'border-teal-500 scale-125' : 'border-slate-300'}`}>
                                 {isCurrent && (
-                                    <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-20" />
+                                    <div className="absolute inset-0 rounded-full bg-teal-500 animate-ping opacity-20" />
                                 )}
-                                <div className={`w-2 h-2 rounded-full ${isCurrent ? 'bg-emerald-600' : 'bg-slate-300'}`} />
+                                <div className={`w-2 h-2 rounded-full ${isCurrent ? 'bg-teal-600' : 'bg-slate-300'}`} />
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@ export function TimelineEditorial() {
                                 <Card className="border-none shadow-none bg-transparent rounded-none p-0 group">
 
                                     <CardHeader className={`p-0 space-y-4 ${isAlternate ? 'lg:items-end' : 'lg:items-start'}`}>
-                                        <Badge variant="outline" className={`w-fit border-emerald-200 text-emerald-700 rounded-sm px-3 py-1 text-[11px] font-bold tracking-widest uppercase ${isCurrent ? 'bg-emerald-50' : 'bg-transparent'}`}>
+                                        <Badge variant="outline" className={`w-fit border-teal-200 text-teal-700 rounded-sm px-3 py-1 text-xs font-bold tracking-widest uppercase ${isCurrent ? 'bg-teal-50' : 'bg-transparent'}`}>
                                             {item.year}
                                         </Badge>
 
@@ -93,7 +93,7 @@ export function TimelineEditorial() {
                                         )}
 
                                         {isCurrent && (
-                                            <div className={`flex items-center gap-2 text-sm font-semibold text-emerald-600 ${isAlternate ? 'lg:justify-end' : ''}`}>
+                                            <div className={`flex items-center gap-2 text-sm font-semibold text-teal-600 ${isAlternate ? 'lg:justify-end' : ''}`}>
                                                 <Sparkles size={16} />
                                                 Current Phase
                                             </div>

@@ -14,18 +14,18 @@ interface ValueItem {
 
 const values: ValueItem[] = [
   {
-    title: 'Community',
+    title: 'Community Centered',
     description: 'We work directly with local communities, ensuring our programs are led by and designed for the people we serve.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/25-DSC00589.jpg'
   },
   {
-    title: 'Empowerment',
+    title: 'Empowerment Focused',
     description: 'We provide communities with the tools, resources, and support they need to build sustainable solutions and take ownership of their own development.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg'
   },
   {
-    title: 'Transparency',
-    description: 'We ensure the majority of your donation goes directly to our projects, with minimal administrative costs. Local staff are paid fairly to implement programs effectively on the ground',
+    title: 'Transparent Impact',
+    description: 'We ensure the majority of your donation goes directly to our projects, with minimal administrative costs. Local staff are paid fairly to implement programs effectively on the ground.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg'
   }
 ];

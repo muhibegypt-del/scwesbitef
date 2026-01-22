@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 import { HandHeart, Share2, Mail, ArrowRight, Plane } from 'lucide-react';
 import { Heading, Text } from '../system';
 import { Button } from '../ui/button';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from '../ui/card';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -19,7 +26,7 @@ const ways = [
   },
   {
     icon: Share2,
-    title: 'Become an Ambassador',
+    title: 'Start a Fundraiser',
     description: 'Start a campaign, make an impact, and help transform lives.',
     action: 'Start Fundraising',
     color: 'sage',
@@ -27,9 +34,9 @@ const ways = [
   },
   {
     icon: Plane,
-    title: 'Soul Caravan 2026 Kenya Adventure',
-    description: 'Find service through exploration. Join us for a life-changing journey where we combine adventure with meaningful volunteer work.',
-    action: 'Apply for 2026',
+    title: 'Soul Caravan Trips',
+    description: 'Soul Caravan trips combine travel with meaningful impact. Explore the beauty and culture of the places you visit while engaging in experiences that connect you with local communities.',
+    action: 'Learn More',
     color: 'olive',
     href: '/soul-caravan'
   }
@@ -70,31 +77,30 @@ export function GetInvolved() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: EASE }}
-              className="group relative bg-brand-primary-dark rounded-xl p-8 hover:bg-brand-primary-hover transition-colors duration-300"
             >
-              <div className={`
-                w-14 h-14 mx-auto mb-8 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110
-                bg-white/10 text-white
-              `}>
-                <way.icon className="w-7 h-7" strokeWidth={1.5} aria-hidden="true" />
-              </div>
-
-              <h3 className="subheading text-white mb-4 text-center">
-                {way.title}
-              </h3>
-
-              <p className="body-text text-teal-100/80 mb-8 flex-grow text-center !text-base">
-                {way.description}
-              </p>
-
-              <div className="mt-auto flex justify-center">
-                <Button asChild variant="link" className="group/btn text-white hover:text-teal-200 hover:no-underline font-bold uppercase tracking-widest p-0">
-                  <Link to={way.href}>
-                    {way.action}
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true" />
-                  </Link>
-                </Button>
-              </div>
+              <Card className="flex flex-col h-full border-slate-100 bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-teal-50 flex items-center justify-center mb-4 transition-colors group-hover:bg-teal-100">
+                    <way.icon className="w-6 h-6 text-teal-600" strokeWidth={1.5} />
+                  </div>
+                  <CardTitle className="font-serif text-2xl text-slate-900">
+                    {way.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-slate-600 leading-relaxed">
+                    {way.description}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="link" className="p-0 h-auto text-teal-700 font-bold uppercase tracking-widest text-sm hover:text-teal-800 hover:no-underline group/btn">
+                    <Link to={way.href} className="flex items-center gap-2">
+                      {way.action}
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
             </motion.div>
           ))}
         </div>
@@ -116,10 +122,10 @@ export function GetInvolved() {
                 <span className="text-sm font-bold uppercase tracking-widest">Stay Connected</span>
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">
-                Join our weekly newsletter
+                Join our community
               </h3>
               <p className="body-text text-teal-100/80 !text-lg max-w-md mx-auto lg:mx-0">
-                Receive impactful stories from the field, transparency reports, and urgent appeals directly to your inbox. No spam, ever.
+                Connect with us, stay inspired, and see the change you help create.
               </p>
             </div>
 

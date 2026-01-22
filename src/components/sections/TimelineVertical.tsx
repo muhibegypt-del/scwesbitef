@@ -21,12 +21,12 @@ export function TimelineVertical() {
         <div ref={containerRef} className="relative space-y-20 lg:space-y-0">
 
             {/* CENTRAL LINE (Desktop) / LEFT LINE (Mobile) */}
-            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-emerald-100/50 -translate-x-1/2" />
+            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-teal-100/50 -translate-x-1/2" />
 
             {/* PROGRESS BEAM */}
             <motion.div
                 style={{ scaleY, transformOrigin: "top" }}
-                className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-emerald-300 to-emerald-500 -translate-x-1/2 z-10 origin-top"
+                className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-500 via-teal-300 to-teal-500 -translate-x-1/2 z-10 origin-top"
             />
 
             {timelineData.map((item, index) => {
@@ -38,11 +38,11 @@ export function TimelineVertical() {
 
                         {/* 1. TIMELINE NODE */}
                         <div className="absolute left-8 lg:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
-                            <div className={`relative flex items-center justify-center w-8 h-8 rounded-full border-4 shadow-sm transition-colors duration-500 bg-white ${isCurrent ? 'border-emerald-500 scale-125' : 'border-emerald-200'}`}>
+                            <div className={`relative flex items-center justify-center w-8 h-8 rounded-full border-4 shadow-sm transition-colors duration-500 bg-white ${isCurrent ? 'border-teal-500 scale-125' : 'border-teal-200'}`}>
                                 {isCurrent && (
-                                    <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-20" />
+                                    <div className="absolute inset-0 rounded-full bg-teal-500 animate-ping opacity-20" />
                                 )}
-                                <div className={`w-2.5 h-2.5 rounded-full ${isCurrent ? 'bg-emerald-600' : 'bg-emerald-300'}`} />
+                                <div className={`w-2.5 h-2.5 rounded-full ${isCurrent ? 'bg-teal-600' : 'bg-teal-300'}`} />
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@ export function TimelineVertical() {
                                 <div className={`group relative p-6 sm:p-8 bg-white rounded-2xl shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300`}>
 
                                     {/* Year Badge */}
-                                    <div className={`inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 text-xs font-bold uppercase tracking-widest ${isAlternate ? 'lg:flex-row-reverse' : ''} ${isCurrent ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-600'}`}>
+                                    <div className={`inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 text-xs font-bold uppercase tracking-widest ${isAlternate ? 'lg:flex-row-reverse' : ''} ${isCurrent ? 'bg-teal-100 text-teal-700' : 'bg-slate-100 text-slate-600'}`}>
                                         <Calendar size={12} />
                                         {item.year}
                                     </div>
@@ -80,7 +80,7 @@ export function TimelineVertical() {
                                     {/* Current Status Indicator */}
                                     {isCurrent && (
                                         <div className="mt-6 pt-4 border-t border-slate-100">
-                                            <div className="flex items-center gap-2 text-sm font-semibold text-emerald-600">
+                                            <div className="flex items-center gap-2 text-sm font-semibold text-teal-600">
                                                 <Sparkles size={16} />
                                                 Current Phase
                                             </div>

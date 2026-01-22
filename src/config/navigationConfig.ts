@@ -31,10 +31,10 @@ export const NAV_CONFIG: NavigationLink[] = [
     {
         label: 'Get Involved',
         href: '/#involved',
-        dropdownItems: [ // Populated children
-            { label: 'Join the Caravan', href: '/soul-caravan' }, // Contextual link
-            { label: 'Volunteer', href: '/#involved' },
-            { label: 'Ambassador Program', href: '/#involved' }
+        dropdownItems: [
+            { label: 'Volunteer with Us', href: '/#involved' },
+            { label: 'Start a Fundraiser', href: '/fundraise' },
+            { label: 'Soul Caravan Trips', href: '/soul-caravan' }
         ]
     },
 ];

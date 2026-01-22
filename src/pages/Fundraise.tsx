@@ -12,9 +12,9 @@ export function Fundraise() {
                 </Link>
 
                 <div className="text-center mb-12">
-                    <h1 className="section-title mb-4">Become an Ambassador</h1>
+                    <h1 className="section-title mb-4">Start a Fundraiser</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Use your voice and network to amplify our impact. Start your own campaign today.
+                        Whether it's building a school, providing food, supporting orphanages, or bringing clean water to a village, your fundraising can make a real difference. Campaign with friends, host an event, or dedicate a special occasion - there's no limit to what you can achieve.
                     </p>
                 </div>
 

@@ -33,9 +33,9 @@ export function MasjidAppeal() {
             {/* Hero */}
             <AppealHero
                 title="Build a Masjid"
-                subtitle="Construct a sacred space for community worship, education, and spiritual growth. A dedicated Masjid serves as the heart of the village."
+                subtitle="Build and restore masjids in communities where access to places of worship and learning is limited, creating safe spaces for prayer and community support. Your contribution helps ensure that these sacred spaces remain accessible, welcoming, and equipped to serve future generations."
                 badge="Sadaqah Jariyah"
-                image={IMAGES.QURBANI.HANDING_BAG} // Placeholder based on User Plan
+                image={IMAGES.QURBANI.HANDING_BAG}
                 ctaLink={SQUARE_LINK}
             />
 
@@ -96,7 +96,7 @@ export function MasjidAppeal() {
                 imageAlt="Community waiting"
                 quote={
                     <>
-                        <span className="text-emerald-600">"The Masjid is the anchor."</span> It is where the hungry are fed, where disputes are settled, and where the name of Allah is raised.
+                        <span className="text-brand-primary">"The Masjid is the anchor."</span> It is where the hungry are fed, where disputes are settled, and where the name of Allah is raised.
                     </>
                 }
                 author="Imam Abdullah"

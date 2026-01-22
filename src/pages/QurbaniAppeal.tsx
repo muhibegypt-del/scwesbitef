@@ -32,8 +32,8 @@ export function QurbaniAppeal() {
 
             {/* Hero */}
             <AppealHero
-                title="Share the Blessing of Qurbani"
-                subtitle="Perform your Qurbani with us. We ensure your sacrifice is carried out according to Sunnah and distributed faithfully to the neediest families."
+                title="Qurbani"
+                subtitle="Provide Qurbani meat to families in need, ensuring that everyone can share in the blessings of Eid. Your contribution helps distribute fresh, high-quality meat to those who need it most, bringing nourishment and celebration to families across under resourced areas."
                 badge="Seasonal Appeal"
                 image={IMAGES.QURBANI.BANNER_GOATS}
                 ctaLink={SQUARE_LINK}
@@ -97,7 +97,7 @@ export function QurbaniAppeal() {
                 imageAlt="Distribution"
                 quote={
                     <>
-                        <span className="text-emerald-600">"We handle every sacrifice with Ihsan."</span> Knowing that this is a sacred trust from the donor to the beneficiary drives our excellence.
+                        <span className="text-brand-primary">"We handle every sacrifice with Ihsan."</span> Knowing that this is a sacred trust from the donor to the beneficiary drives our excellence.
                     </>
                 }
                 author="Distribution Team"

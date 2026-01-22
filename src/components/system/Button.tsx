@@ -24,10 +24,10 @@ const sizeClasses: Record<ButtonSize, string> = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'bg-[#ff6f46] hover:bg-[#e55a35] text-white',
-    secondary: 'bg-teal-600 hover:bg-teal-700 text-white',
-    outline: 'border-2 border-teal-600 text-teal-700 hover:bg-teal-50',
-    ghost: 'text-gray-700 hover:bg-gray-100',
+    primary: 'bg-brand-primary hover:bg-brand-primary-hover text-white shadow-soft hover:shadow-elevated',
+    secondary: 'bg-white text-brand-primary border-2 border-brand-primary hover:bg-brand-primary-lightest',
+    outline: 'border-2 border-brand-primary text-brand-primary hover:bg-brand-primary-lightest',
+    ghost: 'text-gray-700 hover:bg-gray-100 hover:text-brand-primary',
 };
 
 const baseClasses = `

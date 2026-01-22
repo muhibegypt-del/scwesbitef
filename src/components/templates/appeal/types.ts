@@ -1,9 +1,9 @@
 export const BrandPalette = {
     primary: {
-        DEFAULT: 'emerald-600',
-        hover: 'emerald-700',
-        light: 'emerald-50',
-        accent: 'emerald-400',
+        DEFAULT: 'teal-600',
+        hover: 'teal-700',
+        light: 'teal-50',
+        accent: 'teal-400',
     },
     text: {
         main: 'slate-900',
