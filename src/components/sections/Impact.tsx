@@ -77,7 +77,7 @@ export function Impact() {
 
               <div className="text-center md:text-left space-y-4">
                 <p className="font-serif text-2xl italic text-slate-800 leading-relaxed">
-                  "True charity isn't about pity; it's about partnership. We ask the communities what they need, and we deliver exactly that."
+                  "Charity is not pity. It is presence. It is empathy. It is sitting with communities, understanding their needs, and responding with care."
                 </p>
                 <div>
                   <div className="font-bold text-slate-900 text-lg">Uthman Hanif</div>
