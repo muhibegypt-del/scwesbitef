@@ -5,6 +5,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { BrandLogo } from '@/components/ui/BrandLogo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,13 +34,12 @@ export function Footer() {
 
           {/* Brand Column */}
           <div className="space-y-8">
-            <img
-              src="/logo.svg"
-              alt="Soul Caravan Foundation"
-              width={140}
-              height={56}
-              className="h-14 w-auto brightness-0 invert opacity-90"
-            />
+            <div className="w-[140px]">
+              <BrandLogo
+                className="h-14 w-auto text-white opacity-90"
+                aria-label="Soul Caravan Foundation"
+              />
+            </div>
             <p className="text-teal-100/70 text-base leading-relaxed max-w-sm">
               We are a grassroots charity working directly with communities to build sustainable futures through education, water, and essential care.
             </p>

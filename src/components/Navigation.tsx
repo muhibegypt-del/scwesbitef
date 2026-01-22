@@ -9,6 +9,7 @@ import { MobileMenu } from './MobileMenu';
 import { NavigationItem } from './NavigationItem';
 import { HamburgerToggle } from './navigation/HamburgerToggle';
 import { Button } from './ui/button';
+import { BrandLogo } from './ui/BrandLogo';
 
 // --- MAIN NAVIGATION ---
 export function Navigation() {
@@ -41,13 +42,10 @@ export function Navigation() {
             <Link
               to="/"
               className="flex-shrink-0 z-50 focus:outline-none rounded-md"
+              aria-label="Soul Caravan Foundation"
             >
-              <div className="relative w-40 h-20 -my-4 lg:w-48 lg:h-24 lg:-my-6 flex items-center justify-start overflow-hidden">
-                <img
-                  src="https://ik.imagekit.io/dzmabcda0/Design_6.svg"
-                  alt="Soul Caravan Foundation"
-                  className="w-full h-full object-contain scale-[2.5] origin-center transform-gpu"
-                />
+              <div className="relative w-40 h-20 -my-4 lg:w-48 lg:h-24 lg:-my-6 flex items-center justify-start overflow-hidden text-white">
+                <BrandLogo className="w-full h-full object-contain scale-[2.5] origin-center transform-gpu" />
               </div>
             </Link>
 
