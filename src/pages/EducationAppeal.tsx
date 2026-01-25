@@ -33,7 +33,7 @@ export function EducationAppeal() {
       {/* Hero */}
       <AppealHero
         title="Empower Through Education"
-        subtitle="Provide quality education for children in underserved communities. By funding their education, you break the cycle of poverty and unlock limitless potential. Every child deserves the opportunity to learn, grow, and succeed."
+        subtitle="Support children's education and help create opportunities for learning and growth. For many children, access to quality education is limited by poverty, lack of resources, or inadequate school facilities. Without support, students face challenges that make it difficult to reach their potential. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed. Your contribution helps create safe and inspiring spaces for education, empowering children to gain essential skills and build a brighter future for themselves and their communities."
         badge="Educational Support"
         image={IMAGES.EDUCATION.FRIENDS_BLACKBOARD}
         ctaLink={SQUARE_LINK}

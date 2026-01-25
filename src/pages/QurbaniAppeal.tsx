@@ -33,7 +33,7 @@ export function QurbaniAppeal() {
             {/* Hero */}
             <AppealHero
                 title="Qurbani"
-                subtitle="Provide Qurbani meat to families in need, ensuring that everyone can share in the blessings of Eid. Your contribution helps distribute fresh, high-quality meat to those who need it most, bringing nourishment and celebration to families across under resourced areas."
+                subtitle="Provide Qurbani meat to families in need, ensuring that everyone can share in the blessings of Eid. Many vulnerable families have limited access to nutritious food during Eid, and this important tradition is often out of reach. Your contribution helps distribute fresh, high-quality meat to those who need it most, bringing nourishment and celebration to families across under resourced areas."
                 badge="Seasonal Appeal"
                 image={IMAGES.QURBANI.BANNER_GOATS}
                 ctaLink={SQUARE_LINK}
