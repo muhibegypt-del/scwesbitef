@@ -41,8 +41,8 @@ export function WaterWellAppeal() {
       {/* Hero Section */}
       <AppealHero
         title="Build a Water Well"
-        subtitle="Provide clean, safe drinking water for an entire village. By building a water well, you provide more than just water - you provide health, dignity, and stability."
-        badge="Sadaqah Jariyah"
+        subtitle="Provide clean, safe drinking water for an entire village. For many communities, access to clean water is still a daily struggle. A single well can serve hundreds of individuals for years to come, transforming daily life and protecting families from preventable, water-borne diseases.
+By building a water well, you provide more than just water - you provide health, dignity, and stability. Clean water reduces disease, strengthens communities, and creates a foundation for long-term development, allowing families to focus on building a better future."
         image={IMAGES.WATER.GIRL_COLLECTING}
         ctaLink={SQUARE_LINK}
       />
