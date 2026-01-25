@@ -1,12 +1,16 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+
+interface CustomLogoProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+const CustomLogo: React.FC<CustomLogoProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    id="Layer_1"
-    x={0}
-    y={0}
     viewBox="0 0 2000 2000"
+    width="100%"
+    height="100%"
     {...props}
   >
     <style>{".st1{fill:#97a55e}.st2{fill:#fff}"}</style>
@@ -32,4 +36,5 @@ const SvgComponent = (props) => (
     />
   </svg>
 )
-export default SvgComponent
+
+export default CustomLogo
