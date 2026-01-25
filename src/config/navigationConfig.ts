@@ -23,6 +23,7 @@ export const NAV_CONFIG: NavigationLink[] = [
             { label: 'Build a Water Well', href: '/water-well' },
             { label: 'Orphan Care', href: '/orphan-care' },
             { label: 'Food Relief', href: '/food-relief' },
+            { label: 'Education', href: '/education' },
             { label: 'Qurbani', href: '/qurbani' },
             // Zakat & View All Removed as requested
         ]
