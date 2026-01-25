@@ -33,8 +33,9 @@ export function MasjidAppeal() {
             {/* Hero */}
             <AppealHero
                 title="Build a Masjid"
-                subtitle="Build and restore masjids in communities where access to places of worship and learning is limited, creating safe spaces for prayer and community support. Your contribution helps ensure that these sacred spaces remain accessible, welcoming, and equipped to serve future generations."
-                badge="Sadaqah Jariyah"
+                subtitle="Build and restore masjids in communities where access to places of worship and learning is limited, creating safe spaces for prayer and community support. By supporting the construction and restoration of masjids, you help strengthen faith, preserve identity, and provide a stable environment where communities can grow together. 
+
+Your contribution helps ensure that these sacred spaces remain accessible, welcoming, and equipped to serve future generations, fostering unity, resilience, and hope wherever they are needed most."
                 image={IMAGES.MASJID.MAIN}
                 ctaLink={SQUARE_LINK}
             />
