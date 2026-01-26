@@ -20,10 +20,10 @@ const GALLERY_IMAGES = [
 ];
 
 const FAQ_ITEMS = [
-  { question: 'What does my donation cover?', answer: 'Your donation covers school fees, uniforms, textbooks, learning materials, and educational support programs. We ensure that financial barriers don\'t prevent children from accessing quality education.' },
-  { question: 'How many children can I help support?', answer: 'Depending on your donation amount, you can help support one or multiple children. We pool resources to ensure all registered students receive comprehensive educational support.' },
-  { question: 'Can I sponsor a specific student?', answer: 'While we pool donations to serve all students equitably, we provide regular updates on the educational programs and student progress in our supported schools.' },
-  { question: 'How do I receive updates?', answer: 'You will receive quarterly reports showcasing the impact of your contribution, including student success stories, academic achievements, and program developments.' },
+  { question: 'How does my donation support education and improve learning environments?', answer: 'Your donation helps refurbish classrooms, renovate schools, sponsor libraries, and provide essential items like school fees, shoes, and learning supplies.' },
+  { question: 'Who benefits from the education projects supported by donations?', answer: 'Children and schools in underserved communities benefit directly from our education programs and initiatives.' },
+  { question: 'Can donors choose or sponsor a specific school, classroom, or educational program?', answer: 'Yes. Donors can choose to support specific schools, classrooms, or education programs where possible.' },
+  { question: 'How can I get involved beyond making a donation?', answer: 'You can get involved by partnering with us, volunteering, sponsoring projects, or helping raise awareness about our work.' },
 ];
 
 export function EducationAppeal() {
