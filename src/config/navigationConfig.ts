@@ -21,7 +21,7 @@ export const NAV_CONFIG: NavigationLink[] = [
         dropdownItems: [
             { label: 'Build a Masjid', href: '/masjid' },
             { label: 'Build a Water Well', href: '/water-well' },
-            { label: 'Orphan Care', href: '/orphan-care' },
+            { label: 'Widow and Orphan Care', href: '/orphan-care' },
             { label: 'Food Relief', href: '/food-relief' },
             { label: 'Education', href: '/education' },
             { label: 'Qurbani', href: '/qurbani' },
