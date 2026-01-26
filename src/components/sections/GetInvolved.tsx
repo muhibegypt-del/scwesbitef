@@ -69,7 +69,7 @@ export function GetInvolved() {
           </Text>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20 p-8 rounded-2xl" style={{ backgroundColor: '#264245' }}>
           {ways.map((way, index) => (
             <motion.div
               key={way.title}
@@ -78,22 +78,22 @@ export function GetInvolved() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: EASE }}
             >
-              <Card className="flex flex-col h-full border-slate-100 bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <Card className="flex flex-col h-full border-white/10 bg-transparent hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-teal-50 flex items-center justify-center mb-4 transition-colors group-hover:bg-teal-100">
-                    <way.icon className="w-6 h-6 text-teal-600" strokeWidth={1.5} />
+                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4 transition-colors group-hover:bg-white/20">
+                    <way.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="font-serif text-2xl text-slate-900">
+                  <CardTitle className="font-serif text-2xl text-white">
                     {way.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-white leading-relaxed">
                     {way.description}
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild variant="link" className="p-0 h-auto text-teal-700 font-bold uppercase tracking-widest text-sm hover:text-teal-800 hover:no-underline group/btn">
+                  <Button asChild variant="link" className="p-0 h-auto text-white font-bold uppercase tracking-widest text-sm hover:text-white/80 hover:no-underline group/btn">
                     <Link to={way.href} className="flex items-center gap-2">
                       {way.action}
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
