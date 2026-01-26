@@ -27,13 +27,13 @@ export function Hero() {
 
         {/* HERO CONTENT OVERLAY */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-          <div className="w-full max-w-2xl mb-6 opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
+          <div className="w-full max-w-2xl mb-3 opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
           <p className="text-lg md:text-2xl text-gray-200 max-w-2xl drop-shadow-md opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
             Empowering communities through education, water, and care.
           </p>
-          <button className="mt-8 px-12 py-4 text-lg md:text-xl font-semibold text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]" style={{ backgroundColor: '#98a45f' }}>
+          <button className="mt-6 px-12 py-4 text-lg md:text-xl font-semibold text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]" style={{ backgroundColor: '#98a45f' }}>
             Donate Now
           </button>
         </div>
