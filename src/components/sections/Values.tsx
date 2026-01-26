@@ -8,6 +8,7 @@ interface ValueItem {
   title: string;
   description: string;
   image: string;
+  link?: string;
 }
 
 const values: ValueItem[] = [
@@ -25,6 +26,18 @@ const values: ValueItem[] = [
     title: 'Transparent Impact',
     description: 'We ensure the majority of your donation goes directly to our projects, with minimal administrative costs. Local staff are paid fairly to implement programs effectively on the ground.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg'
+  },
+  {
+    title: 'Education',
+    description: 'Support children\'s education and help create opportunities for learning and growth. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed.',
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/10-DSC00188.jpg',
+    link: '/education-appeal'
+  },
+  {
+    title: 'Zakat',
+    description: 'Provide Zakat to support vulnerable families and communities in need. Your contribution helps meet essential needs such as food, education, and basic living expenses for those struggling due to poverty.',
+    image: 'https://ik.imagekit.io/dzmabcda0/finals/20-DSC00749.jpg',
+    link: '/zakat-appeal'
   }
 ];
 
@@ -48,41 +61,55 @@ export function Values() {
 
         {/* Editorial Grid - Stacked & Sharp */}
         <div className="grid gap-x-8 gap-y-16 md:grid-cols-3">
-          {values.map((value, i) => (
-            <motion.article
-              key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group flex flex-col"
-            >
-              {/* Image - Sharp, 4:3 Ratio, No Overlays */}
-              <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100 mb-8 relative">
-                <img
-                  src={value.image}
-                  alt={value.title}
-                  width={800}
-                  height={600}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
+          {values.map((value, i) => {
+            const content = (
+              <>
+                {/* Image - Sharp, 4:3 Ratio, No Overlays */}
+                <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100 mb-8 relative">
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
 
-              {/* Content - Clean, Serif Headings */}
-              <div className="flex flex-col gap-4">
-                <h3 className="text-2xl font-serif font-medium text-gray-900">
-                  {value.title}
-                </h3>
+                {/* Content - Clean, Serif Headings */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-2xl font-serif font-medium text-gray-900">
+                    {value.title}
+                  </h3>
 
-                <div className="w-12 h-px bg-teal-200" />
+                  <div className="w-12 h-px bg-teal-200" />
 
-                <p className="text-gray-600 leading-relaxed text-[15px]">
-                  {value.description}
-                </p>
-              </div>
-            </motion.article>
-          ))}
+                  <p className="text-gray-600 leading-relaxed text-[15px]">
+                    {value.description}
+                  </p>
+                </div>
+              </>
+            );
+
+            return (
+              <motion.article
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+                className="group flex flex-col"
+              >
+                {value.link ? (
+                  <a href={value.link} className="flex flex-col h-full hover:opacity-90 transition-opacity">
+                    {content}
+                  </a>
+                ) : (
+                  content
+                )}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
