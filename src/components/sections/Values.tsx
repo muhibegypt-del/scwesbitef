@@ -1,9 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import { Heading } from '../system';
-import { Button } from '@/components/ui/button';
 
 // --- TYPES ---
 interface ValueItem {
@@ -85,15 +83,6 @@ export function Values() {
               </div>
             </motion.article>
           ))}
-        </div>
-
-        {/* Footer Action - Standardized */}
-        <div className="mt-24 border-t border-gray-100 pt-12 flex justify-center">
-          <Button asChild variant="outline" className="rounded-full border-gray-300 text-gray-600 hover:text-teal-700 hover:border-teal-700 hover:bg-transparent px-8 py-6 uppercase tracking-widest text-xs font-bold transition-all">
-            <a href="/purpose">
-              Read Full Purpose <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
         </div>
       </div>
     </section>
