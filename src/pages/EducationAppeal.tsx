@@ -90,17 +90,17 @@ export function EducationAppeal() {
         quote="Education didn't just change my life — it gave me permission to dream again."
       />
 
-      {/* Quote */}
+      {/* Field Report */}
       <AppealQuote
-        image={IMAGES.EDUCATION.BOY_SMILING}
-        imageAlt="Happy student"
+        image={IMAGES.EDUCATION.KIDS_CLASSROOM}
+        imageAlt="Classroom environment"
         quote={
           <>
-            <span className="text-brand-primary">"Every child I see succeed</span> reminds me why we do this work. Education is the most powerful tool we have to break the cycle of poverty. When a child learns, an entire community benefits."
+            During a Soul Caravan visit to a remote Maasai school, we were confronted with the harsh reality of what learning looked like there. Broken chairs, peeling paint, and the absence of proper desks made it difficult for students to focus, let alone dream. We made a promise to change that. Today, the school has been fully renovated with new tables and chairs, fresh paint, essential school supplies, and repaired sanitation facilities. By improving both the learning environment and access to educational resources, we restored dignity, safety, and hope to the classroom. And this is only the beginning, plans are already underway to introduce a school meal programme, ensuring that no child has to choose between hunger and education.
           </>
         }
-        author="Sarah Kamau"
-        role="Education Program Coordinator"
+        author="Soul Caravan"
+        role="Maasai School Renovation Project"
       />
 
       {/* FAQ */}
