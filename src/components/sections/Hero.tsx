@@ -31,6 +31,9 @@ export function Hero() {
           <p className="text-lg md:text-2xl text-gray-200 max-w-2xl drop-shadow-md opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
             Empowering communities through education, water, and care.
           </p>
+          <button className="mt-8 px-12 py-4 text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
+            Donate Now
+          </button>
         </div>
       </div>
 
