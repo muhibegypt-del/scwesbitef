@@ -14,6 +14,7 @@ const SQUARE_LINKS = {
   FOOD_RELIEF: 'https://square.link/u/dpkEeY0Q',
   MASJID: 'https://square.link/u/PaNdJVqa',
   QURBANI: 'https://square.link/u/wTjNjHHp',
+  ZAKAT: 'https://square.link/u/d5fSYpG9',
 };
 
 interface Program {
@@ -48,9 +49,9 @@ const programs: Program[] = [
   },
   {
     title: 'Support Education',
-    description: 'Provide learning opportunities to children who need it most, opening doors to a brighter future through schools and supplies.',
+    description: 'Provide learning opportunities to children who need it most, opening doors to a brighter future.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg',
-    href: '/education',
+    href: '/education-appeal',
     donateLink: SQUARE_LINKS.EDUCATION,
   },
   {
@@ -66,6 +67,13 @@ const programs: Program[] = [
     image: 'https://ik.imagekit.io/dzmabcda0/finals/24-DSC00601.jpg',
     href: '/qurbani',
     donateLink: SQUARE_LINKS.QURBANI,
+  },
+  {
+    title: 'Zakat',
+    description: 'Provide Zakat to support vulnerable families and communities in need.',
+    image: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION,
+    href: '/zakat-appeal',
+    donateLink: SQUARE_LINKS.ZAKAT,
   },
 ];
 
