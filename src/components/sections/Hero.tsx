@@ -25,7 +25,7 @@ export function Hero() {
 
         {/* HERO CONTENT OVERLAY */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg opacity-0 animate-[fadeIn_1s_ease-out_forwards] whitespace-nowrap">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards] whitespace-nowrap">
             Soul Caravan Foundation
           </h1>
           <p className="text-lg md:text-2xl text-gray-200 max-w-2xl drop-shadow-md opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
