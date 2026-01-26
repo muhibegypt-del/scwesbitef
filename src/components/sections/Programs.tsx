@@ -51,7 +51,7 @@ const programs: Program[] = [
     title: 'Support Education',
     description: 'Provide learning opportunities to children who need it most, opening doors to a brighter future.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg',
-    href: '/education-appeal',
+    href: '/education',
     donateLink: SQUARE_LINKS.EDUCATION,
   },
   {
@@ -72,7 +72,7 @@ const programs: Program[] = [
     title: 'Zakat',
     description: 'Provide Zakat to support vulnerable families and communities in need.',
     image: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION,
-    href: '/zakat-appeal',
+    href: '/zakat',
     donateLink: SQUARE_LINKS.ZAKAT,
   },
 ];
