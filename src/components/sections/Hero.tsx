@@ -1,5 +1,7 @@
 'use client';
 
+import HeroLogo from '../ui/HeroLogo';
+
 // --- CONSTANTS ---
 const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066';
 const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
@@ -25,9 +27,9 @@ export function Hero() {
 
         {/* HERO CONTENT OVERLAY */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards] whitespace-nowrap">
-            Soul Caravan Foundation
-          </h1>
+          <div className="w-full max-w-2xl mb-6 opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
+            <HeroLogo />
+          </div>
           <p className="text-lg md:text-2xl text-gray-200 max-w-2xl drop-shadow-md opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
             Empowering communities through education, water, and care.
           </p>
