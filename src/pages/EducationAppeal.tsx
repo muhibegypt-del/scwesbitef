@@ -71,23 +71,36 @@ export function EducationAppeal() {
         images={GALLERY_IMAGES}
       />
 
-      {/* Field Report - Maasai School Renovation */}
+      {/* Cinematic Story */}
       <AppealCinematicStory
         background={IMAGES.EDUCATION.KIDS_CLASSROOM}
-        personName="Maasai School Renovation"
-        personImage={IMAGES.EDUCATION.KIDS_CLASSROOM}
-        personImageAlt="Renovated classroom"
+        personName="Fatima's Journey"
+        personImage={IMAGES.EDUCATION.GIRL_DESK}
+        personImageAlt="Fatima studying"
         story={
           <>
             <p>
-              During a Soul Caravan visit to a remote Maasai school, we were confronted with the harsh reality of what learning looked like there. Broken chairs, peeling paint, and the absence of proper desks made it difficult for students to focus, let alone dream. We made a promise to change that.
+              Fatima, a 12-year-old from Malindi, was forced to drop out of school when her father passed away. Her mother couldn't afford the fees. Fatima spent her days helping at home, watching other children walk to school with dreams she thought were lost forever.
             </p>
             <p>
-              Today, the school has been fully renovated with new tables and chairs, fresh paint, essential school supplies, and repaired sanitation facilities. By improving both the learning environment and access to educational resources, we restored dignity, safety, and hope to the classroom. And this is only the beginning, plans are already underway to introduce a school meal programme, ensuring that no child has to choose between hunger and education.
+              When she received educational sponsorship through Soul Caravan, everything changed. Today, Fatima is top of her class, excelling in mathematics and science. She dreams of becoming a doctor to help her community. Education gave her back her future.
             </p>
           </>
         }
-        quote=""
+        quote="Education didn't just change my life — it gave me permission to dream again."
+      />
+
+      {/* Quote */}
+      <AppealQuote
+        image={IMAGES.EDUCATION.BOY_SMILING}
+        imageAlt="Happy student"
+        quote={
+          <>
+            <span className="text-brand-primary">"Every child I see succeed</span> reminds me why we do this work. Education is the most powerful tool we have to break the cycle of poverty. When a child learns, an entire community benefits."
+          </>
+        }
+        author="Sarah Kamau"
+        role="Education Program Coordinator"
       />
 
       {/* FAQ */}
