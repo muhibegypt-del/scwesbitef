@@ -71,36 +71,23 @@ export function EducationAppeal() {
         images={GALLERY_IMAGES}
       />
 
-      {/* Cinematic Story */}
+      {/* Field Report - Maasai School Renovation */}
       <AppealCinematicStory
         background={IMAGES.EDUCATION.KIDS_CLASSROOM}
-        personName="Fatima's Journey"
-        personImage={IMAGES.EDUCATION.GIRL_DESK}
-        personImageAlt="Fatima studying"
+        personName="Maasai School Renovation"
+        personImage={IMAGES.EDUCATION.KIDS_CLASSROOM}
+        personImageAlt="Renovated classroom"
         story={
           <>
             <p>
-              Fatima, a 12-year-old from Malindi, was forced to drop out of school when her father passed away. Her mother couldn't afford the fees. Fatima spent her days helping at home, watching other children walk to school with dreams she thought were lost forever.
+              During a Soul Caravan visit to a remote Maasai school, we were confronted with the harsh reality of what learning looked like there. Broken chairs, peeling paint, and the absence of proper desks made it difficult for students to focus, let alone dream. We made a promise to change that.
             </p>
             <p>
-              When she received educational sponsorship through Soul Caravan, everything changed. Today, Fatima is top of her class, excelling in mathematics and science. She dreams of becoming a doctor to help her community. Education gave her back her future.
+              Today, the school has been fully renovated with new tables and chairs, fresh paint, essential school supplies, and repaired sanitation facilities. By improving both the learning environment and access to educational resources, we restored dignity, safety, and hope to the classroom. And this is only the beginning, plans are already underway to introduce a school meal programme, ensuring that no child has to choose between hunger and education.
             </p>
           </>
         }
-        quote="Education didn't just change my life — it gave me permission to dream again."
-      />
-
-      {/* Field Report */}
-      <AppealQuote
-        image={IMAGES.EDUCATION.KIDS_CLASSROOM}
-        imageAlt="Classroom environment"
-        quote={
-          <>
-            During a Soul Caravan visit to a remote Maasai school, we were confronted with the harsh reality of what learning looked like there. Broken chairs, peeling paint, and the absence of proper desks made it difficult for students to focus, let alone dream. We made a promise to change that. Today, the school has been fully renovated with new tables and chairs, fresh paint, essential school supplies, and repaired sanitation facilities. By improving both the learning environment and access to educational resources, we restored dignity, safety, and hope to the classroom. And this is only the beginning, plans are already underway to introduce a school meal programme, ensuring that no child has to choose between hunger and education.
-          </>
-        }
-        author="Soul Caravan"
-        role="Maasai School Renovation Project"
+        quote=""
       />
 
       {/* FAQ */}
