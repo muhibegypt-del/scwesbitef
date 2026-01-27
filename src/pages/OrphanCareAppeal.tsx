@@ -3,7 +3,6 @@ import { ORPHAN_CARE_IMAGES, IMAGES } from '../data/imageAssets';
 // Appeal Template Components
 import { AppealHero } from '@/components/templates/appeal/AppealHero';
 import { AppealProblem } from '@/components/templates/appeal/AppealProblem';
-import { AppealImpact } from '@/components/templates/appeal/AppealImpact';
 import { AppealCinematicStory } from '@/components/templates/appeal/AppealCinematicStory';
 import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
@@ -12,13 +11,6 @@ import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 const SQUARE_LINK = 'https://square.link/u/1muC8Kjs';
 
 // Data
-const GALLERY_IMAGES = [
-  { src: ORPHAN_CARE_IMAGES[0], alt: 'Happy children' },
-  { src: ORPHAN_CARE_IMAGES[1], alt: 'Child receiving meal' },
-  { src: ORPHAN_CARE_IMAGES[2], alt: 'Children in classroom' },
-  { src: ORPHAN_CARE_IMAGES[3], alt: 'Community support' },
-];
-
 const FAQ_ITEMS = [
   { question: 'Is my donation Zakat eligible?', answer: 'Yes, our Orphan & Widow Care program is fully Zakat eligible. We ensure your donation reaches the most vulnerable families.' },
   { question: 'What does the support cover?', answer: 'Your donation covers essential needs including school fees, uniforms, daily nutritious meals, and healthcare, as well as emotional and community-based care to help them heal.' },
@@ -64,13 +56,6 @@ Your support helps restore stability, providing children with the opportunity to
           src: ORPHAN_CARE_IMAGES[1],
           alt: "Child receiving meal"
         }}
-      />
-
-      {/* Impact */}
-      <AppealImpact
-        title="Education Opens Doors"
-        subtitle="We cover school fees, uniforms, and supplies so orphaned children can continue their education. Knowledge is their pathway to independence."
-        images={GALLERY_IMAGES}
       />
 
       {/* Cinematic Story (Using Community Content) */}
