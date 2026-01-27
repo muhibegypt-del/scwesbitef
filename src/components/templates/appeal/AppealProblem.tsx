@@ -74,6 +74,9 @@ export function AppealProblem({
                                     src={image.src}
                                     alt={image.alt}
                                     className="w-full h-full object-cover scale-105"
+                                    loading="lazy"
+                                    width={800}
+                                    height={600}
                                 />
 
                                 {image.videoTrigger && (

@@ -75,6 +75,9 @@ export function AppealHero({
                         src={image}
                         alt={title}
                         className="absolute inset-0 w-full h-full object-cover"
+                        // @ts-ignore
+                        fetchPriority="high"
+                        loading="eager"
                     />
                 </FadeIn>
             </div>
