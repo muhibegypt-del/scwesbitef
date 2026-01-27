@@ -49,14 +49,14 @@ Providing food relief ensures that families receive not only nourishment, but al
               Our hot meal programs provide freshly cooked, nutritious food to those who need it most. From community halls to school feeding programs, we reach the hungry where they are.
             </p>
             <p>
-              Every meal includes rice, protein, and vegetables — a complete, balanced diet essential for health and development.
+              Every meal helps nourish individuals and strengthen communities.
             </p>
           </>
         }
         bullets={[
-          "Emergency aid distribution within 24 hours",
-          "Immediate relief for families in crisis",
-          "Nutritionally balanced meals for children"
+          "Emergency food support is provided to communities in need",
+          "Relief is delivered to families affected by crisis or hardship",
+          "Nutritious meals help maintain health and wellbeing"
         ]}
         image={{
           src: FOOD_RELIEF_IMAGES[1],

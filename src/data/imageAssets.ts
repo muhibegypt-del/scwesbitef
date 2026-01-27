@@ -92,6 +92,21 @@ export const IMAGES = {
         `${BASE_URL}/24-DSC00601.jpg`,  // Qurbani banner
         `${BASE_URL}/21-DSC00776.jpg`,  // Woman with parcel
     ],
+
+    // ===========================
+    // UPDATE ASSETS (2025)
+    // ===========================
+    UPDATES_2025: {
+        EDUCATION: {
+            HERO_MAIN: 'https://ik.imagekit.io/dzmabcda0/DSC00398.jpg',
+            FEATURE_SCHOOL: 'https://ik.imagekit.io/dzmabcda0/DSC00535.jpg',
+            MEAL_PROGRAM: 'https://ik.imagekit.io/dzmabcda0/2025?updatedAt=1768994319467',
+            GALLERY_GENERIC: 'https://ik.imagekit.io/dzmabcda0/DSC00203.jpg',
+        },
+        WATER: {
+            AMINA_STORY: 'https://ik.imagekit.io/dzmabcda0/DSC00133.JPG',
+        },
+    },
 };
 
 // Convenient arrays for page use

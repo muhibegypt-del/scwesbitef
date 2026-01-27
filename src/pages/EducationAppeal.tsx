@@ -16,7 +16,7 @@ const GALLERY_IMAGES = [
   { src: IMAGES.EDUCATION.FRIENDS_BLACKBOARD, alt: 'Students at blackboard' },
   { src: IMAGES.EDUCATION.BOY_NOTEBOOK, alt: 'Student with notebook' },
   { src: IMAGES.EDUCATION.GIRL_DESK, alt: 'Girl studying at desk' },
-  { src: IMAGES.EDUCATION.TUTOR_SESSION, alt: 'Tutoring session' },
+  { src: IMAGES.UPDATES_2025.EDUCATION.GALLERY_GENERIC, alt: 'Tutoring session' },
 ];
 
 const FAQ_ITEMS = [
@@ -35,7 +35,7 @@ export function EducationAppeal() {
         title="Empower Through Education"
         subtitle="Support children's education and help create opportunities for learning and growth. For many children, access to quality education is limited by poverty, lack of resources, or inadequate school facilities. Without support, students face challenges that make it difficult to reach their potential. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed. Your contribution helps create safe and inspiring spaces for education, empowering children to gain essential skills and build a brighter future for themselves and their communities."
         badge="Educational Support"
-        image={IMAGES.EDUCATION.FRIENDS_BLACKBOARD}
+        image={IMAGES.UPDATES_2025.EDUCATION.HERO_MAIN}
         ctaLink={SQUARE_LINK}
       />
 
@@ -59,7 +59,7 @@ export function EducationAppeal() {
           "After-school tutoring and mentorship programs"
         ]}
         image={{
-          src: EDUCATION_IMAGES[2],
+          src: IMAGES.UPDATES_2025.EDUCATION.FEATURE_SCHOOL,
           alt: "Student receiving tutoring"
         }}
       />
@@ -73,17 +73,17 @@ export function EducationAppeal() {
 
       {/* Cinematic Story */}
       <AppealCinematicStory
-        background={IMAGES.EDUCATION.KIDS_CLASSROOM}
+        background={IMAGES.UPDATES_2025.EDUCATION.MEAL_PROGRAM}
         personName="Fatima's Journey"
         personImage={IMAGES.EDUCATION.GIRL_DESK}
         personImageAlt="Fatima studying"
         story={
           <>
             <p>
-              Fatima, a 12-year-old from Malindi, was forced to drop out of school when her father passed away. Her mother couldn't afford the fees. Fatima spent her days helping at home, watching other children walk to school with dreams she thought were lost forever.
+              During a Soul Caravan visit to a remote Maasai school, we were confronted with the harsh reality of what learning looked like there. Broken chairs, peeling paint, and the absence of proper desks made it difficult for students to focus, let alone dream. We made a promise to change that.
             </p>
             <p>
-              When she received educational sponsorship through Soul Caravan, everything changed. Today, Fatima is top of her class, excelling in mathematics and science. She dreams of becoming a doctor to help her community. Education gave her back her future.
+              Today, the school has been fully renovated with new tables and chairs, fresh paint, essential school supplies, and repaired sanitation facilities. By improving both the learning environment and access to educational resources, we restored dignity, safety, and hope to the classroom. And this is only the beginning, plans are already underway to introduce a school meal programme, ensuring that no child has to choose between hunger and education.
             </p>
           </>
         }

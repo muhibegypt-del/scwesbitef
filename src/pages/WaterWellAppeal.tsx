@@ -83,7 +83,7 @@ By building a water well, you provide more than just water - you provide health,
       <AppealCinematicStory
         background={IMAGES.WATER.TANK_LANDSCAPE}
         personName="Amina's Story"
-        personImage={IMAGES.WATER.CHILD_TAP_2}
+        personImage={IMAGES.UPDATES_2025.WATER.AMINA_STORY}
         personImageAlt="Amina and her family"
         story={
           <>

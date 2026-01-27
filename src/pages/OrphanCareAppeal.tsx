@@ -21,7 +21,7 @@ const GALLERY_IMAGES = [
 
 const FAQ_ITEMS = [
   { question: 'Is my donation Zakat eligible?', answer: 'Yes, our Orphan & Widow Care program is fully Zakat eligible. We ensure your donation reaches the most vulnerable families.' },
-  { question: 'What does the support cover?', answer: 'Your donation covers essential needs including school fees, uniforms, daily nutritious meals, and healthcare, as well as psychosocial support.' },
+  { question: 'What does the support cover?', answer: 'Your donation covers essential needs including school fees, uniforms, daily nutritious meals, and healthcare, as well as emotional and community-based care to help them heal.' },
   { question: 'Can I sponsor a specific child?', answer: 'We pool donations to ensure all registered orphans in our rigorous program receive equal care and support, regardless of individual sponsorship status.' },
   { question: 'How often will I receive updates?', answer: 'We provide annual reports and regular newsletter updates on the progress of the children and families in our care.' },
 ];
@@ -48,17 +48,17 @@ Your support helps restore stability, providing children with the opportunity to
         intro={
           <>
             <p>
-              Every child deserves nutritious meals that fuel their growth and learning. Our orphan support program ensures no child goes hungry.
+              Through holistic care, we support orphans and widows with essential resources that restore dignity and stability. Our programs strengthen families, protect education, and ease daily burdens.
             </p>
             <p>
-              From daily meals to special treats, we provide the sustenance they need to thrive. Without this support, many children are forced to work instead of attending school.
+              Without this support, many households face hardship, disrupted schooling, and limited opportunities to rebuild secure, independent futures for their children today.
             </p>
           </>
         }
         bullets={[
-          "Monthly support ensures stability",
-          "Education, food & healthcare included",
-          "Psychosocial support for trauma recovery"
+          "Ongoing support that helps restore stability",
+          "Education assistance and food for vulnerable families",
+          "Essential resources that strengthen households and protect children’s futures"
         ]}
         image={{
           src: ORPHAN_CARE_IMAGES[1],
@@ -82,10 +82,7 @@ Your support helps restore stability, providing children with the opportunity to
         story={
           <>
             <p>
-              Beyond material support, we provide a network of care. Widows receive vocational training while their children receive mentorship and guidance.
-            </p>
-            <p>
-              Together, we build resilient families who can support themselves and give back to their communities. Many of our supported children go on to become teachers, doctors, and community leaders.
+              Beyond material support, we provide a network of care. Together, we build resilient families who can support themselves and give back to their communities.
             </p>
           </>
         }
