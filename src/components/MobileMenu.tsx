@@ -5,6 +5,8 @@ import { Lock, Phone } from 'lucide-react';
 import type { NavigationLink } from '../types';
 import { Button } from './ui/button';
 
+import { useFocusTrap } from '../hooks/useFocusTrap';
+
 interface MobileMenuProps {
     isOpen: boolean;
     onClose: () => void;
@@ -32,10 +34,13 @@ const itemVariants: Variants = {
 };
 
 export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMenuProps) {
+    const containerRef = useFocusTrap(isOpen);
+
     return createPortal(
         <AnimatePresence>
             {isOpen && (
                 <motion.div
+                    ref={containerRef}
                     variants={mobileMenuVariants}
                     initial="hidden"
                     animate="visible"

@@ -64,7 +64,7 @@ export function Navigation() {
                 href="https://square.link/u/cI8AoKop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#98a55f] hover:brightness-110 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#98a55f] focus:ring-offset-brand-primary-darker"
+                className="flex items-center gap-2 bg-brand-accent hover:brightness-110 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-accent focus:ring-offset-brand-primary-darker"
               >
                 Donate
                 <ArrowUpRight className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Navigation() {
                 href="https://square.link/u/cI8AoKop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#98a55f] text-white font-bold text-sm px-4 flex items-center min-h-[44px] rounded-full active:scale-95 transition-transform"
+                className="bg-brand-accent text-white font-bold text-sm px-4 flex items-center min-h-[44px] rounded-full active:scale-95 transition-transform"
               >
                 Donate
               </a>
