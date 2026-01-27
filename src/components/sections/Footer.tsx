@@ -55,7 +55,7 @@ export function Footer() {
               </a>
               <div className="flex items-center gap-4 text-teal-200/60">
                 <MapPin className="h-5 w-5 text-olive-400/80" />
-                <span className="text-sm">Nairobi, Kenya</span>
+                <span className="text-sm">United Kingdom</span>
               </div>
             </div>
 
