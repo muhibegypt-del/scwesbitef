@@ -9,7 +9,6 @@ export function ZakatAppeal() {
       <AppealHero
         title="Zakat"
         subtitle="Provide Zakat to support vulnerable families and communities in need. Your contribution helps meet essential needs such as food, education, and basic living expenses for those struggling due to poverty, conflict, or other hardships. By giving Zakat through our programs, you ensure that your contribution reaches the people who need it most."
-        badge="Zakat"
         image={IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION}
         ctaLink={SQUARE_LINK}
       />

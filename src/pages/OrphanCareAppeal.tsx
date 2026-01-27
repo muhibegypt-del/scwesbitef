@@ -25,10 +25,9 @@ export function OrphanCareAppeal() {
       {/* Hero */}
       <AppealHero
         title="Support Orphans & Widows"
-        subtitle="Provide comprehensive support for orphans and widows, including school fees, uniforms, and food for families who have lost their primary provider. Losing a parent or spouse can leave families vulnerable and struggling to meet basic needs. 
+        subtitle="Provide comprehensive support for orphans and widows, including school fees, uniforms, and food for families who have lost their primary provider. Losing a parent or spouse can leave families vulnerable and struggling to meet basic needs.
 
 Your support helps restore stability, providing children with the opportunity to continue their education and widows with the resources they need to care for their families."
-        badge="Orphan & Widow Care"
         image={IMAGES.EDUCATION.BOY_SMILING}
         ctaLink={SQUARE_LINK}
       />

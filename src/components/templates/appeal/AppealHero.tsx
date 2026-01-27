@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Heart, Droplets } from 'lucide-react';
+import { ArrowLeft, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { BrandPalette } from './types';
 
 interface AppealHeroProps {
     title: string;
     subtitle: string;
-    badge: string;
     image: string;
     ctaLink: string;
     ctaText?: string;
@@ -19,7 +17,6 @@ interface AppealHeroProps {
 export function AppealHero({
     title,
     subtitle,
-    badge,
     image,
     ctaLink,
     ctaText = "Donate Now",
@@ -41,17 +38,7 @@ export function AppealHero({
                         </Button>
                     </FadeIn>
 
-                    <FadeIn delay={0.2} direction="down">
-                        {/* Badge */}
-                        <div className="mb-6">
-                            <Badge variant="secondary" className={`bg-${BrandPalette.primary.light} text-${BrandPalette.primary.DEFAULT} hover:bg-${BrandPalette.primary.light} gap-2 px-4 py-1.5 text-sm font-medium border-none shadow-sm`}>
-                                <Droplets size={14} />
-                                {badge}
-                            </Badge>
-                        </div>
-                    </FadeIn>
-
-                    <FadeIn delay={0.3}>
+                    <FadeIn delay={0.2}>
                         {/* Headline */}
                         <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-${BrandPalette.text.main} leading-[1.1] tracking-tight mb-6`}>
                             {title}
