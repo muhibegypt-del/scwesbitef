@@ -1,12 +1,22 @@
 'use client';
 
 import HeroLogo from '../ui/HeroLogo';
+import { Button } from '@/components/ui/button';
 
 // --- CONSTANTS ---
 const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066';
 const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
 
+import { useState, useEffect } from 'react';
+
 export function Hero() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowButton(true), 100); // 100ms tiny delay to ensure mount
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative w-full h-dvh flex flex-col font-sans overflow-hidden bg-gray-900">
 
@@ -31,15 +41,21 @@ export function Hero() {
           <div className="w-full max-w-2xl opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
-          <a
-            href="https://square.link/u/cI8AoKop"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-10 py-3.5 text-base md:text-lg font-medium text-white rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards] flex items-center justify-center"
-            style={{ backgroundColor: '#98a55f' }}
-          >
-            Donate Now
-          </a>
+          <div className={`transition-all duration-1000 ease-out fill-mode-forwards ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-10 py-7 text-lg font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"
+            >
+              <a
+                href="https://square.link/u/cI8AoKop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Donate Now
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* SCROLL INDICATOR */}

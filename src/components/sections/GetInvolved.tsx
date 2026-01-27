@@ -78,7 +78,7 @@ export function GetInvolved() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: EASE }}
             >
-              <Card className="flex flex-col h-full border-white/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" style={{ backgroundColor: '#264245' }}>
+              <Card className="flex flex-col h-full border-white/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group bg-teal-700">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4 transition-colors group-hover:bg-white/20">
                     <way.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
