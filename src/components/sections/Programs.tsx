@@ -108,7 +108,9 @@ export function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group flex flex-col bg-white border border-gray-100 rounded-xl overflow-hidden shadow-soft hover:shadow-elevated transition-shadow duration-300"
+              className={`group flex flex-col bg-white border border-gray-100 rounded-xl overflow-hidden shadow-soft hover:shadow-elevated transition-shadow duration-300 ${
+                index === 6 ? 'lg:col-start-2' : ''
+              }`}
             >
               {/* Image - Strict 4:3, Sharp */}
               <div className="aspect-[4/3] w-full bg-gray-100 relative overflow-hidden">
