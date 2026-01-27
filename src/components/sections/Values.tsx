@@ -26,18 +26,6 @@ const values: ValueItem[] = [
     title: 'Transparent Impact',
     description: 'We ensure the majority of your donation goes directly to our projects, with minimal administrative costs. Local staff are paid fairly to implement programs effectively on the ground.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg'
-  },
-  {
-    title: 'Education',
-    description: 'Support children\'s education and help create opportunities for learning and growth. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed.',
-    image: 'https://ik.imagekit.io/dzmabcda0/finals/10-DSC00188.jpg',
-    link: '/education-appeal'
-  },
-  {
-    title: 'Zakat',
-    description: 'Provide Zakat to support vulnerable families and communities in need. Your contribution helps meet essential needs such as food, education, and basic living expenses for those struggling due to poverty.',
-    image: 'https://ik.imagekit.io/dzmabcda0/finals/20-DSC00749.jpg',
-    link: '/zakat-appeal'
   }
 ];
 
