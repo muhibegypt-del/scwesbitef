@@ -13,6 +13,7 @@ export function Volunteer() {
 
                 <div className="text-center mb-12">
                     <h1 className="section-title mb-4">Volunteer with Us</h1>
+                    <img src="https://ik.imagekit.io/dzmabcda0/IMG_8549%20(1).JPG" alt="Volunteers in action" className="w-full max-w-2xl mx-auto rounded-lg mb-6 object-cover" />
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Whether you want to help support communities, assist with programs on the ground, or contribute your skills in meaningful ways, your time can make a real difference. Volunteering with us gives you the opportunity to see your impact firsthand while working alongside local communities and other dedicated volunteers.
                     </p>
