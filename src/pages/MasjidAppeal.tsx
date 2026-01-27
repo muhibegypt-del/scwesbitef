@@ -3,21 +3,12 @@ import { IMAGES } from '../data/imageAssets'; // Reusing some village images
 // Appeal Template Components
 import { AppealHero } from '@/components/templates/appeal/AppealHero';
 import { AppealProblem } from '@/components/templates/appeal/AppealProblem';
-import { AppealImpact } from '@/components/templates/appeal/AppealImpact';
 import { AppealCinematicStory } from '@/components/templates/appeal/AppealCinematicStory';
 import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
 const SQUARE_LINK = 'https://square.link/u/PaNdJVqa';
-
-// Data (Using generic/reused assets where specific ones are missing)
-const GALLERY_IMAGES = [
-    { src: IMAGES.QURBANI.COMMUNITY_GATHERING, alt: 'Community gathering' }, // Reusing gathering
-    { src: IMAGES.WATER.TANK_VILLAGE_1, alt: 'Village center' },
-    { src: IMAGES.EDUCATION.KIDS_CLASSROOM, alt: 'Children studying' },
-    { src: IMAGES.WATER.SIGNAGE_INSTALL_1, alt: 'Community construction' },
-];
 
 const FAQ_ITEMS = [
     { question: 'Is this donation Sadaqah Jariyah?', answer: 'Yes, building a Masjid is one of the best forms of Sadaqah Jariyah (continuous charity), rewarding you as long as it is used.' },
@@ -63,13 +54,6 @@ Your contribution helps ensure that these sacred spaces remain accessible, welco
                     src: IMAGES.QURBANI.COMMUNITY_GATHERING,
                     alt: "Community gathering for prayer"
                 }}
-            />
-
-            {/* Impact */}
-            <AppealImpact
-                title="A Legacy of Faith"
-                subtitle="Your contribution builds a lasting structure that will serve generations. Every prayer performed there will add to your scale of good deeds."
-                images={GALLERY_IMAGES}
             />
 
             {/* Cinematic Story */}
