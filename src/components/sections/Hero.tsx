@@ -26,10 +26,16 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
         {/* HERO CONTENT OVERLAY */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 gap-8">
           <div className="w-full max-w-2xl opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
+          <button
+            className="px-10 py-3.5 text-base md:text-lg font-medium text-white rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards]"
+            style={{ backgroundColor: '#98a55f' }}
+          >
+            Donate Now
+          </button>
         </div>
       </div>
 
