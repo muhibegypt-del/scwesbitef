@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 
 import { motion } from 'framer-motion';
 import { SectionHeading, BodyText } from '../components/ui/Typography';
-import { ArrowRight } from 'lucide-react';
 import { FadeIn } from '@/components/ui/FadeIn';
 
 const TRIPS = [
@@ -88,7 +87,7 @@ export function SoulCaravanFeature() {
                                         variant="outline"
                                         className="w-full rounded-full border-gray-300 text-gray-600 hover:text-teal-700 hover:border-teal-700 hover:bg-transparent px-8 py-6 uppercase tracking-widest text-xs font-bold transition-all"
                                     >
-                                        Apply Now <ArrowRight className="ml-2 h-4 w-4" />
+                                        Coming Soon
                                     </Button>
                                 </CardContent>
                             </Card>
