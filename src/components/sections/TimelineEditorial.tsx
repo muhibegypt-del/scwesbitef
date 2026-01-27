@@ -5,7 +5,6 @@ import { timelineData } from '@/data/timelineData';
 import { FadeIn } from '@/components/ui/FadeIn';
 
 // Shadcn Components
-import { Badge } from '@/components/ui/badge';
 import {
     Card,
     CardContent,
@@ -70,9 +69,9 @@ export function TimelineEditorial() {
                                 <Card className="border-none shadow-none bg-transparent rounded-none p-0 group">
 
                                     <CardHeader className={`p-0 space-y-4 ${isAlternate ? 'lg:items-end' : 'lg:items-start'}`}>
-                                        <Badge variant="outline" className={`w-fit border-teal-200 text-teal-700 rounded-sm px-3 py-1 text-xs font-bold tracking-widest uppercase ${isCurrent ? 'bg-teal-50' : 'bg-transparent'}`}>
+                                        <div className={`text-6xl md:text-8xl font-serif font-bold text-teal-100/80 leading-none tracking-tighter w-full ${isAlternate ? 'lg:text-right' : 'lg:text-left'}`}>
                                             {item.year}
-                                        </Badge>
+                                        </div>
 
                                         <CardTitle className="text-3xl font-serif text-slate-900 leading-tight">
                                             {item.title}
