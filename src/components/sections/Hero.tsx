@@ -17,6 +17,14 @@ export function Hero() {
     if (videoRef.current) {
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
+
+      // Attempt to programmatically play the video
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn('Auto-play was prevented:', error);
+        });
+      }
     }
   }, []);
 
@@ -27,15 +35,14 @@ export function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <video
           ref={videoRef}
+          src={VIDEO_URL}
           autoPlay
           muted
           loop
           playsInline
           className="w-full h-full object-cover"
           poster={POSTER_URL}
-        >
-          <source src={VIDEO_URL} type="video/mp4" />
-        </video>
+        />
         {/* Subtle gradient for visual depth only */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
