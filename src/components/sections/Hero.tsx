@@ -7,15 +7,10 @@ import { Button } from '@/components/ui/button';
 const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066';
 const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function Hero() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowButton(true), 100); // 100ms tiny delay to ensure mount
-    return () => clearTimeout(timer);
-  }, []);
+  const [showButton, setShowButton] = useState(true);
 
   return (
     <section className="relative w-full h-dvh flex flex-col font-sans overflow-hidden bg-gray-900">
@@ -41,7 +36,7 @@ export function Hero() {
           <div className="w-full max-w-2xl opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
-          <div className={`transition-all duration-1000 ease-out fill-mode-forwards ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
+          <div className={`transition-all duration-200 ease-out fill-mode-forwards ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
             <Button
               asChild
               size="lg"
