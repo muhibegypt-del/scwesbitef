@@ -4,8 +4,10 @@ import HeroLogo from '../ui/HeroLogo';
 import { Button } from '@/components/ui/button';
 
 // --- CONSTANTS ---
-const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066';
-const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
+// Optimized Video: 720p width (w-720), 70% quality (q-70), No Audio Channel (ac-none)
+const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066&tr=w-720,q-70';
+// Optimized Poster: 800px width (w-800), 80% quality (q-80)
+const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg?tr=w-800,q-80';
 
 import { useState, useRef, useEffect } from 'react';
 
