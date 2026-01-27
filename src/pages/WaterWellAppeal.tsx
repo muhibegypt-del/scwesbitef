@@ -67,8 +67,7 @@ By building a water well, you provide more than just water - you provide health,
         ]}
         image={{
           src: WATER_WELL_IMAGES[1],
-          alt: "Child using water tap",
-          videoTrigger: true
+          alt: "Child using water tap"
         }}
       />
 
