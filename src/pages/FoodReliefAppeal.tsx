@@ -59,7 +59,7 @@ Providing food relief ensures that families receive not only nourishment, but al
           "Nutritious meals help maintain health and wellbeing"
         ]}
         image={{
-          src: "https://ik.imagekit.io/dzmabcda0/DSC00203.jpg?updatedAt=1769518413034",
+          src: "https://ik.imagekit.io/dzmabcda0/DSC00655.jpg",
           alt: "Child eating nutritious meal"
         }}
       />
