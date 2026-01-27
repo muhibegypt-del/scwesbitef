@@ -66,6 +66,9 @@ export const IMAGES = {
         WOMAN_CARRYING_ORANGE: `${BASE_URL}/21-DSC00776.jpg`,
         WOMAN_CARRYING_BLUE: `${BASE_URL}/22-DSC00625.jpg`,
         PARCEL_CLOSEUP: `${BASE_URL}/23-DSC00606.jpg`,
+        // New additions
+        PARCEL_ADDITION_1: 'https://ik.imagekit.io/dzmabcda0/DSC00708.jpg',
+        PARCEL_ADDITION_2: 'https://ik.imagekit.io/dzmabcda0/DSC00688.jpg',
     },
 
     // ===========================

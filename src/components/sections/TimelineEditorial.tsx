@@ -69,7 +69,12 @@ export function TimelineEditorial() {
                                 <Card className="border-none shadow-none bg-transparent rounded-none p-0 group">
 
                                     <CardHeader className={`p-0 space-y-4 ${isAlternate ? 'lg:items-end' : 'lg:items-start'}`}>
-                                        <div className={`text-6xl md:text-8xl font-serif font-bold text-teal-100/80 leading-none tracking-tighter w-full ${isAlternate ? 'lg:text-right' : 'lg:text-left'}`}>
+                                        <div
+                                            className={`text-6xl md:text-8xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#276280] via-[#6b8c96] to-[#276280] leading-none tracking-tighter w-full opacity-30 ${isAlternate ? 'lg:text-right' : 'lg:text-left'}`}
+                                            style={{
+                                                filter: 'drop-shadow(1px 1px 1px rgba(255,255,255,0.8)) drop-shadow(-1px -1px 0px rgba(39,98,128,0.2))'
+                                            }}
+                                        >
                                             {item.year}
                                         </div>
 

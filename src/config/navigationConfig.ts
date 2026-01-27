@@ -16,7 +16,7 @@ export const NAV_CONFIG: NavigationLink[] = [
     },
     {
         label: 'Our Appeals',
-        href: '/#appeals',
+        href: '/#programs',
         dropdownItems: [
             { label: 'Build a Masjid', href: '/masjid' },
             { label: 'Build a Water Well', href: '/water-well' },

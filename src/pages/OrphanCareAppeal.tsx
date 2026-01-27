@@ -8,6 +8,13 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
+// New Images provided by user
+const NEW_IMAGES = {
+  HERO: 'https://ik.imagekit.io/dzmabcda0/DSC00747.jpg',
+  PROBLEM: 'https://ik.imagekit.io/dzmabcda0/DSC00472.jpg',
+  QUOTE: 'https://ik.imagekit.io/dzmabcda0/DSC00111.JPG.jpeg'
+};
+
 const SQUARE_LINK = 'https://square.link/u/1muC8Kjs';
 
 // Data
@@ -28,7 +35,7 @@ export function OrphanCareAppeal() {
         subtitle="Provide comprehensive support for orphans and widows, including school fees, uniforms, and food for families who have lost their primary provider. Losing a parent or spouse can leave families vulnerable and struggling to meet basic needs.
 
 Your support helps restore stability, providing children with the opportunity to continue their education and widows with the resources they need to care for their families."
-        image={IMAGES.EDUCATION.BOY_SMILING}
+        image={NEW_IMAGES.HERO}
         ctaLink={SQUARE_LINK}
       />
 
@@ -52,8 +59,8 @@ Your support helps restore stability, providing children with the opportunity to
           "Essential resources that strengthen households and protect children’s futures"
         ]}
         image={{
-          src: ORPHAN_CARE_IMAGES[1],
-          alt: "Child receiving meal"
+          src: NEW_IMAGES.PROBLEM,
+          alt: "Students learning together"
         }}
       />
 
@@ -75,7 +82,7 @@ Your support helps restore stability, providing children with the opportunity to
 
       {/* Quote */}
       <AppealQuote
-        image={ORPHAN_CARE_IMAGES[0]}
+        image={NEW_IMAGES.QUOTE}
         imageAlt="Happy child"
         quote={
           <>

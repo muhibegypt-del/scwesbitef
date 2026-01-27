@@ -1,4 +1,4 @@
-import { EDUCATION_IMAGES, IMAGES } from '../data/imageAssets';
+import { IMAGES } from '../data/imageAssets';
 
 // Appeal Template Components
 import { AppealHero } from '@/components/templates/appeal/AppealHero';
@@ -9,14 +9,14 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/d5fSYpG9';
+const SQUARE_LINK = 'https://square.link/u/VFOiNlbN';
 
 // Data
 const GALLERY_IMAGES = [
   { src: IMAGES.EDUCATION.FRIENDS_BLACKBOARD, alt: 'Students at blackboard' },
   { src: IMAGES.EDUCATION.BOY_NOTEBOOK, alt: 'Student with notebook' },
   { src: IMAGES.EDUCATION.GIRL_DESK, alt: 'Girl studying at desk' },
-  { src: IMAGES.UPDATES_2025.EDUCATION.GALLERY_GENERIC, alt: 'Tutoring session' },
+  { src: IMAGES.EDUCATION.KIDS_CLASSROOM, alt: 'Full classroom' },
 ];
 
 const FAQ_ITEMS = [
@@ -45,17 +45,17 @@ export function EducationAppeal() {
         intro={
           <>
             <p>
-              In rural Kenya, thousands of bright children are unable to attend school due to financial constraints. School fees, uniforms, and supplies create insurmountable barriers for families living in poverty.
+              Many children are eager to learn but are held back by costs, under-resourced schools, and a lack of basic facilities. Our education projects remove these barriers by covering school fees, improving school infrastructure, and providing essential learning resources.
             </p>
             <p>
-              Without education, these children face limited opportunities and a future of hardship. Your support ensures that talented students can access the education they deserve, regardless of their economic circumstances.
+              By strengthening both access to education and the quality of learning environments, we help students stay in school, engage more deeply in their studies, and gain the skills they need to build brighter futures.
             </p>
           </>
         }
         bullets={[
-          "Full coverage of school fees and uniforms",
-          "Learning materials and textbooks provided",
-          "After-school tutoring and mentorship programs"
+          "School fee assistance allows children to stay in school",
+          "School infrastructure improvements strengthens learning environments",
+          "Learning resources are provided to help expand educational access"
         ]}
         image={{
           src: IMAGES.UPDATES_2025.EDUCATION.FEATURE_SCHOOL,

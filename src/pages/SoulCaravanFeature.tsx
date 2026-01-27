@@ -12,17 +12,17 @@ const TRIPS = [
     {
         title: 'Kenya',
         image: 'https://ik.imagekit.io/dzmabcda0/kenya?updatedAt=1768994461063',
-        date: 'August 2026'
+        date: 'September 2026'
     },
     {
         title: 'Indonesia',
         image: 'https://ik.imagekit.io/dzmabcda0/lombok?updatedAt=1768994446046',
-        date: 'December 2026'
+        date: 'October 2026'
     },
     {
         title: 'Morocco',
         image: 'https://ik.imagekit.io/dzmabcda0/morocco?updatedAt=1768994428462',
-        date: 'April 2027'
+        date: 'Coming soon'
     }
 ];
 

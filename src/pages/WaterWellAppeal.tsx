@@ -27,7 +27,6 @@ const FAQ_ITEMS = [
   { question: 'How long does it take to build a well?', answer: 'A typical water well takes 4-8 weeks to complete, depending on the location and ground conditions. We provide regular updates throughout the construction process.' },
   { question: 'Can I dedicate the well to someone?', answer: 'Yes! You can dedicate the well in memory of a loved one, to celebrate a milestone, or in honor of someone special. A permanent plaque will be installed at the well site.' },
   { question: 'How do I receive updates on my well?', answer: 'You will receive photos and GPS coordinates once construction is complete. We also send annual impact reports showing how many people your well is serving.' },
-  { question: 'Is my donation tax-deductible?', answer: 'Yes. Soul Caravan Foundation is a registered charity. You will receive a tax receipt via email after your donation is processed.' },
 ];
 
 // ============================================================
@@ -61,8 +60,8 @@ By building a water well, you provide more than just water - you provide health,
           </>
         }
         bullets={[
-          "Wells are built with durable materials for 10+ year lifespan",
-          "Each well serves 200+ community members daily",
+          "Wells are built with durable materials for longevity",
+          "Each well serves hundreds of community members daily",
           "Local teams maintain the infrastructure for sustainability"
         ]}
         image={{
@@ -106,8 +105,8 @@ By building a water well, you provide more than just water - you provide health,
             <span className="text-brand-primary">"As a volunteer</span>— I see the relief a family feels when clean water flows for the first time. It's not just infrastructure; it's hope, health, and a future they never thought possible."
           </>
         }
-        author="Hassan Ochieng"
-        role="Field Operations Lead, Kilifi Region"
+        author="Zakariya Jeilan"
+        role="Volunteer"
       />
 
       {/* FAQ */}

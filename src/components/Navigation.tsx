@@ -44,7 +44,7 @@ export function Navigation() {
               className="flex-shrink-0 z-50 focus:outline-none rounded-md"
               aria-label="Soul Caravan Foundation"
             >
-              <div className="relative w-40 h-20 lg:w-48 lg:h-24 flex items-center justify-start">
+              <div className="relative w-48 h-24 lg:w-64 lg:h-32 flex items-center justify-start">
                 <CustomLogo className="w-full h-full object-contain" />
               </div>
             </Link>

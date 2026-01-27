@@ -3,12 +3,15 @@ import { ChevronDown } from 'lucide-react';
 import type { NavigationLink } from '../config/navigationConfig';
 import { MegaMenuDropdown } from './navigation/MegaMenuDropdown';
 
+import { useLenis } from '@studio-freight/react-lenis';
+
 interface NavigationItemProps {
   link: NavigationLink;
 }
 
 export function NavigationItem({ link }: NavigationItemProps) {
   const location = useLocation();
+  const lenis = useLenis();
   const isActive = location.pathname === link.href || (link.dropdownItems?.some(item => item.href === location.pathname) ?? false);
   const hasDropdown = link.dropdownItems && link.dropdownItems.length > 0;
 
@@ -19,9 +22,19 @@ export function NavigationItem({ link }: NavigationItemProps) {
 
       if (location.pathname === targetPath || (targetPath === '/' && location.pathname === '/')) {
         e.preventDefault();
-        const element = document.getElementById(hash) || document.querySelector(`#${hash}`);
+
+        // Update URL hash without reload
+        window.history.pushState({}, '', href);
+
+        const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          if (lenis) {
+            lenis.scrollTo(element, { offset: -100 });
+          } else {
+            // Fallback for native scroll (or reduced motion)
+            const top = element.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
         }
       }
     }
@@ -30,12 +43,14 @@ export function NavigationItem({ link }: NavigationItemProps) {
   return (
     <div className="group relative h-full flex items-center">
       {hasDropdown ? (
-        <button
+        <Link
+          to={link.href}
+          onClick={(e) => handleScroll(e, link.href)}
           className={`flex items-center gap-1 font-bold text-sm transition-colors py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md px-3 ${isActive ? 'text-white' : 'text-slate-100 hover:text-teal-200'}`}
         >
           {link.label}
           <ChevronDown className="w-4 h-4 text-current transition-transform duration-200 group-hover:rotate-180" />
-        </button>
+        </Link>
       ) : (
         <Link
           to={link.href}

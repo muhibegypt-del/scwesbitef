@@ -1,4 +1,5 @@
-import { FOOD_RELIEF_IMAGES, IMAGES } from '../data/imageAssets';
+import { FOOD_RELIEF_IMAGES } from '../data/imageAssets';
+import { IMAGES } from '../data/imageAssets'; // re-adding IMAGES because I just used it in the gallery above!
 
 // Appeal Template Components
 import { AppealHero } from '@/components/templates/appeal/AppealHero';
@@ -13,10 +14,12 @@ const SQUARE_LINK = 'https://square.link/u/dpkEeY0Q';
 
 // Data
 const GALLERY_IMAGES = [
-  { src: FOOD_RELIEF_IMAGES[0], alt: 'Food distribution' },
-  { src: FOOD_RELIEF_IMAGES[1], alt: 'Child receiving meal' },
-  { src: FOOD_RELIEF_IMAGES[2], alt: 'Food parcels' },
-  { src: FOOD_RELIEF_IMAGES[3], alt: 'Community meal' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_ADDITION_1, alt: 'Food distribution event' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_ADDITION_2, alt: 'Community aid' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_CLOSEUP, alt: 'Food parcel contents' },
+  { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_ORANGE, alt: 'Woman receiving parcel' },
+  { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_BLUE, alt: 'Carrying food home' },
+  { src: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION, alt: 'Community distribution' },
 ];
 
 const FAQ_ITEMS = [
@@ -99,8 +102,8 @@ Providing food relief ensures that families receive not only nourishment, but al
             <span className="text-brand-primary">"Serving food is serving humanity."</span> Seeing a child finish a full plate of food with a smile is why we do this. It's basic dignity.
           </>
         }
-        author="Food Program Lead"
-        role="Emergency Response Team"
+        author="Yahya Jeilan"
+        role="Operations Manager"
       />
 
       {/* FAQ */}

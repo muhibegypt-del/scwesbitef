@@ -17,6 +17,7 @@ export function Hero() {
           muted
           loop
           playsInline
+          webkit-playsinline="true"
           className="w-full h-full object-cover"
           poster={POSTER_URL}
         >
@@ -30,12 +31,15 @@ export function Hero() {
           <div className="w-full max-w-2xl opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
-          <button
-            className="px-10 py-3.5 text-base md:text-lg font-medium text-white rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards]"
+          <a
+            href="https://square.link/u/cI8AoKop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-3.5 text-base md:text-lg font-medium text-white rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards] flex items-center justify-center"
             style={{ backgroundColor: '#98a55f' }}
           >
             Donate Now
-          </button>
+          </a>
         </div>
       </div>
 
