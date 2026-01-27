@@ -5,7 +5,7 @@ import { Z_INDEX } from '../../lib/design-tokens';
 // Dynamic content mapping for each navigation section
 const DROPDOWN_CONTENT: Record<string, { title: string; description: string; viewAllText: string }> = {
     'Who We Are': {
-        title: 'About Soul Caravan',
+        title: 'About Soul Caravan Foundation',
         description: 'Learn about our mission, values, and the people behind our work.',
         viewAllText: 'Learn More'
     },
