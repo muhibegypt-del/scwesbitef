@@ -36,7 +36,7 @@ const programs: Program[] = [
   {
     title: 'Orphan & Widow Care',
     description: 'Help provide vulnerable children and windows with care, stability and essential resources, creating an environment where they can flourish.',
-    image: 'https://ik.imagekit.io/dzmabcda0/finals/28-DSC00262.jpg',
+    image: 'https://ik.imagekit.io/dzmabcda0/DSC00203.jpg?updatedAt=1769518413034',
     href: '/orphan-care',
     donateLink: SQUARE_LINKS.ORPHANS,
   },
