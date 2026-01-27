@@ -7,10 +7,18 @@ import { Button } from '@/components/ui/button';
 const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%20.mp4?updatedAt=1768715864066';
 const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function Hero() {
   const [showButton, setShowButton] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+    }
+  }, []);
 
   return (
     <section className="relative w-full h-dvh flex flex-col font-sans overflow-hidden bg-gray-900">
@@ -18,11 +26,11 @@ export function Hero() {
       {/* BACKGROUND VIDEO (Full Screen) - No overlays */}
       <div className="absolute inset-0 w-full h-full">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          webkit-playsinline="true"
           className="w-full h-full object-cover"
           poster={POSTER_URL}
         >
