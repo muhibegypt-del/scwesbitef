@@ -91,8 +91,8 @@ export function EducationAppeal() {
 
       {/* Quote */}
       <AppealQuote
-        image={IMAGES.EDUCATION.BOY_SMILING}
-        imageAlt="Happy student"
+        image="https://ik.imagekit.io/dzmabcda0/2025?updatedAt=1768994319467"
+        imageAlt="From the field"
         quote={
           <>
             <span className="text-brand-primary">"Our community is deeply grateful for this support,</span> education is vital for our children to grow into contributing members of society."
