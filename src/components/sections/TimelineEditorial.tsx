@@ -96,6 +96,7 @@ export function TimelineEditorial() {
                                                     src={item.photos[0]}
                                                     alt={item.title}
                                                     className="relative z-10 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                                    loading="lazy"
                                                 />
                                             </div>
                                         )}
