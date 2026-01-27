@@ -35,7 +35,7 @@ export function FoodReliefAppeal() {
         title="Food Relief"
         subtitle="Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict. For many families, hunger is a daily struggle, leaving children malnourished and parents desperate to provide even the most basic needs.
 Providing food relief ensures that families receive not only nourishment, but also hope. By providing regular meals and food parcels, you help prevent malnutrition, reduce suffering, and give communities the strength to survive."
-        image={IMAGES.HOT_MEALS.GIRL_PLATE}
+        image="https://ik.imagekit.io/dzmabcda0/DSC00607.jpg"
         ctaLink={SQUARE_LINK}
       />
 
