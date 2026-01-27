@@ -73,7 +73,7 @@ export function AppealProblem({
                                 <img
                                     src={image.src}
                                     alt={image.alt}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover scale-105"
                                 />
 
                                 {image.videoTrigger && (
