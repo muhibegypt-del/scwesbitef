@@ -28,7 +28,7 @@ interface Program {
 const programs: Program[] = [
   {
     title: 'Build a Water Well',
-    description: 'Construct a deep-water tube well to provide clean, safe drinking water for an entire village (up to 200 people) for 10+ years.',
+    description: 'Construct a deep-water tube well to provide clean, safe drinking water.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/8-DSC00857.jpg',
     href: '/water-well',
     donateLink: SQUARE_LINKS.WATER_WELL,
