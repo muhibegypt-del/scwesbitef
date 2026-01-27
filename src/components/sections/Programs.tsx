@@ -135,7 +135,7 @@ export function Programs() {
                   {program.href ? (
                     <Button asChild variant="outline" className="w-full rounded-xl border-gray-200 hover:border-teal-600 hover:text-teal-700 h-11 uppercase tracking-widest text-xs font-bold">
                       <Link to={program.href}>
-                        Learn More <ArrowUpRight className="ml-2 h-3 w-3" />
+                        Learn More <span className="sr-only">about {program.title}</span> <ArrowUpRight className="ml-2 h-3 w-3" />
                       </Link>
                     </Button>
                   ) : (
