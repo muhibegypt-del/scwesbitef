@@ -6,7 +6,7 @@ export interface NavigationLink {
 
 export const NAV_CONFIG: NavigationLink[] = [
     {
-        label: 'About Soul Caravan Foundation',
+        label: 'Who We Are',
         href: '/#history',
         dropdownItems: [
             { label: 'Our Story', href: '/#year-2020' },
