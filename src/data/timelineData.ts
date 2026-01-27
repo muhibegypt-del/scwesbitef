@@ -35,7 +35,7 @@ export const timelineData = [
         title: "The Impact Expands",
         description: "We continued our support for orphanages and took a major step in education by building a fully outfitted science lab in a soon-to-be-built secondary school within an under-resourced community, providing students with the tools to explore, learn, and grow.",
         photos: [
-            'https://ik.imagekit.io/dzmabcda0/2024%201'
+            'https://ik.imagekit.io/dzmabcda0/DSC00203.jpg?updatedAt=1769518413034'
         ],
         detailedCopy: "We continued our support for orphanages and took a major step in education by building a fully outfitted science lab in a soon-to-be-built secondary school within an under-resourced community, providing students with the tools to explore, learn, and grow."
     },
