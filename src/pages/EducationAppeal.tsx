@@ -96,11 +96,11 @@ export function EducationAppeal() {
         imageAlt="Happy student"
         quote={
           <>
-            <span className="text-brand-primary">"Every child I see succeed</span> reminds me why we do this work. Education is the most powerful tool we have to break the cycle of poverty. When a child learns, an entire community benefits."
+            <span className="text-brand-primary">"Our community is deeply grateful for this support,</span> education is vital for our children to grow into contributing members of society."
           </>
         }
-        author="Sarah Kamau"
-        role="Education Program Coordinator"
+        author="Alija"
+        role="Village Leader"
       />
 
       {/* FAQ */}
