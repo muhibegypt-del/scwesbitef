@@ -32,7 +32,7 @@ export function Navigation() {
     <>
       {/* MAIN HEADER - DARK TEAL AS REQUESTED */}
       <header
-        className={`fixed left-0 right-0 w-full z-header transition-all duration-300 bg-brand-primary-dark ${isScrolled ? 'top-0 shadow-soft' : 'top-0'}`}
+        className={`fixed left-0 right-0 w-full z-header transition-all duration-300 ${isScrolled ? 'top-0 shadow-soft bg-brand-primary-dark/95 backdrop-blur-md' : 'top-0 bg-brand-primary-dark'}`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">

@@ -41,8 +41,25 @@ export function Hero() {
             Donate Now
           </a>
         </div>
+
+        {/* SCROLL INDICATOR */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-80">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+          </svg>
+        </div>
       </div>
 
-    </section>
+    </section >
   );
 }

@@ -21,21 +21,33 @@ const DROPDOWN_CONTENT: Record<string, { title: string; description: string; vie
     }
 };
 
-export function MegaMenuDropdown({ link }: { link: NavigationLink }) {
+interface MegaMenuDropdownProps {
+    link: NavigationLink;
+    isOpen: boolean;
+    closeMenu: () => void;
+}
+
+export function MegaMenuDropdown({ link, isOpen, closeMenu }: MegaMenuDropdownProps) {
     if (!link.dropdownItems || link.dropdownItems.length === 0) return null;
 
     // Get dynamic content based on navigation label, fallback to Our Appeals
     const content = DROPDOWN_CONTENT[link.label] || DROPDOWN_CONTENT['Our Appeals'];
 
+    // Dynamic positioning: If it's "Get Involved" (last item), align right to prevent overflow
+    const isLastItem = link.label === 'Get Involved';
+    const positionClasses = isLastItem
+        ? 'right-0 w-[600px] origin-top-right'
+        : 'left-1/2 -translate-x-1/2 w-[600px] origin-top';
+
     return (
         <div
-            className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 ease-out"
+            className={`absolute top-full pt-4 transition-all duration-200 ease-out transform ${positionClasses} ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2 pointer-events-none'}`}
             style={{ zIndex: Z_INDEX.header }}
         >
 
             {/* The Pointer (Speech Bubble Triangle) - POSITIONED OUTSIDE OVERFLOW WRAPPER */}
             {/* It sits in the padding area (pt-4) but needs to be visually connected to the white box below */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 z-50" />
+            <div className={`absolute top-2 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 z-50 ${isLastItem ? 'right-10' : 'left-1/2 -translate-x-1/2'}`} />
 
             {/* Content Container - Background & Shadow apply here */}
             {/* NOTE: We remove the top border here safely since keyline is handled by wrapper or visually merged */}
@@ -55,6 +67,7 @@ export function MegaMenuDropdown({ link }: { link: NavigationLink }) {
                             <li key={item.label}>
                                 <Link
                                     to={item.href}
+                                    onClick={closeMenu}
                                     className="text-gray-800 font-bold hover:text-teal-600 text-sm block transition-colors"
                                 >
                                     {item.label}

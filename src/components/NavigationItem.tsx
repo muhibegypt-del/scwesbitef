@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import type { NavigationLink } from '../config/navigationConfig';
@@ -10,12 +11,14 @@ interface NavigationItemProps {
 }
 
 export function NavigationItem({ link }: NavigationItemProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const lenis = useLenis();
   const isActive = location.pathname === link.href || (link.dropdownItems?.some(item => item.href === location.pathname) ?? false);
   const hasDropdown = link.dropdownItems && link.dropdownItems.length > 0;
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    setIsOpen(false); // Close dropdown on main link click too
     if (href.includes('#')) {
       const [path, hash] = href.split('#');
       const targetPath = path || '/';
@@ -41,15 +44,19 @@ export function NavigationItem({ link }: NavigationItemProps) {
   };
 
   return (
-    <div className="group relative h-full flex items-center">
+    <div
+      className="relative h-full flex items-center"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       {hasDropdown ? (
         <Link
           to={link.href}
           onClick={(e) => handleScroll(e, link.href)}
-          className={`flex items-center gap-1 font-bold text-sm transition-colors py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md px-3 ${isActive ? 'text-white' : 'text-slate-100 hover:text-teal-200'}`}
+          className={`flex items-center gap-1 font-bold text-sm transition-colors py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md px-3 ${isActive || isOpen ? 'text-white' : 'text-slate-100 hover:text-teal-200'}`}
         >
           {link.label}
-          <ChevronDown className="w-4 h-4 text-current transition-transform duration-200 group-hover:rotate-180" />
+          <ChevronDown className={`w-4 h-4 text-current transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </Link>
       ) : (
         <Link
@@ -65,7 +72,13 @@ export function NavigationItem({ link }: NavigationItemProps) {
         </Link>
       )}
 
-      {hasDropdown && <MegaMenuDropdown link={link} />}
+      {hasDropdown && (
+        <MegaMenuDropdown
+          link={link}
+          isOpen={isOpen}
+          closeMenu={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 }
