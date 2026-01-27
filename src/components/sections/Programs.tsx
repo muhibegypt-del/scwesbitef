@@ -35,7 +35,7 @@ const programs: Program[] = [
   },
   {
     title: 'Orphan & Widow Care',
-    description: 'Provide comprehensive support including school fees, uniforms, food, and psychosocial support for families who have lost their primary provider.',
+    description: 'Help provide vulnerable children and windows with care, stability and essential resources, creating an environment where they can flourish.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/28-DSC00262.jpg',
     href: '/orphan-care',
     donateLink: SQUARE_LINKS.ORPHANS,
