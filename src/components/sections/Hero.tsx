@@ -47,15 +47,14 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
         {/* HERO CONTENT OVERLAY */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 gap-8">
-          <div className="w-full max-w-2xl opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 gap-6">
+          <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
           <div className={`transition-all duration-200 ease-out fill-mode-forwards ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
             <Button
               asChild
-              size="lg"
-              className="rounded-full px-10 py-7 text-lg font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"
+              className="rounded-full px-8 py-6 text-base font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"
             >
               <a
                 href="https://square.link/u/cI8AoKop"
