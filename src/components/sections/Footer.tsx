@@ -1,7 +1,7 @@
 'use client';
 
 import {
-  Mail, Phone, MapPin, Instagram,
+  Mail, MapPin, Instagram,
   ArrowUp
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -52,10 +52,6 @@ export function Footer() {
               <a href="mailto:info@soulcaravan.org" className="flex items-center gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                 <Mail className="h-5 w-5 text-olive-400/80 group-hover:text-olive-400 transition-colors" />
                 <span className="text-sm">info@soulcaravan.org</span>
-              </a>
-              <a href="tel:+254700000000" className="flex items-center gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
-                <Phone className="h-5 w-5 text-olive-400/80 group-hover:text-olive-400 transition-colors" />
-                <span className="text-sm">+254 700 000 000</span>
               </a>
               <div className="flex items-center gap-4 text-teal-200/60">
                 <MapPin className="h-5 w-5 text-olive-400/80" />
