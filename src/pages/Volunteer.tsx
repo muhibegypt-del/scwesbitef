@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { MailerLiteForm } from '../components/forms/MailerLiteForm';
+import { VolunteerForm } from '../components/forms/VolunteerForm';
 
 export function Volunteer() {
     return (
@@ -19,7 +19,7 @@ export function Volunteer() {
                     </p>
                 </div>
 
-                <MailerLiteForm />
+                <VolunteerForm />
             </div>
         </div>
     );
