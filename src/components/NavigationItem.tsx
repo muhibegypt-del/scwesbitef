@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import type { NavigationLink } from '../config/navigationConfig';
@@ -12,6 +12,8 @@ interface NavigationItemProps {
 
 export function NavigationItem({ link }: NavigationItemProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const closeTimeoutRef = useRef<number | null>(null);
+  const justClosedRef = useRef(false);
   const location = useLocation();
   const lenis = useLenis();
   const isActive = location.pathname === link.href || (link.dropdownItems?.some(item => item.href === location.pathname) ?? false);
@@ -43,11 +45,41 @@ export function NavigationItem({ link }: NavigationItemProps) {
     }
   };
 
+  const handleMouseEnter = () => {
+    // Don't reopen if we just closed via click
+    if (justClosedRef.current) return;
+
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Delay closing slightly to prevent flickering
+    closeTimeoutRef.current = window.setTimeout(() => {
+      setIsOpen(false);
+      justClosedRef.current = false;
+    }, 100);
+  };
+
+  const handleDropdownItemClick = () => {
+    // Mark that we just closed via click
+    justClosedRef.current = true;
+    setIsOpen(false);
+
+    // Clear the flag after a delay to allow normal hover behavior later
+    setTimeout(() => {
+      justClosedRef.current = false;
+    }, 300);
+  };
+
   return (
     <div
       className="relative h-full flex items-center"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {hasDropdown ? (
         <Link
@@ -76,7 +108,7 @@ export function NavigationItem({ link }: NavigationItemProps) {
         <MegaMenuDropdown
           link={link}
           isOpen={isOpen}
-          closeMenu={() => setIsOpen(false)}
+          closeMenu={handleDropdownItemClick}
         />
       )}
     </div>
