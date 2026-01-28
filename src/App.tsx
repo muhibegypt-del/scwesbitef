@@ -7,11 +7,13 @@ import { ErrorBoundary } from './components/ui/ErrorBoundary';
 import { ProgressiveTypographyProvider, useTypographyQualityChecker } from './components/ui/ProgressiveTypography';
 import { Hero } from './components/sections/Hero';
 import { Values } from './components/sections/Values';
-import { Programs } from './components/sections/Programs';
-import { Impact } from './components/sections/Impact';
-import { GetInvolved } from './components/sections/GetInvolved';
 import { Footer } from './components/sections/Footer';
 import { Navigation } from './components/Navigation';
+
+// Lazy load below-the-fold homepage sections
+const Programs = lazy(() => import('./components/sections/Programs').then(m => ({ default: m.Programs })));
+const Impact = lazy(() => import('./components/sections/Impact').then(m => ({ default: m.Impact })));
+const GetInvolved = lazy(() => import('./components/sections/GetInvolved').then(m => ({ default: m.GetInvolved })));
 
 // Lazy load all page routes for better initial bundle size
 const WaterWellAppeal = lazy(() => import('./pages/WaterWellAppeal').then(m => ({ default: m.WaterWellAppeal })));
@@ -46,9 +48,11 @@ function HomePage() {
     <main>
       <Hero />
       <Values />
-      <Programs />
-      <Impact />
-      <GetInvolved />
+      <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="w-8 h-8 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" /></div>}>
+        <Programs />
+        <Impact />
+        <GetInvolved />
+      </Suspense>
     </main>
   );
 }
