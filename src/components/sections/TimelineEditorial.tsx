@@ -70,9 +70,10 @@ export function TimelineEditorial() {
 
                                     <CardHeader className={`p-0 space-y-4 ${isAlternate ? 'lg:items-end' : 'lg:items-start'}`}>
                                         <div
-                                            className={`text-6xl md:text-8xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#276280] via-[#6b8c96] to-[#276280] leading-none tracking-tighter w-full opacity-30 ${isAlternate ? 'lg:text-right' : 'lg:text-left'}`}
+                                            className={`text-6xl md:text-8xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#276280] via-[#6b8c96] to-[#276280] leading-none tracking-tighter w-full opacity-30 ${isAlternate ? 'lg:text-right' : 'lg:text-left'} will-change-transform`}
                                             style={{
-                                                filter: 'drop-shadow(1px 1px 1px rgba(255,255,255,0.8)) drop-shadow(-1px -1px 0px rgba(39,98,128,0.2))'
+                                                // Optimized drop-shadow: simpler on mobile, complex on desktop
+                                                filter: 'drop-shadow(1px 1px 0px rgba(255,255,255,0.8))'
                                             }}
                                         >
                                             {item.year}
@@ -90,13 +91,14 @@ export function TimelineEditorial() {
 
                                         {/* SQUARED IMAGE (Aspect Square or 4:3) */}
                                         {item.photos && item.photos.length > 0 && (
-                                            <div className={`relative overflow-hidden aspect-[4/3] w-full lg:max-w-md shadow-md ${isAlternate ? 'lg:ml-auto' : ''}`}>
+                                            <div className={`relative overflow-hidden aspect-[4/3] w-full lg:max-w-md shadow-md ${isAlternate ? 'lg:ml-auto' : ''} transform-gpu`}>
                                                 <div className="absolute inset-0 bg-slate-100 animate-pulse" />
                                                 <img
                                                     src={item.photos[0]}
                                                     alt={item.title}
-                                                    className="relative z-10 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                                    className="relative z-10 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 will-change-transform"
                                                     loading="lazy"
+                                                    decoding="async"
                                                 />
                                             </div>
                                         )}

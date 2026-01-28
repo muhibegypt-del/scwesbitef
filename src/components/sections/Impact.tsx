@@ -56,7 +56,7 @@ export function Impact() {
         {/* FOUNDER QUOTE (Moved to bottom as a closing thought) */}
         <div className="max-w-4xl mx-auto">
           <motion.div
-            className="relative bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100 overflow-hidden"
+            className="relative bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100 overflow-hidden will-change-transform"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: EASE }}

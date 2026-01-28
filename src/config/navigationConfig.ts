@@ -9,7 +9,7 @@ export const NAV_CONFIG: NavigationLink[] = [
         label: 'Who We Are',
         href: '/#history',
         dropdownItems: [
-            { label: 'Our Story', href: '/#year-2020' },
+            { label: 'Our Story', href: '/#history' },
             { label: 'Our Values', href: '/#values' },
             { label: 'Our Team', href: '/leadership' },
         ]
