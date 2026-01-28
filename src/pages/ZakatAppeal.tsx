@@ -1,7 +1,7 @@
 import { IMAGES } from '../data/imageAssets';
 import { AppealHero } from '@/components/templates/appeal/AppealHero';
 
-const SQUARE_LINK = 'https://square.link/u/d5fSYpG9';
+const SQUARE_LINK = 'https://square.link/u/dDwM2RK4';
 
 export function ZakatAppeal() {
   return (
