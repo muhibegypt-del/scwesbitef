@@ -1,7 +1,7 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
-import { Lock, Phone } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import type { NavigationLink } from '../types';
 import { Button } from './ui/button';
 
@@ -108,14 +108,6 @@ export function MobileMenu({ isOpen, onClose, currentHash, navConfig }: MobileMe
                                 Access Donor Portal
                             </a>
 
-                            <div className="h-px w-full bg-white/10 my-2" />
-
-                            <div className="flex items-center justify-between text-white text-sm">
-                                <span>Reg No: 12345678</span>
-                                <a href="tel:+123456789" className="flex items-center gap-2 hover:text-white/90 transition-colors">
-                                    <Phone className="h-3 w-3" /> Contact Support
-                                </a>
-                            </div>
                         </div>
 
                         <Button
