@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { FundraiserForm } from '../components/forms/FundraiserForm';
+import { MailerLiteFundraiserEmbed } from '../components/forms/MailerLiteFundraiserEmbed';
 
 export function Fundraise() {
     return (
@@ -18,7 +18,7 @@ export function Fundraise() {
                     </p>
                 </div>
 
-                <FundraiserForm />
+                <MailerLiteFundraiserEmbed />
             </div>
         </div>
     );

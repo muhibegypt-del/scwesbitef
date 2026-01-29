@@ -40,7 +40,7 @@ export function AppealHero({
 
                     <FadeIn delay={0.2}>
                         {/* Headline */}
-                        <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-${BrandPalette.text.main} leading-[1.1] tracking-tight mb-6`}>
+                        <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-${BrandPalette.text.main} tracking-tight mb-6`}>
                             {title}
                         </h1>
                     </FadeIn>

@@ -1,10 +1,11 @@
 import { useState, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import type { NavigationLink } from '../config/navigationConfig';
 import { MegaMenuDropdown } from './navigation/MegaMenuDropdown';
+import { useHashNavigation } from '../hooks/useHashNavigation';
 
-import { useLenis } from '@studio-freight/react-lenis';
+// import { useLenis } from '@studio-freight/react-lenis';
 
 interface NavigationItemProps {
   link: NavigationLink;
@@ -14,35 +15,12 @@ export function NavigationItem({ link }: NavigationItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   const closeTimeoutRef = useRef<number | null>(null);
   const justClosedRef = useRef(false);
-  const location = useLocation();
-  const lenis = useLenis();
+  const { handleHashNavigation } = useHashNavigation();
   const isActive = location.pathname === link.href || (link.dropdownItems?.some(item => item.href === location.pathname) ?? false);
   const hasDropdown = link.dropdownItems && link.dropdownItems.length > 0;
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
-    setIsOpen(false); // Close dropdown on main link click too
-    if (href.includes('#')) {
-      const [path, hash] = href.split('#');
-      const targetPath = path || '/';
-
-      if (location.pathname === targetPath || (targetPath === '/' && location.pathname === '/')) {
-        e.preventDefault();
-
-        // Update URL hash without reload
-        window.history.pushState({}, '', href);
-
-        const element = document.getElementById(hash);
-        if (element) {
-          if (lenis) {
-            lenis.scrollTo(element, { offset: -100 });
-          } else {
-            // Fallback for native scroll (or reduced motion)
-            const top = element.getBoundingClientRect().top + window.scrollY - 100;
-            window.scrollTo({ top, behavior: 'smooth' });
-          }
-        }
-      }
-    }
+  const onLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    handleHashNavigation(e, href, () => setIsOpen(false));
   };
 
   const handleMouseEnter = () => {
@@ -84,7 +62,7 @@ export function NavigationItem({ link }: NavigationItemProps) {
       {hasDropdown ? (
         <Link
           to={link.href}
-          onClick={(e) => handleScroll(e, link.href)}
+          onClick={(e) => onLinkClick(e, link.href)}
           className={`flex items-center gap-1 font-bold text-sm transition-colors py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md px-3 ${isActive || isOpen ? 'text-white' : 'text-slate-100 hover:text-teal-200'}`}
         >
           {link.label}
@@ -93,7 +71,7 @@ export function NavigationItem({ link }: NavigationItemProps) {
       ) : (
         <Link
           to={link.href}
-          onClick={(e) => handleScroll(e, link.href)}
+          onClick={(e) => onLinkClick(e, link.href)}
           className={`relative py-2 px-3 flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md font-bold text-sm transition-colors ${isActive ? 'text-white' : 'text-slate-100 hover:text-teal-200'}`}
           aria-current={isActive ? 'page' : undefined}
         >

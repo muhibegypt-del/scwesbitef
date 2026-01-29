@@ -33,7 +33,7 @@ const Volunteer = lazy(() => import('./pages/Volunteer').then(m => ({ default: m
 function NoiseOverlay() {
   return (
     <div
-      className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] hidden sm:block"
+      className="fixed inset-0 pointer-events-none z-50 opacity-5 hidden sm:block"
       style={{
         backgroundImage: `url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGklEQVQYV2M8c+YMAxYwiqIoiqIoiqIoOikAAEX8A/nGmjQkAAAAAElFTkSuQmCC")`,
         backgroundRepeat: 'repeat',

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useHashNavigation } from '../../hooks/useHashNavigation';
 import { NavigationLink } from '../../config/navigationConfig';
 import { Z_INDEX } from '../../lib/design-tokens';
 
@@ -28,6 +29,8 @@ interface MegaMenuDropdownProps {
 }
 
 export function MegaMenuDropdown({ link, isOpen, closeMenu }: MegaMenuDropdownProps) {
+    const { handleHashNavigation } = useHashNavigation();
+
     if (!link.dropdownItems || link.dropdownItems.length === 0) return null;
 
     // Get dynamic content based on navigation label, fallback to Our Appeals
@@ -67,7 +70,7 @@ export function MegaMenuDropdown({ link, isOpen, closeMenu }: MegaMenuDropdownPr
                             <li key={item.label}>
                                 <Link
                                     to={item.href}
-                                    onClick={closeMenu}
+                                    onClick={(e) => handleHashNavigation(e, item.href, closeMenu)}
                                     className="text-gray-800 font-bold hover:text-teal-600 text-sm block transition-colors"
                                 >
                                     {item.label}

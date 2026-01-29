@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useMailerLiteTracker } from '../../hooks/useMailerLiteTracker';
 
 const MAILERLITE_HTML_CONTENT = `
     <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1769596");</style>
@@ -709,41 +710,43 @@ const MAILERLITE_HTML_CONTENT = `
 `;
 
 export function MailerLiteVolunteerEmbed() {
-    useEffect(() => {
-        // 1. Define the success callback globally
-        (window as any).ml_webform_success_36358988 = function () {
-            var $ = (window as any).ml_jQuery || (window as any).jQuery;
-            if ($) {
-                $('.ml-subscribe-form-36358988 .row-success').show();
-                $('.ml-subscribe-form-36358988 .row-form').hide();
-            }
-        };
+  // Phase 1 Optimization: Use cached tracker to prevent race conditions/duplicate analytics
+  useMailerLiteTracker();
 
-        // 2. Load the main MailerLite script
-        const script = document.createElement('script');
-        script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024";
-        script.type = "text/javascript";
-        script.async = true;
-        document.body.appendChild(script);
+  useEffect(() => {
+    // 1. Define the success callback globally
+    (window as any).ml_webform_success_36358988 = function () {
+      var $ = (window as any).ml_jQuery || (window as any).jQuery;
+      if ($) {
+        $('.ml-subscribe-form-36358988 .row-success').show();
+        $('.ml-subscribe-form-36358988 .row-form').hide();
+      }
+    };
 
-        // 3. Execute the tracking fetch
-        fetch("https://assets.mailerlite.com/jsonp/2055231/forms/177848637564389359/takel");
+    // 2. Load the main MailerLite script
+    const script = document.createElement('script');
+    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
 
-        return () => {
-            // Cleanup if needed (though MailerLite scripts are global)
-            try {
-                document.body.removeChild(script);
-                delete (window as any).ml_webform_success_36358988;
-            } catch (e) {
-                // ignore
-            }
-        };
-    }, []);
+    // 3. Tracking handled by useMailerLiteTracker hook
 
-    return (
-        <div
-            dangerouslySetInnerHTML={{ __html: MAILERLITE_HTML_CONTENT }}
-            className="mailerlite-embed-container"
-        />
-    );
+    return () => {
+      // Cleanup if needed (though MailerLite scripts are global)
+      try {
+        document.body.removeChild(script);
+        delete (window as any).ml_webform_success_36358988;
+      } catch (e) {
+        // ignore
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: MAILERLITE_HTML_CONTENT }}
+      className="mailerlite-embed-container"
+    />
+  );
 }

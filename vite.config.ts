@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -8,7 +9,6 @@ export default defineConfig({
   plugins: [
     million.vite({
       auto: true,
-      mute: true // Reduces console noise in development
     }),
     react()
   ],
@@ -45,5 +45,10 @@ export default defineConfig({
     hmr: {
       overlay: false
     }
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
   }
 });

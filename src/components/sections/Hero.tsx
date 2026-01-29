@@ -9,10 +9,9 @@ const VIDEO_URL = 'https://ik.imagekit.io/dzmabcda0/finals/WEB%20BANNER%20VIDEO%
 // Optimized Poster: 800px width (w-800), 80% quality (q-80)
 const POSTER_URL = 'https://ik.imagekit.io/dzmabcda0/finals/9-DSC00914.jpg?tr=w-800,q-70';
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 export function Hero() {
-  const [showButton, setShowButton] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -50,10 +49,10 @@ export function Hero() {
 
         {/* HERO CONTENT OVERLAY */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 gap-6">
-          <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
+          <div className="w-full max-w-sm opacity-0 animate-[fadeIn_2.5s_ease-in-out_forwards]">
             <HeroLogo />
           </div>
-          <div className={`transition-all duration-200 ease-out fill-mode-forwards ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
+          <div className={`transition-all duration-200 ease-out fill-mode-forwards opacity-100 translate-y-0 scale-100`}>
             <Button
               asChild
               className="rounded-full px-8 py-6 text-base font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"

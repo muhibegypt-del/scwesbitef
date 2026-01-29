@@ -57,7 +57,7 @@ function FAQAccordionItem({
             <button
                 onClick={onToggle}
                 className={cn(
-                    'w-full flex items-center justify-between py-5 px-1 text-left transition-colors min-h-[56px]',
+                    'w-full flex items-center justify-between py-5 px-1 text-left transition-colors min-h-14',
                     `lg:${styles.hoverBg}` // Only apply hover background on desktop
                 )}
                 aria-expanded={isOpen}
