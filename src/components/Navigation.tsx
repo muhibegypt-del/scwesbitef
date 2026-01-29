@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { User, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { NAV_CONFIG } from '../config/navigationConfig';
@@ -16,6 +16,28 @@ export function Navigation() {
   const isScrolled = useOptimizedScroll({ threshold: 20 });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentHash, setCurrentHash] = useState('');
+
+  // -- DROPDOWN STATE LIFTED UP --
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
+
+  const handleNavEnter = (label: string) => {
+    if (closeTimeoutRef.current) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setActiveDropdown(label);
+  };
+
+  const handleNavLeave = () => {
+    closeTimeoutRef.current = window.setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150); // Small delay to allow moving to dropdown content
+  };
+
+  const handleNavClose = () => {
+    setActiveDropdown(null);
+  };
 
   useEffect(() => {
     const handleHashChange = () => setCurrentHash(window.location.hash);
@@ -52,7 +74,14 @@ export function Navigation() {
             {/* DESKTOP NAV */}
             <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
               {NAV_CONFIG.map((link) => (
-                <NavigationItem key={link.label} link={link} />
+                <NavigationItem
+                  key={link.label}
+                  link={link}
+                  isOpen={activeDropdown === link.label}
+                  onOpen={() => handleNavEnter(link.label)}
+                  onLeave={handleNavLeave}
+                  onClose={handleNavClose}
+                />
               ))}
             </nav>
 

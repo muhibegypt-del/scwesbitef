@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import type { NavigationLink } from '../config/navigationConfig';
 import { MegaMenuDropdown } from './navigation/MegaMenuDropdown';
@@ -9,43 +9,35 @@ import { useHashNavigation } from '../hooks/useHashNavigation';
 
 interface NavigationItemProps {
   link: NavigationLink;
+  isOpen: boolean;
+  onOpen: () => void;
+  onLeave: () => void;
+  onClose: () => void;
 }
 
-export function NavigationItem({ link }: NavigationItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const closeTimeoutRef = useRef<number | null>(null);
+export function NavigationItem({ link, isOpen, onOpen, onLeave, onClose }: NavigationItemProps) {
   const justClosedRef = useRef(false);
   const { handleHashNavigation } = useHashNavigation();
+  const location = useLocation();
   const isActive = location.pathname === link.href || (link.dropdownItems?.some(item => item.href === location.pathname) ?? false);
   const hasDropdown = link.dropdownItems && link.dropdownItems.length > 0;
 
   const onLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
-    handleHashNavigation(e, href, () => setIsOpen(false));
+    handleHashNavigation(e, href, () => {
+      handleDropdownClose();
+    });
   };
 
   const handleMouseEnter = () => {
     // Don't reopen if we just closed via click
     if (justClosedRef.current) return;
-
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-    setIsOpen(true);
+    onOpen();
   };
 
-  const handleMouseLeave = () => {
-    // Delay closing slightly to prevent flickering
-    closeTimeoutRef.current = window.setTimeout(() => {
-      setIsOpen(false);
-      justClosedRef.current = false;
-    }, 100);
-  };
-
-  const handleDropdownItemClick = () => {
+  const handleDropdownClose = () => {
     // Mark that we just closed via click
     justClosedRef.current = true;
-    setIsOpen(false);
+    onClose();
 
     // Clear the flag after a delay to allow normal hover behavior later
     setTimeout(() => {
@@ -57,7 +49,7 @@ export function NavigationItem({ link }: NavigationItemProps) {
     <div
       className="relative h-full flex items-center"
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={onLeave}
     >
       {hasDropdown ? (
         <Link
@@ -86,7 +78,7 @@ export function NavigationItem({ link }: NavigationItemProps) {
         <MegaMenuDropdown
           link={link}
           isOpen={isOpen}
-          closeMenu={handleDropdownItemClick}
+          closeMenu={handleDropdownClose}
         />
       )}
     </div>
