@@ -49,9 +49,9 @@ export function Footer() {
           <div className="md:text-right">
             <h4 className="text-white font-medium mb-6">Contact Us</h4>
             <div className="space-y-4 md:flex md:flex-col md:items-end">
-              <a href="mailto:info@soulcaravan.org" className="flex items-center gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
+              <a href="mailto:info.soulcaravan@gmail.com" className="flex items-center gap-4 text-teal-200/60 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 rounded-sm">
                 <Mail className="h-5 w-5 text-olive-400/80 group-hover:text-olive-400 transition-colors" />
-                <span className="text-sm">info@soulcaravan.org</span>
+                <span className="text-sm">info.soulcaravan@gmail.com</span>
               </a>
               <div className="flex items-center gap-4 text-teal-200/60">
                 <MapPin className="h-5 w-5 text-olive-400/80" />
