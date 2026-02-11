@@ -25,6 +25,7 @@ const EducationAppeal = lazy(() => import('./pages/EducationAppeal').then(m => (
 const MasjidAppeal = lazy(() => import('./pages/MasjidAppeal').then(m => ({ default: m.MasjidAppeal })));
 const QurbaniAppeal = lazy(() => import('./pages/QurbaniAppeal').then(m => ({ default: m.QurbaniAppeal })));
 const ZakatAppeal = lazy(() => import('./pages/ZakatAppeal').then(m => ({ default: m.ZakatAppeal })));
+const RamadanAppeal = lazy(() => import('./pages/RamadanAppeal').then(m => ({ default: m.RamadanAppeal })));
 const Purpose = lazy(() => import('./pages/Purpose').then(m => ({ default: m.Purpose })));
 const Leadership = lazy(() => import('./pages/Leadership').then(m => ({ default: m.Leadership })));
 const Fundraise = lazy(() => import('./pages/Fundraise').then(m => ({ default: m.Fundraise })));
@@ -84,6 +85,7 @@ function App() {
                   <Route path="/masjid" element={<MasjidAppeal />} />
                   <Route path="/qurbani" element={<QurbaniAppeal />} />
                   <Route path="/zakat" element={<ZakatAppeal />} />
+                  <Route path="/ramadan" element={<RamadanAppeal />} />
                   <Route path="/purpose" element={<Purpose />} />
                   <Route path="/leadership" element={<Leadership />} />
                   <Route path="/fundraise" element={<Fundraise />} />

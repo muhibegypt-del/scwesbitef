@@ -25,6 +25,7 @@ export const NAV_CONFIG: NavigationLink[] = [
             { label: 'Education', href: '/education' },
             { label: 'Qurbani', href: '/qurbani' },
             { label: 'Zakat', href: '/zakat' },
+            { label: 'Ramadan 2026', href: '/ramadan' },
         ]
     },
     {
