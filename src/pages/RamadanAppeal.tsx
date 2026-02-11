@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Heart, ArrowRight, Users, Utensils, Package, Star } from 'lucide-react';
+import { ArrowLeft, Heart, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { Card } from '@/components/ui/card';
@@ -29,13 +29,6 @@ const GALLERY_IMAGES = [
   { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_ORANGE, alt: 'Woman receiving parcel' },
   { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_BLUE, alt: 'Carrying food home' },
   { src: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION, alt: 'Community distribution' },
-];
-
-const IMPACT_STATS = [
-  { icon: Utensils, value: '20', label: 'People fed per £50 donation', suffix: '' },
-  { icon: Package, value: '500+', label: 'Food parcels distributed last Ramadan', suffix: '' },
-  { icon: Users, value: '2,000+', label: 'Families supported across communities', suffix: '' },
-  { icon: Star, value: '30', label: 'Days of nourishment and hope', suffix: '' },
 ];
 
 const FAQ_ITEMS = [
@@ -205,66 +198,6 @@ function WhyRamadanSection() {
   );
 }
 
-function ImpactStatsSection() {
-  return (
-    <section className="py-20 lg:py-28 bg-teal-900 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <filter id="ramadanNoise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#ramadanNoise)" />
-        </svg>
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-8 lg:px-12">
-        <FadeIn>
-          <div className="text-center mb-16">
-            <p className="text-olive-400 font-semibold tracking-[0.2em] uppercase text-xs mb-4">
-              Your Impact
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Every Donation Counts
-            </h2>
-            <div className="w-16 h-px bg-olive-400/40 mx-auto mt-6" />
-          </div>
-        </FadeIn>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {IMPACT_STATS.map((stat, idx) => (
-            <FadeIn key={idx} delay={0.1 + (idx * 0.1)} direction="up">
-              <div className="text-center p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-                <stat.icon className="h-8 w-8 text-olive-400 mx-auto mb-4" />
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                  {stat.value}{stat.suffix}
-                </div>
-                <p className="text-teal-200/70 text-sm leading-snug">
-                  {stat.label}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-
-        <FadeIn delay={0.6} direction="up">
-          <div className="text-center mt-14">
-            <Button
-              asChild
-              size="lg"
-              className="rounded-full bg-olive-500 hover:bg-olive-600 text-white h-14 px-10 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <a href={SQUARE_LINK} target="_blank" rel="noopener noreferrer" className="gap-3">
-                <Heart className="h-5 w-5" />
-                Feed a Family This Ramadan
-              </a>
-            </Button>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-  );
-}
-
 function GallerySection() {
   return (
     <section className="py-16 lg:py-24 bg-slate-100">
@@ -382,7 +315,6 @@ export function RamadanAppeal() {
     <div className="min-h-screen bg-slate-50">
       <RamadanHero />
       <WhyRamadanSection />
-      <ImpactStatsSection />
       <GallerySection />
       <CinematicSection />
 
