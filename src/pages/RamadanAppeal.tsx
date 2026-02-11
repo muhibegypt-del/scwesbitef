@@ -12,23 +12,23 @@ import {
 } from '@/components/ui/carousel';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
+import { IMAGES } from '@/data/imageAssets';
 
 const SQUARE_LINK = 'https://checkout.square.site/merchant/MLAAADG4MBDM3/checkout/LZHY5QXEAVERT3CC25PZ3KK4';
 
 const RAMADAN_IMAGES = {
-  hero: '/images/ramadan/WhatsApp_Image_2026-02-12_at_3.21.24_AM.jpeg',
-  womanParcel: '/images/ramadan/678ac44e-ea02-401e-94a8-b0d420512bbd.jpg',
-  distribution1: '/images/ramadan/WhatsApp_Image_2026-02-12_at_3.21.23_AM.jpeg',
-  distribution2: '/images/ramadan/WhatsApp_Image_2026-02-12_at_3.21.25_AM.jpeg',
-  distribution3: '/images/ramadan/WhatsApp_Image_2026-02-12_at_3.22.14_AM.jpeg',
+  hero: 'https://ik.imagekit.io/dzmabcda0/DSC00607.jpg',
+  womanParcel: '/images/ramadan-hero.jpg',
+  child: '/images/ramadan-child.jpeg',
 };
 
 const GALLERY_IMAGES = [
-  { src: RAMADAN_IMAGES.womanParcel, alt: 'Woman receiving food parcel during Ramadan distribution' },
-  { src: RAMADAN_IMAGES.distribution1, alt: 'Community food distribution during Ramadan' },
-  { src: RAMADAN_IMAGES.distribution2, alt: 'Families receiving essential supplies' },
-  { src: RAMADAN_IMAGES.distribution3, alt: 'Ramadan food relief reaching communities' },
-  { src: RAMADAN_IMAGES.hero, alt: 'Children receiving meals during Ramadan' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_ADDITION_1, alt: 'Food distribution event' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_ADDITION_2, alt: 'Community aid during Ramadan' },
+  { src: IMAGES.FOOD_PARCEL.PARCEL_CLOSEUP, alt: 'Food parcel contents' },
+  { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_ORANGE, alt: 'Woman receiving parcel' },
+  { src: IMAGES.FOOD_PARCEL.WOMAN_CARRYING_BLUE, alt: 'Carrying food home' },
+  { src: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION, alt: 'Community distribution' },
 ];
 
 const IMPACT_STATS = [
@@ -315,7 +315,7 @@ function CinematicSection() {
     <section className="relative py-32 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${RAMADAN_IMAGES.distribution2})` }}
+        style={{ backgroundImage: `url(${IMAGES.FOOD_PARCEL.POT_SETUP})` }}
       />
       <div className="absolute inset-0 bg-slate-900/90" />
 
@@ -361,8 +361,8 @@ function CinematicSection() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-teal-600 to-teal-700 rounded-[2.6rem] blur opacity-25 group-hover:opacity-50 transition duration-1000" />
                 <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl rotate-2 group-hover:rotate-0 transition-all duration-700 ease-out border-4 border-white/10">
                   <img
-                    src={RAMADAN_IMAGES.distribution1}
-                    alt="Ramadan food distribution in the community"
+                    src={IMAGES.FOOD_PARCEL.WOMAN_CARRYING_ORANGE}
+                    alt="Woman carrying food parcel during Ramadan distribution"
                     className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
                     loading="lazy"
                   />
