@@ -15,6 +15,7 @@ const SQUARE_LINKS = {
   MASJID: 'https://square.link/u/PaNdJVqa',
   QURBANI: 'https://square.link/u/wTjNjHHp',
   ZAKAT: 'https://square.link/u/d5fSYpG9',
+  RAMADAN: 'https://checkout.square.site/merchant/MLAAADG4MBDM3/checkout/LZHY5QXEAVERT3CC25PZ3KK4',
 };
 
 interface Program {
@@ -26,6 +27,13 @@ interface Program {
 }
 
 const programs: Program[] = [
+  {
+    title: 'Ramadan 2026',
+    description: 'Feed families this Ramadan. Provide hot iftar meals, food parcels, and Eid gifts for orphaned children.',
+    image: 'https://ik.imagekit.io/dzmabcda0/DSC00607.jpg?tr=w-600',
+    href: '/ramadan',
+    donateLink: SQUARE_LINKS.RAMADAN,
+  },
   {
     title: 'Build a Water Well',
     description: 'Provide access to clean, safe drinking water to an entire village, improving daily lives and creating a healthier tomorrow.',

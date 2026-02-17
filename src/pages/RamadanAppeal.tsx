@@ -32,11 +32,10 @@ const GALLERY_IMAGES = [
 ];
 
 const FAQ_ITEMS = [
-  { question: 'Is my Ramadan donation Zakat eligible?', answer: 'Yes. Our Ramadan food relief programs are designed to be Zakat eligible, reaching the poor and needy who qualify as recipients under Islamic guidelines.' },
-  { question: 'What does a food parcel contain?', answer: 'Each Ramadan food parcel includes essentials such as rice, flour, cooking oil, dates, lentils, sugar, and tea — carefully selected to sustain a family throughout the blessed month.' },
-  { question: 'How does my donation reach families?', answer: 'We work directly with local communities and trusted partners on the ground. Your donation is used to purchase and distribute food parcels directly to families in need, with full transparency.' },
+  { question: 'What does a food parcel contain?', answer: 'Each Ramadan food parcel contains rice, flour, beans, wheat, oil, and sugar — carefully selected to sustain a family throughout the blessed month.' },
+  { question: 'How does my donation reach families?', answer: 'We work directly with local communities and trusted partners on the ground. Your donation is used to purchase and distribute food parcels, prepare hot Iftar meals, and purchase Eid clothes and gifts for orphaned children.' },
   { question: 'Can I donate on behalf of a loved one?', answer: 'Of course. Many donors give Sadaqah Jariyah during Ramadan on behalf of family members, both living and deceased. Your generosity benefits them too.' },
-  { question: 'Where does Soul Caravan distribute during Ramadan?', answer: 'Our Ramadan programs primarily serve communities in East Africa, focusing on areas facing food insecurity and poverty. We target the most vulnerable families in remote and underserved regions.' },
+  { question: 'Where does Soul Caravan Foundation distribute during Ramadan?', answer: 'Our Ramadan programs serve communities in Kenya, focusing on areas facing food insecurity and poverty. We target the most vulnerable families in remote and underserved regions.' },
 ];
 
 function RamadanHero() {
@@ -161,9 +160,9 @@ function WhyRamadanSection() {
 
             <ul className="space-y-4 text-slate-700">
               {[
-                'Iftar meals served to families who cannot afford to break their fast',
-                'Monthly food parcels providing essential staples for the entire month',
-                'Community feeding programs bringing people together in unity',
+                'Hot iftar meals served to families who cannot afford to break their fast',
+                'Food parcels providing essential staples for the entire month',
+                'Eid clothes and gifts for orphaned children',
               ].map((item, idx) => (
                 <FadeIn key={idx} delay={0.4 + (idx * 0.1)} direction="right">
                   <li className="flex items-start gap-3">
