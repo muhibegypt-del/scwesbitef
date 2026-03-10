@@ -9,7 +9,7 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/wTjNjHHp';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 // Data
 const GALLERY_IMAGES = [
@@ -35,7 +35,7 @@ export function QurbaniAppeal() {
                 title="Qurbani"
                 subtitle="Provide Qurbani meat to families in need, ensuring that everyone can share in the blessings of Eid. Many vulnerable families have limited access to nutritious food during Eid, and this important tradition is often out of reach. Your contribution helps distribute fresh, high-quality meat to those who need it most, bringing nourishment and celebration to families across under resourced areas."
                 image={IMAGES.QURBANI.BANNER_GOATS}
-                ctaLink={SQUARE_LINK}
+                ctaLink={DONATION_LINK}
                 ctaText="Order Qurbani"
             />
 
@@ -112,7 +112,7 @@ export function QurbaniAppeal() {
             <AppealCTA
                 title="Share the Joy of Eid"
                 text="Your Qurbani brings essential protein to families who eat meat only a few times a year."
-                ctaLink={SQUARE_LINK}
+                ctaLink={DONATION_LINK}
                 ctaText="Order Now"
             />
 

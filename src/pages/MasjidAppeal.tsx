@@ -7,7 +7,7 @@ import { AppealProblem } from '@/components/templates/appeal/AppealProblem';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/PaNdJVqa';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 const FAQ_ITEMS = [
     { question: 'Is this donation Sadaqah Jariyah?', answer: 'Yes, building a Masjid is one of the best forms of Sadaqah Jariyah (continuous charity), rewarding you as long as it is used.' },
@@ -27,7 +27,7 @@ export function MasjidAppeal() {
 
 Your contribution helps ensure that these sacred spaces remain accessible, welcoming, and equipped to serve future generations, fostering unity, resilience, and hope wherever they are needed most."
                 image={IMAGES.MASJID.MAIN}
-                ctaLink={SQUARE_LINK}
+                ctaLink={DONATION_LINK}
             />
 
             {/* Problem */}
@@ -68,7 +68,7 @@ Your contribution helps ensure that these sacred spaces remain accessible, welco
             <AppealCTA
                 title="Build Your House in Jannah"
                 text="A Masjid is more than a building; it is the heart of the community. Build a legacy that lasts forever."
-                ctaLink={SQUARE_LINK}
+                ctaLink={DONATION_LINK}
             />
 
         </div>

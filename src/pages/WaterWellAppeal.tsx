@@ -9,7 +9,7 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/d5fSYpG9';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 // ============================================================
 // DATA
@@ -43,7 +43,7 @@ export function WaterWellAppeal() {
         subtitle="Provide clean, safe drinking water for an entire village. For many communities, access to clean water is still a daily struggle. A single well can serve hundreds of individuals for years to come, transforming daily life and protecting families from preventable, water-borne diseases.
 By building a water well, you provide more than just water - you provide health, dignity, and stability. Clean water reduces disease, strengthens communities, and creates a foundation for long-term development, allowing families to focus on building a better future."
         image={IMAGES.WATER.GIRL_COLLECTING}
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
       {/* Problem Section */}
@@ -118,7 +118,7 @@ By building a water well, you provide more than just water - you provide health,
       <AppealCTA
         title="Transform a Community Today"
         text="Your contribution helps us build water wells that serve over 200 people for more than a decade. Give the gift of clean water."
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
     </div>

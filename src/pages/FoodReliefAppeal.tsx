@@ -10,7 +10,7 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/dpkEeY0Q';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 // Data
 const GALLERY_IMAGES = [
@@ -39,7 +39,7 @@ export function FoodReliefAppeal() {
         subtitle="Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict. For many families, hunger is a daily struggle, leaving children malnourished and parents desperate to provide even the most basic needs.
 Providing food relief ensures that families receive not only nourishment, but also hope. By providing regular meals and food parcels, you help prevent malnutrition, reduce suffering, and give communities the strength to survive."
         image="https://ik.imagekit.io/dzmabcda0/DSC00607.jpg"
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
       {/* Problem */}
@@ -115,7 +115,7 @@ Providing food relief ensures that families receive not only nourishment, but al
       <AppealCTA
         title="Feed a Family Today"
         text="Your donation provides nutritious food packs that sustain vulnerable families for an entire month."
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
     </div>

@@ -58,7 +58,7 @@ export function Hero() {
               className="rounded-full px-8 py-6 text-base font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"
             >
               <a
-                href="https://gofund.me/227437bb2"
+                href="https://www.gofundme.com/f/soul-caravan-foundation-purpose-in-action/donate?attribution_id=sl:cf4d6bfe-c56a-4a6d-8930-c2a56d6373f0&lang=en_GB&ts=1773085563&utm_campaign=fp_sharesheet&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link&source=btn_donate"
                 target="_blank"
                 rel="noopener noreferrer"
               >

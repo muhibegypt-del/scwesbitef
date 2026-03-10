@@ -8,8 +8,8 @@ import { IMAGES } from '@/data/imageAssets';
 
 // GoFundMe donation links
 const DONATION_LINKS = {
-  RAMADAN: 'https://www.gofundme.com/f/ramadan-2026-help-the-needy-in-kenya',
-  ZAKAT: 'https://gofund.me/67057174e',
+  RAMADAN: 'https://www.gofundme.com/f/ramadan-2026-help-the-needy-in-kenya/donate?source=btn_donate',
+  ZAKAT: 'https://www.gofundme.com/f/jqtzem-zakat/donate?attribution_id=sl:c4348239-6a19-4a0d-847b-4a610b4d21bf&lang=en_GB&ts=1773086258&utm_campaign=fp_sharesheet&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link&fundraiserPageParams=cl,o&source=btn_donate',
   // All other programs currently inactive
   WATER_WELL: null,
   EDUCATION: null,

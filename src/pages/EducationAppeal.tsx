@@ -9,7 +9,7 @@ import { AppealQuote } from '@/components/templates/appeal/AppealQuote';
 import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 
-const SQUARE_LINK = 'https://square.link/u/VFOiNlbN';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 // Data
 const GALLERY_IMAGES = [
@@ -35,7 +35,7 @@ export function EducationAppeal() {
         title="Empower Through Education"
         subtitle="Support children's education and help create opportunities for learning and growth. For many children, access to quality education is limited by poverty, lack of resources, or inadequate school facilities. Without support, students face challenges that make it difficult to reach their potential. Providing education support ensures children have the tools, environment, and guidance they need to learn and succeed. Your contribution helps create safe and inspiring spaces for education, empowering children to gain essential skills and build a brighter future for themselves and their communities."
         image={IMAGES.UPDATES_2025.EDUCATION.HERO_MAIN}
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
       {/* Problem */}
@@ -111,7 +111,7 @@ export function EducationAppeal() {
       <AppealCTA
         title="Invest in a Child's Future"
         text="Your contribution provides comprehensive educational support that transforms lives and builds stronger communities."
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
     </div>

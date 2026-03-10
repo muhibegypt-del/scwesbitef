@@ -15,7 +15,7 @@ const NEW_IMAGES = {
   QUOTE: 'https://ik.imagekit.io/dzmabcda0/DSC00111.JPG.jpeg'
 };
 
-const SQUARE_LINK = 'https://square.link/u/1muC8Kjs';
+const DONATION_LINK = null; // Disabled - no active donation link
 
 // Data
 const FAQ_ITEMS = [
@@ -36,7 +36,7 @@ export function OrphanCareAppeal() {
 
 Your support helps restore stability, providing children with the opportunity to continue their education and widows with the resources they need to care for their families."
         image={NEW_IMAGES.HERO}
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
       {/* Problem */}
@@ -102,7 +102,7 @@ Your support helps restore stability, providing children with the opportunity to
       <AppealCTA
         title="Be a Guardian of Hope"
         text="Your monthly support creates stability and hope for families who have lost everything."
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
 
     </div>

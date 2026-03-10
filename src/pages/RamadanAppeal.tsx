@@ -14,7 +14,7 @@ import { AppealFAQ } from '@/components/templates/appeal/AppealFAQ';
 import { AppealCTA } from '@/components/templates/appeal/AppealCTA';
 import { IMAGES } from '@/data/imageAssets';
 
-const SQUARE_LINK = 'https://checkout.square.site/merchant/MLAAADG4MBDM3/checkout/LZHY5QXEAVERT3CC25PZ3KK4';
+const DONATION_LINK = 'https://www.gofundme.com/f/ramadan-2026-help-the-needy-in-kenya/donate?source=btn_donate';
 
 const RAMADAN_IMAGES = {
   hero: 'https://ik.imagekit.io/dzmabcda0/DSC00607.jpg',
@@ -95,7 +95,7 @@ function RamadanHero() {
                   size="lg"
                   className="rounded-full bg-olive-500 hover:bg-olive-600 text-white h-14 px-10 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <a href={SQUARE_LINK} target="_blank" rel="noopener noreferrer" className="gap-3">
+                  <a href={DONATION_LINK} target="_blank" rel="noopener noreferrer" className="gap-3">
                     <Heart className="h-5 w-5" />
                     Donate Now
                   </a>
@@ -322,7 +322,7 @@ export function RamadanAppeal() {
       <AppealCTA
         title="Make This Ramadan Count"
         text="Your donation provides life-sustaining food parcels to families with nothing to break their fast. Give generously this blessed month."
-        ctaLink={SQUARE_LINK}
+        ctaLink={DONATION_LINK}
       />
     </div>
   );

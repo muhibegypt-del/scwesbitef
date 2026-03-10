@@ -90,7 +90,7 @@ export function Navigation() {
               {/* Donate CTA */}
               {/* Donate CTA */}
               <a
-                href="https://square.link/u/cI8AoKop"
+                href="https://www.gofundme.com/f/soul-caravan-foundation-purpose-in-action/donate?attribution_id=sl:cf4d6bfe-c56a-4a6d-8930-c2a56d6373f0&lang=en_GB&ts=1773085563&utm_campaign=fp_sharesheet&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link&source=btn_donate"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-brand-accent hover:brightness-110 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-accent focus:ring-offset-brand-primary-darker"
@@ -108,7 +108,7 @@ export function Navigation() {
             {/* MOBILE ACTIONS */}
             <div className="flex items-center gap-3 lg:hidden">
               <a
-                href="https://square.link/u/cI8AoKop"
+                href="https://www.gofundme.com/f/soul-caravan-foundation-purpose-in-action/donate?attribution_id=sl:cf4d6bfe-c56a-4a6d-8930-c2a56d6373f0&lang=en_GB&ts=1773085563&utm_campaign=fp_sharesheet&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link&source=btn_donate"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-accent text-white font-bold text-sm px-4 flex items-center min-h-[44px] rounded-full active:scale-95 transition-transform"
