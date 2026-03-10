@@ -58,7 +58,7 @@ export function Hero() {
               className="rounded-full px-8 py-6 text-base font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-olive-500 hover:bg-olive-600 border-none"
             >
               <a
-                href="https://square.link/u/cI8AoKop"
+                href="https://gofund.me/227437bb"
                 target="_blank"
                 rel="noopener noreferrer"
               >

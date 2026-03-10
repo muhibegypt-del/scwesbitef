@@ -6,16 +6,17 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { IMAGES } from '@/data/imageAssets';
 
-// Square payment links
-const SQUARE_LINKS = {
-  WATER_WELL: 'https://square.link/u/d5fSYpG9',
-  EDUCATION: 'https://square.link/u/VFOiNlbN',
-  ORPHANS: 'https://square.link/u/1muC8Kjs',
-  FOOD_RELIEF: 'https://square.link/u/dpkEeY0Q',
-  MASJID: 'https://square.link/u/PaNdJVqa',
-  QURBANI: 'https://square.link/u/wTjNjHHp',
-  ZAKAT: 'https://square.link/u/d5fSYpG9',
-  RAMADAN: 'https://checkout.square.site/merchant/MLAAADG4MBDM3/checkout/LZHY5QXEAVERT3CC25PZ3KK4',
+// GoFundMe donation links
+const DONATION_LINKS = {
+  RAMADAN: 'https://www.gofundme.com/f/ramadan-2026-help-the-needy-in-kenya',
+  ZAKAT: 'https://gofund.me/67057174',
+  // All other programs currently inactive
+  WATER_WELL: null,
+  EDUCATION: null,
+  ORPHANS: null,
+  FOOD_RELIEF: null,
+  MASJID: null,
+  QURBANI: null,
 };
 
 interface Program {
@@ -23,7 +24,7 @@ interface Program {
   description: string;
   image: string;
   href: string | null;
-  donateLink: string;
+  donateLink: string | null;
 }
 
 const programs: Program[] = [
@@ -32,56 +33,56 @@ const programs: Program[] = [
     description: 'Feed families this Ramadan. Provide hot iftar meals, food parcels, and Eid gifts for orphaned children.',
     image: 'https://ik.imagekit.io/dzmabcda0/DSC00607.jpg?tr=w-600',
     href: '/ramadan',
-    donateLink: SQUARE_LINKS.RAMADAN,
+    donateLink: DONATION_LINKS.RAMADAN,
   },
   {
     title: 'Build a Water Well',
     description: 'Provide access to clean, safe drinking water to an entire village, improving daily lives and creating a healthier tomorrow.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/8-DSC00857.jpg?tr=w-600',
     href: '/water-well',
-    donateLink: SQUARE_LINKS.WATER_WELL,
+    donateLink: DONATION_LINKS.WATER_WELL,
   },
   {
     title: 'Orphan & Widow Care',
     description: 'Help provide vulnerable children and windows with care, stability and essential resources, creating an environment where they can flourish.',
     image: 'https://ik.imagekit.io/dzmabcda0/DSC00203.jpg?updatedAt=1769518413034&tr=w-600',
     href: '/orphan-care',
-    donateLink: SQUARE_LINKS.ORPHANS,
+    donateLink: DONATION_LINKS.ORPHANS,
   },
   {
     title: 'Food Relief',
     description: 'Distribute hot, nutritious meals and monthly food parcels to families facing starvation due to poverty or conflict.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/13-DSC00025.jpg?tr=w-600',
     href: '/food-relief',
-    donateLink: SQUARE_LINKS.FOOD_RELIEF,
+    donateLink: DONATION_LINKS.FOOD_RELIEF,
   },
   {
     title: 'Support Education',
     description: 'Provide learning opportunities to children who need it most, opening doors to a brighter future.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/29-DSC00256.jpg?tr=w-600',
     href: '/education',
-    donateLink: SQUARE_LINKS.EDUCATION,
+    donateLink: DONATION_LINKS.EDUCATION,
   },
   {
     title: 'Build a Masjid',
     description: 'Construct a place of worship and community gathering that will serve generations as the heart of spiritual and social life.',
     image: `${IMAGES.MASJID.MAIN}?tr=w-600`,
     href: '/masjid',
-    donateLink: SQUARE_LINKS.MASJID,
+    donateLink: DONATION_LINKS.MASJID,
   },
   {
     title: 'Qurbani',
     description: 'Fulfill your Qurbani obligation and share fresh meat with families in need during Eid al-Adha celebrations.',
     image: 'https://ik.imagekit.io/dzmabcda0/finals/24-DSC00601.jpg',
     href: '/qurbani',
-    donateLink: SQUARE_LINKS.QURBANI,
+    donateLink: DONATION_LINKS.QURBANI,
   },
   {
     title: 'Zakat',
     description: 'Provide Zakat to support vulnerable families and communities in need.',
     image: IMAGES.FOOD_PARCEL.COMMUNITY_DISTRIBUTION,
     href: '/zakat',
-    donateLink: SQUARE_LINKS.ZAKAT,
+    donateLink: DONATION_LINKS.ZAKAT,
   },
 ];
 
@@ -152,11 +153,17 @@ export function Programs() {
                     </div>
                   )}
 
-                  <Button asChild className="w-full rounded-xl bg-teal-800 hover:bg-teal-700 text-white h-11 uppercase tracking-widest text-xs font-bold shadow-none">
-                    <a href={program.donateLink} target="_blank" rel="noopener noreferrer">
+                  {program.donateLink ? (
+                    <Button asChild className="w-full rounded-xl bg-teal-800 hover:bg-teal-700 text-white h-11 uppercase tracking-widest text-xs font-bold shadow-none">
+                      <a href={program.donateLink} target="_blank" rel="noopener noreferrer">
+                        Donate Now
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button disabled className="w-full rounded-xl bg-gray-200 text-gray-400 h-11 uppercase tracking-widest text-xs font-bold shadow-none cursor-not-allowed">
                       Donate Now
-                    </a>
-                  </Button>
+                    </Button>
+                  )}
                 </div>
               </div>
             </motion.div>
